@@ -1,4 +1,4 @@
-这次项目我们使用github进行版本控制。
+使用github进行版本控制。
 
 github：
 	
@@ -10,21 +10,27 @@ github：
 
 
 
-对主分支进行同步：
+同步：
 	
-	先点击compare，然后将base fork该为自己的git将head fork该为要拉取的git。
+	1.compare
+
+	2.base fork->次分支git       		head fork ->主分支git
 	
-	然后点击Create pull request，点击Merge pull最后确认就将主分支的内容同步到次分支了。
+	3.Create pull request，
+
+	4.Merge pull
 	
-	最后在本机执行git pull origin master将git上的内容更新到本地。
+	5.命令行下git pull origin master
 
 
-对主分支提交：
+提交：
 	
-	先将内容上传到git上。
+	1.git push origin master（上传内容）
 	
-	然后点击pull request。
+	2.pull request。
     
-	然后点击Create pull request.
+	3.Create pull request.
 	
-	最后确认就可以了.
+	4.确认
+
+注意： 	每次提交前需要先对主分支进行同步。
