@@ -9,12 +9,13 @@ FDB中的字符串类。
 
 ##类开发的必要性，唯一性
 
-以有文档，见compare_string_SDS.md
+已有文档，见compare_string_SDS.md
 
 ##类中各函数的复杂度，可能瓶颈
 
 new的使用仍有瓶颈。
 且存在new的遗留问题。
+
 
 ##类的声明与定义
 
@@ -34,22 +35,24 @@ class String
     friend String operator+(const String &lhs, const String &rhs);
     friend String operator+(const String &lhs, const char *rhs);
 
+    
+    //修改人：胡兴菊  日期：2016.3.26  修改内容：size 和 free 的注释 
 private:
-    int size; 		//字符串已用长度
-    int free;		//字符串已经使用长度
-    char *str; 		//空闲长度
+    int size; 		//字符串已经使用长度  
+    int free;		//数组中空闲长度
+    char *str;
 public:
     String(); 				      //无参构造
-    String(char *rhs); 			  //行参为char* 构造函数
+    String(char *rhs); 			  //形参为char* 构造函数
     String(const String &rhs); 	  //复制构造函数
     ~String();  			      //析构函数
 
     //重载运算符
     String & operator=(const String &rhs); 	//赋值运算符
-    String & operator=(const char *rhs); 	//行参为char* 的赋值运算符
+    String & operator=(const char *rhs); 	//形参为char* 的赋值运算符
     char& operator[](int i);			    //下标运算符
     String& operator+=(const String &rhs); 	//复合赋值运算符
-    String& operator+=(const char *rhs); 	//行参为char *的复合赋值运算符
+    String& operator+=(const char *rhs); 	//形参为char *的复合赋值运算符
 
     //接口函数
     int getsize() const; 				//获取当前字符串已用空间
@@ -105,15 +108,25 @@ public:
     10.String & operator=(const String &rhs); 	
         赋值运算符。将rhs对象赋值给this对象。返回this对象。
     11.String & operator=(const char *rhs); 	
-        行参为char* 的赋值运算符。将rhs数组赋值给this对象。返回this对象
+        形参为char* 的赋值运算符。将rhs数组赋值给this对象。返回this对象
     12.char& operator[](int i);			    
         下标运算符。获取this对象中str成员下标为i的引用。
     13.String& operator+=(const String &rhs);
         复合赋值运算符。将rhs对象与this对象相加并赋值给this对象。
     14.String& operator+=(const char *rhs); 	
-        行参为char *的复合赋值运算符。将rhs数组与this对象相加并赋值给this对象。
+        形参为char *的复合赋值运算符。将rhs数组与this对象相加并赋值给this对象。
 
        
 
 
-##审阅人批覆
+##审阅人批复：
+
+第一次审阅结果：整体结构清晰，考虑相对周全。主要有一下两点不足，望加以修整：
+
+1.需对函数复杂度详尽说明
+2.开发必要性、唯一性文档需要补充修整。主要包括自己构建string类的目的，
+以及自己构建的string类和c++的string类的区别。
+
+
+审阅人：胡兴菊     审阅日期日期：2016.3.26
+
