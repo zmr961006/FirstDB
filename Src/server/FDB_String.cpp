@@ -236,7 +236,8 @@ String& String::StringAdd(const char *s)
 
 String& String::StringClear()
 {
-    memset(str, 0, size + free);
+    //memset(str, 0, size + free);
+    str[0] = 0;
     free += size;
     size = 0;
 
