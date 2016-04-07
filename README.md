@@ -1,5 +1,6 @@
 # FirstDB  
-## For XiyouLinux group  10 years old!!
+#仅以献给Xiyou Linux group  10周年 
+##关于我们  www.xiyoulinux.org
 ##由西邮Linux兴趣小组成员开发的分布式键值存储系统
 
 ###核心主题
