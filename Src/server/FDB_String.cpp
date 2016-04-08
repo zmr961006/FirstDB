@@ -31,12 +31,20 @@ String::String(const String &rhs)
     std::memcpy(str, rhs.str, size + 1);
 }
 
+String::String(String &&rhs) noexcept
+{
+    size = rhs.size;
+    free = FREE(size);
+    str = new char[LEN(size)];
+    std::memcpy(str, rhs.str, size + 1);
+}
+
 String::~String()
 {
     delete [] str;
 }
 
-String& String::operator=(const String &rhs)
+String& String::operator=(const String &rhs) 
 {
     if (this == &rhs)
     {
@@ -49,19 +57,44 @@ String& String::operator=(const String &rhs)
         
         str = new char[LEN(rhs.size)];
         free = FREE(rhs.size);
-	size = rhs.size;
+	    size = rhs.size;
     	std::memcpy(str, rhs.str, size + 1);
     }
     else 
     {
         free = size + free - rhs.size;
-	size = rhs.size;
+	    size = rhs.size;
     	std::memcpy(str, rhs.str, size + 1);
     }
     
-    
     return *this;
 }
+
+/*String& String::operator=(String &&rhs) noexcept
+{
+    if (this == &rhs)
+    {
+        return *this;
+    }
+    
+    if ( (size + free) <= rhs.size )
+    {
+        delete [] str;
+        
+        str = new char[LEN(rhs.size)];
+        free = FREE(rhs.size);
+	    size = rhs.size;
+    	std::memcpy(str, rhs.str, size + 1);
+    }
+    else 
+    {
+        free = size + free - rhs.size;
+	    size = rhs.size;
+    	std::memcpy(str, rhs.str, size + 1);
+    }
+    
+    return *this;
+}*/
 
 String& String::operator=(const char *rhs)
 {
@@ -73,14 +106,14 @@ String& String::operator=(const char *rhs)
         
         str = new char[LEN(rhs_size)];
         free = FREE(rhs_size);
-	size = rhs_size;
+	    size = rhs_size;
     	std::memcpy(str, rhs, size + 1);
     }
     else if ( rhs_size  < (size + free) )
     {
         free = (size + free) - rhs_size;
-	size = rhs_size;
-   	std::memcpy(str, rhs, size + 1);
+	    size = rhs_size;
+   	    std::memcpy(str, rhs, size + 1);
     }
     
     
@@ -268,4 +301,9 @@ String& String::StringChange(const String &st)
 {
     *this = st;
     return *this;
+}
+
+char * String::StringGetChar()
+{
+    return str;
 }
