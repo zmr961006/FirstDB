@@ -43,12 +43,14 @@ public:
     String(); 				//无参构造
     String(char *rhs); 			//行参为char* 构造函数
     String(const String &rhs); 		//复制构造函数
+    String(String &&rhs) noexcept;
     ~String();  			//析构函数
 
     //重载运算符
     String & operator=(const String &rhs); 	//赋值运算符
-    String & operator=(const char *rhs); 	//行参为char* 的赋值运算符
-    char& operator[](int i);			//下标运算符
+    String & operator=(const char *rhs);    //行参为char* 的赋值运算符
+    //String & operaotr=(String&& rhs) noexcept;
+    char& operator[](int i);			    //下标运算符
     String& operator+=(const String &rhs); 	//复合赋值运算符
     String& operator+=(const char *rhs); 	//行参为char *的复合赋值运算符
 
@@ -62,6 +64,7 @@ public:
     String &StringSizeClear(size_t pos, size_t len); 	//以pos开始清除之后len长度的内容
     String &StringChange(const char *s); 		//修改字符串为s
     String &StringChange(const String &str2); 		//修改字符串为str2
+    char * StringGetChar();
 };
 
 #endif
