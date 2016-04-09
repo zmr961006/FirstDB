@@ -23,27 +23,27 @@ private:
 public:
     Hash_map_pseudo() = default;
     ~Hash_map_pseudo() = default;
-    void Hash_map_set(const String&  a, const T& b);
-    void Hash_map_set(Hash_node_pseudo<T> rhs);
-    void Hash_map_del(const String & rhs);
-    void Hash_map_change(const String & a, const T & b);
-    void Hash_map_change(Hash_node_pseudo<T> rhs);
-    bool Hash_map_test(const String & rhs);
-    T Hash_map_find(const String & rhs);
-    void Hash_map_show();
-    int Hash_map_size();
-    void Hash_map_destory();
-    std::vector<Hash_node_pseudo<T> > Hash_map_data();
+    void Hash_pseudo_set(const String&  a, const T& b);
+    void Hash_pseudo_set(Hash_node_pseudo<T> rhs);
+    void Hash_pseudo_del(const String & rhs);
+    void Hash_pseudo_change(const String & a, const T & b);
+    void Hash_pseudo_change(Hash_node_pseudo<T> rhs);
+    bool Hash_pseudo_test(const String & rhs);
+    T Hash_pseudo_find(const String & rhs);
+    void Hash_pseudo_show();
+    int Hash_pseudo_size();
+    void Hash_pseudo_destory();
+    std::vector<Hash_node_pseudo<T> > Hash_pseudo_data();
 };
 
 template <typename T>
-void Hash_map_pseudo<T>::Hash_map_set(const String & a, const T & b)
+void Hash_map_pseudo<T>::Hash_pseudo_set(const String & a, const T & b)
 {
     Hash_node_pseudo<T> key_value(a, b);
 
-    if (Hash_map_test(a) == true)
+    if (Hash_pseudo_test(a) == true)
     {
-        Hash_map_change(a, b);
+        Hash_pseudo_change(a, b);
     }
     else
     {
@@ -52,11 +52,11 @@ void Hash_map_pseudo<T>::Hash_map_set(const String & a, const T & b)
 }
 
 template <typename T>
-void Hash_map_pseudo<T>::Hash_map_set(Hash_node_pseudo<T> rhs)
+void Hash_map_pseudo<T>::Hash_pseudo_set(Hash_node_pseudo<T> rhs)
 {
-    if (Hash_map_test(rhs.Hash_key()) == true)
+    if (Hash_pseudo_test(rhs.Hash_key()) == true)
     {
-        Hash_map_change(rhs);
+        Hash_pseudo_change(rhs);
     }
     else
     {
@@ -65,7 +65,7 @@ void Hash_map_pseudo<T>::Hash_map_set(Hash_node_pseudo<T> rhs)
 }
 
 template <typename T>
-void Hash_map_pseudo<T>::Hash_map_del(const String & rhs)
+void Hash_map_pseudo<T>::Hash_pseudo_del(const String & rhs)
 {
     for (auto item = data.begin(); item != data.end(); ++item)
     {
@@ -78,21 +78,21 @@ void Hash_map_pseudo<T>::Hash_map_del(const String & rhs)
 }
 
 template <typename T>
-void Hash_map_pseudo<T>::Hash_map_change(const String & a, const T & b)
+void Hash_map_pseudo<T>::Hash_pseudo_change(const String & a, const T & b)
 {
-    Hash_map_del(a);
-    Hash_map_set(a, b);   
+    Hash_pseudo_del(a);
+    Hash_pseudo_set(a, b);   
 }
 
 template <typename T>
-void Hash_map_pseudo<T>::Hash_map_change(Hash_node_pseudo<T> rhs)
+void Hash_map_pseudo<T>::Hash_pseudo_change(Hash_node_pseudo<T> rhs)
 {
-    Hash_map_del(rhs.Hash_key());
-    Hash_map_set(rhs.Hash_key(), rhs.Hash_value());
+    Hash_pseudo_del(rhs.Hash_key());
+    Hash_pseudo_set(rhs.Hash_key(), rhs.Hash_value());
 }
 
 template <typename T>
-bool Hash_map_pseudo<T>::Hash_map_test(const String & rhs)
+bool Hash_map_pseudo<T>::Hash_pseudo_test(const String & rhs)
 {
     for (auto item : data)
     {
@@ -106,7 +106,7 @@ bool Hash_map_pseudo<T>::Hash_map_test(const String & rhs)
 
 //在调用Hash_map_find之前必须先调用Hash_map_test测试这个key是否在data中
 template <typename T>
-T Hash_map_pseudo<T>::Hash_map_find(const String & rhs)
+T Hash_map_pseudo<T>::Hash_pseudo_find(const String & rhs)
 {
     for (auto item : data)
     {
@@ -118,7 +118,7 @@ T Hash_map_pseudo<T>::Hash_map_find(const String & rhs)
 }
 
 template <typename T>
-void Hash_map_pseudo<T>::Hash_map_show()
+void Hash_map_pseudo<T>::Hash_pseudo_show()
 {
     for (auto item : data)
     {
@@ -127,19 +127,19 @@ void Hash_map_pseudo<T>::Hash_map_show()
 }
 
 template <typename T>
-int Hash_map_pseudo<T>::Hash_map_size()
+int Hash_map_pseudo<T>::Hash_pseudo_size()
 {
     return data.size();
 }
 
 template <typename T>
-void Hash_map_pseudo<T>::Hash_map_destory()
+void Hash_map_pseudo<T>::Hash_pseudo_destory()
 {
     data.erase(data.begin(), data.end());
 }
 
 template <typename T>
-std::vector<Hash_node_pseudo<T>> Hash_map_pseudo<T>::Hash_map_data()
+std::vector<Hash_node_pseudo<T>> Hash_map_pseudo<T>::Hash_pseudo_data()
 {
     return data;
 }

@@ -72,7 +72,7 @@ T Hash_node_pseudo<T>::Hash_value()
 }
 
 template <typename T>
-unsigned Hash_node_pseudo<T>::Get_hash_key()
+unsigned int Hash_node_pseudo<T>::Get_hash_key()
 {
     return hash_num;
 }
