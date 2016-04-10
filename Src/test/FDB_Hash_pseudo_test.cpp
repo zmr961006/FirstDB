@@ -1,15 +1,15 @@
 /*************************************************************************
-	> File Name: test.cpp
+	> File Name: FDB_Hash_pseudo_test.cpp
 	> Author: wrx
 	> Mail: 1721267632@qq.com
-	> Created Time: 2016年04月04日 星期一 13时55分38秒
+	> Created Time: 2016年04月09日 星期六 23时22分36秒
  ************************************************************************/
 
 #include<iostream>
-#include"./FDB_String.cpp"
-#include"./pseudo_map_hash.h"
-#include"./pseudo_node_hash.h"
-#include"./hash_map.h"
+#include"../server/FDB_String.cpp"
+#include"../server/FDB_Hash_node.h"
+#include"../server/FDB_Hash_pseudo.h"
+#include"../server/FDB_Hash_map.h"
 using namespace std;
 
 int main()
@@ -33,27 +33,28 @@ int main()
     Hash_map_pseudo<String> hash;
     Hash_node_pseudo<String> hash1("123","456");
     String str;
-    hash.Hash_map_set(a);
-    hash.Hash_map_set(j, d);
-    cout << hash.Hash_map_size() << endl;
-    if ( hash.Hash_map_test(j) == true)
+    hash.Hash_pseudo_set(a);
+    hash.Hash_pseudo_set(j, d);
+    cout << hash.Hash_pseudo_size() << endl;
+    if ( hash.Hash_pseudo_test(j) == true)
     {
-        str = hash.Hash_map_find(j);
+        str = hash.Hash_pseudo_find(j);
         cout << str << endl;
     }
     else
     {
         cout << "don,t find!" << endl;
     }
-    hash.Hash_map_show();
-    cout << hash.Hash_map_size() << endl;
-    hash.Hash_map_set("zmr", "abc");
-    hash.Hash_map_show();
+    hash.Hash_pseudo_show();
+    cout << hash.Hash_pseudo_size() << endl;
+    hash.Hash_pseudo_set("zmr", "abc");
+    hash.Hash_pseudo_show();
     //hash.Hash_map_destory();
     //hash.Hash_map_show();
 
     cout << "---------------------------------------" << endl;
     
-    Hash_map<String> map(hash);
+    Hash_map<String> map(hash); 
     map.Hash_map_show();
 }
+
