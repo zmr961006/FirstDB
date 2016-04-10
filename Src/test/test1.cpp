@@ -6,11 +6,11 @@
  ************************************************************************/
 
 #include<iostream>
-#include"./FDB_String.h"
-#include"./FDB_String.cpp"
-#include"./hash_map.h"
-#include"./pseudo_map_hash.h"
-#include"./pseudo_node_hash.h"
+#include"../server/FDB_String.cpp"
+#include"../server/FDB_String.h"
+#include"../server/hash_map.h"
+#include"../server/pseudo_map_hash.h"
+#include"../server/pseudo_node_hash.h"
 #include<vector>
 #include<string>
 using namespace std;
