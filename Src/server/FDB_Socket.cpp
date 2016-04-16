@@ -5,7 +5,7 @@
 	> Created Time: 2016年04月14日 星期四 08时30分26秒
  ************************************************************************/
 
-#include<iostream>
+/*#include<iostream>
 #include<error.h>
 #include<fcntl.h>
 #include<stdio.h>
@@ -14,8 +14,9 @@
 #include<unistd.h>
 #include<arpa/inet.h>
 #include"./FDB_Socket.h"
+*/
 
-
+#include"./FDB_Socket.h"
 typedef struct sockaddr SA;
 
 
@@ -46,11 +47,14 @@ int Socket::setnonblocking(){
 }
 
 
-bool Socket::bindAddress(struct sockaddr * myaddr){
+bool Socket::bindAddress(){
     
-    int len = sizeof(myaddr);
-    int ret = bind(sockfd_,(SA*)(myaddr),len);
+    //int len = sizeof(*myaddr);
+    std::cout << "sockfd = " << sockfd_ << " len = " << sizeof(address) << std::endl;
+    int ret = bind(sockfd_,(struct sockaddr *)&address,sizeof(address));
+    std::cout << ret << std::endl;
     if(ret < 0){
+        std::cout << ret << std::endl;
         std::cout << "bind error" << std::endl;
         return false;
     }    
@@ -103,23 +107,51 @@ bool Socket::setKeepAlive(bool on){
 
 }
 
+
 Socket::Socket(sa_family_t family,int listen_num){
     
     
 
+    Socket__(family,listen_num);
+    //setReuseAddr(true);
+    //setReusePort(true);
     bzero(&address,sizeof(address));
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = htonl(INADDR_ANY);
-    address.sin_port  = htons(9001);
+    address.sin_port  = htons(9201);
     
-    Socket__(family,listen_num);
-    if(bindAddress((SA*)&address) && (sockfd_ > 0)){
+    //Socket__(family,listen_num);
+    if(bindAddress() && (sockfd_ > 0)){
         if(listen(listen_num)){
-            return ;
+            /*if(setnonblocking()){
+                return;    
+            }*/
+            
         }
     }
 
 
 }
 
+int Socket::do_accept(){
+    
+    socklen_t clen;
+    int connfd;
+    for(;;){
+        clen = sizeof(cliaddr);
+        if(connfd = accept(sockfd_,(SA*)(&cliaddr),&clen)){
+            std::cout << "sksksks" << std::endl;
+            if(fork() == 0){
+                char buf[100];
+                for(;;){   
+                    while(read(connfd,buf,100) > 0){
+                        std::cout << buf << std::endl;
+                    }
+                }   
+            }
+        }
+    }
 
+
+
+}

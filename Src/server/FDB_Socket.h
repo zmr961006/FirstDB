@@ -8,6 +8,18 @@
 #ifndef _FDB_SOCKET_H
 #define _FDB_SOCKET_H
 
+
+#include<iostream>
+#include<unistd.h>
+#include<fcntl.h>
+#include<stdio.h>
+#include<strings.h>
+#include<sys/socket.h>
+#include<arpa/inet.h>
+
+
+
+
 struct tcp_info;
 
 class Socket{
@@ -15,22 +27,23 @@ class Socket{
     public:
         explicit Socket(int sockfd):sockfd_(sockfd){}
     
-        bool Socket__(sa_family_t family = AF_INET,int backlog);
+        bool Socket__(sa_family_t family = AF_INET,int backlog = 100);
         ~Socket();
         int fd()const{return sockfd_; }
-        bool Socket(sa_family_t family,int listen_num);
+        Socket(sa_family_t family,int listen_num);
         bool getTcpInfo(struct tcp_info *)const;
         bool getTcpInfoString(char *buf,int len)const;
     
-        bool bindAddress(struct sockaddr * localaddr);
+        bool bindAddress();
         bool listen(int backlog);
 
-        int accept(InetAddress *peeraddr);
+        int  do_accept();
+        bool getbacklog();
         bool shutdownWrite();
         bool setTcpNoDelay(bool on);
         bool setReuseAddr(bool on);
         bool setReusePort(bool on);
-        int setnonblocking();    
+        int  setnonblocking();    
 
         bool setKeepAlive(bool on);
 
@@ -38,8 +51,9 @@ class Socket{
     private:
         int sockfd_ ;
         int backlog;
-        struct sockaddr_in address;mZ        
-        
+        struct sockaddr_in address;      
+        struct sockaddr_in cliaddr;
+
 
 
 };
