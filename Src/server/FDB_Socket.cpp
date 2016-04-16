@@ -12,6 +12,7 @@
 #include<strings.h>
 #include<sys/socket.h>
 #include<unistd.h>
+#include<arpa/inet.h>
 #include"./FDB_Socket.h"
 
 
@@ -25,7 +26,7 @@ Socket::~Socket(){
 
 }
 
-Socket::Socket(sa_family_t family,int listen_num){
+bool Socket::Socket__(sa_family_t family,int listen_num){
     
     backlog = listen_num;
     sockfd_ = socket(family,SOCK_STREAM,0);
@@ -37,18 +38,18 @@ Socket::Socket(sa_family_t family,int listen_num){
 
 int Socket::setnonblocking(){
     
-    int old_option = fcntl(fd,F_GETFL);
+    int old_option = fcntl(sockfd_,F_GETFL);
     int new_option = old_option | O_NONBLOCK;
-    fcntl(fd,F_SETFL,new_option);
+    fcntl(sockfd_,F_SETFL,new_option);
     return old_option;
 
 }
 
 
-bool Socket::bindAddress(const struct sockaddr & myaddr){
+bool Socket::bindAddress(struct sockaddr * myaddr){
     
     int len = sizeof(myaddr);
-    int ret = ::bind(sockfd_,myaddr,len);
+    int ret = bind(sockfd_,(SA*)(myaddr),len);
     if(ret < 0){
         std::cout << "bind error" << std::endl;
         return false;
@@ -102,5 +103,23 @@ bool Socket::setKeepAlive(bool on){
 
 }
 
+Socket::Socket(sa_family_t family,int listen_num){
+    
+    
+
+    bzero(&address,sizeof(address));
+    address.sin_family = AF_INET;
+    address.sin_addr.s_addr = htonl(INADDR_ANY);
+    address.sin_port  = htons(9001);
+    
+    Socket__(family,listen_num);
+    if(bindAddress((SA*)&address) && (sockfd_ > 0)){
+        if(listen(listen_num)){
+            return ;
+        }
+    }
+
+
+}
 
 

@@ -15,13 +15,14 @@ class Socket{
     public:
         explicit Socket(int sockfd):sockfd_(sockfd){}
     
-        Socket(sa_family_t family,int backlog);
+        bool Socket__(sa_family_t family = AF_INET,int backlog);
         ~Socket();
         int fd()const{return sockfd_; }
+        bool Socket(sa_family_t family,int listen_num);
         bool getTcpInfo(struct tcp_info *)const;
         bool getTcpInfoString(char *buf,int len)const;
     
-        bool bindAddress(const struct sockaddr & localaddr);
+        bool bindAddress(struct sockaddr * localaddr);
         bool listen(int backlog);
 
         int accept(InetAddress *peeraddr);
@@ -32,9 +33,12 @@ class Socket{
         int setnonblocking();    
 
         bool setKeepAlive(bool on);
+
+
     private:
         int sockfd_ ;
         int backlog;
+        struct sockaddr_in address;mZ        
         
 
 
