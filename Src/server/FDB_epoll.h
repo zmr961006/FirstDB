@@ -31,16 +31,18 @@ class Epoll{
     public:
 
         Epoll();
-        ~Epoll(){}
+        ~Epoll();
         bool Epoll_create();
         bool Epoll_add(int fd,bool enable_et,bool oneshot);
         bool Epoll_reset(int fd);
-        bool Epoll_del();
+        bool Epoll_del(int fd);
         bool Epoll_up();
         bool Epoll_wait();
         bool Epoll_setnonblock(int fd);
         bool Epoll_setMAX_NUM();
-        
+        bool Epoll_getMAX_NUM();    
+        bool Epoll_create_events();    
+
         void (*work)(int);
         void (*timer)(int);
 
@@ -49,8 +51,9 @@ class Epoll{
         int epoll_fd;
         int MAX_NUM = 100; /*假定有100，应当从配置文件中读取*/
         int buf_SIZE;
-        struct epoll_event events[MAX_NUM];
-        
+        epoll_event *event_s;
+        int sock_fd ;
+        std::mutex epoll_mutex;
         
 };
 

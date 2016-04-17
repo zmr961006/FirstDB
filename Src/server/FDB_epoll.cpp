@@ -40,6 +40,18 @@ bool Epoll::Epoll_reset(int fd){
 }
 
 
+bool Epoll::Epoll_del(int fd){
+
+    epoll_event event;
+    event.data.fd = fd;
+    epoll_ctl(epoll_fd,EPOLL_CTL_DEL,fd,&event);
+
+}
+
+
+
+
+
 bool Epoll::Epoll_add(int fd,bool enable_et,bool oneshot){
     
     epoll_event event;
@@ -58,6 +70,30 @@ bool Epoll::Epoll_add(int fd,bool enable_et,bool oneshot){
     Epoll_setnonblock(fd);    
         
     return true;
+
+}
+
+
+bool Epoll::Epoll_create_events(){
+
+    event_s = new epoll_event[MAX_NUM];
+    if(!event_s){
+
+        std::cout << "create events error !! go to log now " << std::endl;
+        return false;
+
+    }
+    return true;    
+
+}
+
+
+Epoll::~Epoll(){
+    
+
+    delete event_s;
+
+
 }
 
 
@@ -67,21 +103,63 @@ bool Epoll::Epoll_wait(){
 
     while(do_work){
         
-        int ret = epoll_wait(epoll_fd,events,MAX_NUM-1);
+        int ret = epoll_wait(epoll_fd,event_s,MAX_NUM,-1);
 
         if(ret < 0){
             
-            std::cout << "heart data " << std::endl;
+            std::cout << "epoll failure " << std::endl;
+            break;
 
         }
 
-        work(events,ret,epoll_fd,fd);
+        for(int i = 0;i < ret;i++){
+            int sockfd = event_s[i].data.fd;
+            int connfd;
+            if( (event_s[i].events & EPOLLERR)  ||
+                (event_s[i].events & EPOLLHUP)  ||
+                (!(event_s[i].events & EPOLLIN))){
+                
+                std::cout << "error epoll " << std::endl;
+                close(event_s[i].data.fd);
+                continue;
 
-    }
+            }else if(sockfd == sock_fd){
+                
+                //Accept , return connfd;
+
+            
+                Epoll_add(epoll_fd,connfd,true);
+            }else if(event_s[i].events & EPOLLIN){
+            
+                //read
+            
+            }else if(event_s[i].events & EPOLLOUT){
+                
+                //write user buff; 
+                
+            }else{
+                
+
+            }
+        }
+
     
+    
+    }
+    close(sock_fd);
+    close(epoll_fd);
 
 
 }
 
+
+
+
+bool Epoll::Epoll_getMAX_NUM(){
+    
+    MAX_NUM = 100;
+    return true;
+
+}
 
 
