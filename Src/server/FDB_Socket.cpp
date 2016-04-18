@@ -123,9 +123,9 @@ Socket::Socket(sa_family_t family,int listen_num){
     //Socket__(family,listen_num);
     if(bindAddress() && (sockfd_ > 0)){
         if(listen(listen_num)){
-            /*if(setnonblocking()){
+            if(setnonblocking()){
                 return;    
-            }*/
+            }
             
         }
     }
@@ -149,9 +149,32 @@ int Socket::do_accept(){
                     }
                 }   
             }
+            
+        }
+    }
+}
+
+
+bool Socket::test_accept(){
+    
+    //Accept user(sockfd_);
+    while(1){
+        
+        Accept user(sockfd_);
+        if(user.Accept_return()){
+            if(fork() == 0){
+                char buf[100];
+                for(;;){
+                    while(read(user.Accept_return(),buf,100) > 0){
+                        std::cout << buf << std::endl;
+                    }
+                }
+            }
         }
     }
 
 
 
 }
+
+
