@@ -155,9 +155,11 @@ bool Epoll::Epoll_wait(){
             
                 /*测试读取信息*/
                 char buf[1024];
+                std::cout << "get\n" << std::endl;
                 read(event_s[i].data.fd,buf,1024);
                 std::cout << buf << std::endl;
                 bzero(buf,1024);
+                Epoll_reset(connfd);
             
             }else if(event_s[i].events & EPOLLOUT){
                 
