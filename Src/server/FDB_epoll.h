@@ -22,6 +22,7 @@
 #include<stdlib.h>
 #include<sys/epoll.h>
 #include<time.h>
+#include"./FDB_accept.h"
 
 
 
@@ -30,9 +31,9 @@ class Epoll{
 
     public:
 
-        Epoll();
+        Epoll(int fd);
         ~Epoll();
-        bool Epoll_create();
+        bool Epoll_create(int fd);
         bool Epoll_add(int fd,bool enable_et,bool oneshot);
         bool Epoll_reset(int fd);
         bool Epoll_del(int fd);
@@ -42,6 +43,7 @@ class Epoll{
         bool Epoll_setMAX_NUM();
         bool Epoll_getMAX_NUM();    
         bool Epoll_create_events();    
+        bool Epoll_add_listen(int fd,bool enable_et);    
 
         void (*work)(int);
         void (*timer)(int);
@@ -53,7 +55,7 @@ class Epoll{
         int buf_SIZE;
         epoll_event *event_s;
         int sock_fd ;
-        std::mutex epoll_mutex;
+        //std::mutex epoll_mutex;
         
 };
 

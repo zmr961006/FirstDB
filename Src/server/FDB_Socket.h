@@ -19,6 +19,7 @@
 #include<sys/socket.h>
 #include<arpa/inet.h>
 
+#include"./FDB_accept.h"
 
 
 
@@ -48,7 +49,7 @@ class Socket{
         int  setnonblocking();                             /*设置非阻塞套接字*/
 
         bool setKeepAlive(bool on);                        /*设置保活机制*/
-
+        bool test_accept();
 
     private:
         int sockfd_ ;
