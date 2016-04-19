@@ -28,6 +28,19 @@ my_intset::my_intset()
 
 }
 
+//析构函数
+my_intset::~my_intset()
+{
+    for(auto i = v1.end()-v1.begin(); i > 0; i--){
+        v1.push_back( *(v1.begin()+i) );
+    }
+    for(auto i = v2.end()-v2.begin(); i > 0; i--){
+        v2.push_back( *(v2.begin()+i) );
+    }
+    for(auto i = v3.end()-v3.begin(); i > 0; i--){
+        v3.push_back( *(v3.begin()+i) );
+    }
+}
 //一组重载的向集合插入元素函数
 void my_intset::my_insert(short s)
 {
