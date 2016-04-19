@@ -22,7 +22,7 @@ public:
     bool intset_delete(long s);
 
     my_intset();                    //构造函数
-
+    ~my_intset();                   //析构函数
 
     void print_int();              //输出vector函数
     int get_size();               //返回集合中元素的个数
