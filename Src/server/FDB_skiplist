@@ -1,24 +1,39 @@
-/*************************************************************************
-	> File Name: 1.h
-	> Author:Eval 
-	> Mail:1040460587@qq.com 
-	> Created Time: 2016年04月16日 星期六 12时55分55秒
- ************************************************************************/
 
 #include<stdio.h>  
-#include<stdlib.h>  
-#include"SkipNode.h"
+ #include<stdlib.h>  
+        
+    #define MAX_LEVEL 10 //最大层数 
+    #define true 1
+    #define false 0
+ 
+    //节点  
+    /*typedef  struct nodeStructure  
+    {  
+        int key;    //key表示第几个结点
+        int value;  //val表示结点里面的值
+        struct nodeStructure *forward[1];  
+    }nodeStructure;  */
 
-#define MAX_LEVEL 10 //最大层数 
-#define true 1
-#define false 0
+//结点
+template<class E>
+class nodeStructure
+{
+public:
+    E key;
+    E value;
+    nodeStructure<E>* forward[1];
+};
 
-#ifndef _1_H
-#define _1_H
-#endif
+
+    //跳表  
+    /*typedef  struct skiplist  
+    {  
+        int level;  
+        nodeStructure *header;  
+    }skiplist;  */
 
 
-//跳跃表类
+//跳表
 template<class E>
 class skiplist
 {
@@ -206,3 +221,25 @@ void skiplist<E>::printSL(skiplist<E> *sl)
     }  
     printf("\n");
 }  
+    int main()  
+    {  
+        skiplist<int> A;
+        skiplist<int > *sl=A.createSkiplist();  
+        for(int i=1;i<=19;i++)  
+        {  
+            A.insert(sl,i,i*2);  
+        }  
+        A.printSL(sl);  
+        printf("\n\n");
+        //搜索  
+        int i=A.search(sl,4);  
+        printf("i=%d\n",i);  
+        //删除  
+        int b=A.deleteSL(sl,4);  
+        if(b)  
+            printf("删除成功\n");  
+        A.printSL(sl);  
+        return 0;  
+    }  
+
+

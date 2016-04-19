@@ -1,26 +1,10 @@
 /*************************************************************************
-	> File Name: FDB_timer.h
+	> File Name: FDB_buffer.h
 	> Author: 
 	> Mail: 
-	> Created Time: 2016年04月12日 星期二 14时33分16秒
+	> Created Time: 2016年04月17日 星期日 19时15分32秒
  ************************************************************************/
 
-#ifndef _FDB_TIMER_H
-#define _FDB_TIMER_H
-
-
-class timer{
-
-
-
-
-
-
-
-}
-
-
-
-
-
+#ifndef _FDB_BUFFER_H
+#define _FDB_BUFFER_H
 #endif

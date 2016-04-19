@@ -7,16 +7,20 @@
 
 #include<iostream>
 #include"./FDB_epoll.h"
+#include"./FDB_accept.h"
 
 using namespace std;
 
 
-Epoll::Epoll(){
+Epoll::Epoll(int fd){
 
     epoll_fd = epoll_create1(0);
+    Epoll_create_events();
     if(epoll_fd == -1){
         std::cout << "error" << std::endl;
     }
+    //std::cout << epoll_fd << std::endl;
+    sock_fd = fd ;
 
 }
 
@@ -47,6 +51,20 @@ bool Epoll::Epoll_del(int fd){
     epoll_ctl(epoll_fd,EPOLL_CTL_DEL,fd,&event);
 
 }
+
+bool Epoll::Epoll_add_listen(int fd , bool enable_et){
+
+    epoll_event event;
+    event.data.fd = fd;
+    event.events = EPOLLIN;
+    if(enable_et){
+        event.events |= EPOLLET;
+    }
+      
+    epoll_ctl(epoll_fd,EPOLL_CTL_ADD,fd,&event);
+    return true;
+}
+
 
 
 
@@ -100,11 +118,14 @@ Epoll::~Epoll(){
 bool Epoll::Epoll_wait(){
 
     bool do_work = true;
+    bool test;
+    test = Epoll_add_listen(sock_fd,false);
+    std::cout << test << std::endl;
 
     while(do_work){
-        
+        //std::cout << "AAA" << std::endl;
         int ret = epoll_wait(epoll_fd,event_s,MAX_NUM,-1);
-
+        std::cout << "sssss" << std::endl;
         if(ret < 0){
             
             std::cout << "epoll failure " << std::endl;
@@ -125,13 +146,22 @@ bool Epoll::Epoll_wait(){
 
             }else if(sockfd == sock_fd){
                 
-                //Accept , return connfd;
+                Accept connt(sockfd);
 
-            
-                Epoll_add(epoll_fd,connfd,true);
+                connfd = connt.Accept_return();
+
+                Epoll_add(connfd,true,false);
+
             }else if(event_s[i].events & EPOLLIN){
             
-                //read
+                /*测试读取信息*/
+                char buf[1024];
+                std::cout << "get\n" << std::endl;
+                std::cout << "id = events " << event_s[i].data.fd << " " << std::endl;
+                read(event_s[i].data.fd,buf,1024);
+                std::cout << buf << std::endl;
+                bzero(buf,1024);
+                Epoll_reset(event_s[i].data.fd);
             
             }else if(event_s[i].events & EPOLLOUT){
                 
@@ -139,7 +169,7 @@ bool Epoll::Epoll_wait(){
                 
             }else{
                 
-
+                //anything else
             }
         }
 
