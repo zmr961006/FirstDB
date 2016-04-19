@@ -16,7 +16,7 @@ template <typename T>
 class FDB_Stack
 {
 private:
-    stack<T> data;		//栈数据对象
+    std::stack<T> data;		//栈数据对象
     unsigned int size; 		//栈中对象的个数
     std::mutex stack_mutex; 	//栈类中的锁
 public:
@@ -62,6 +62,11 @@ void FDB_Stack<T>::FDB_Stack_pop()
     {
         if (stack_mutex.try_lock())
         {   
+            if (size == 0)
+            {
+            stack_mutex.unlock();
+                break;
+            }
             data.pop();
             size--;
             stack_mutex.unlock();
