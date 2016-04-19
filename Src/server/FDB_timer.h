@@ -7,4 +7,20 @@
 
 #ifndef _FDB_TIMER_H
 #define _FDB_TIMER_H
+
+
+class timer{
+
+
+
+
+
+
+
+}
+
+
+
+
+
 #endif

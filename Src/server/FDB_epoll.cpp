@@ -62,7 +62,7 @@ bool Epoll::Epoll_add_listen(int fd , bool enable_et){
     }
       
     epoll_ctl(epoll_fd,EPOLL_CTL_ADD,fd,&event);
-    return false;
+    return true;
 }
 
 
@@ -145,21 +145,23 @@ bool Epoll::Epoll_wait(){
                 continue;
 
             }else if(sockfd == sock_fd){
-                std::cout << "HHHHHHHH" << std::endl;
-                std::cout << "sockfd" << std::endl;
+                
                 Accept connt(sockfd);
+
                 connfd = connt.Accept_return();
-                Epoll_add(connfd,true,true);
+
+                Epoll_add(connfd,true,false);
 
             }else if(event_s[i].events & EPOLLIN){
             
                 /*测试读取信息*/
                 char buf[1024];
                 std::cout << "get\n" << std::endl;
+                std::cout << "id = events " << event_s[i].data.fd << " " << std::endl;
                 read(event_s[i].data.fd,buf,1024);
                 std::cout << buf << std::endl;
                 bzero(buf,1024);
-                Epoll_reset(connfd);
+                Epoll_reset(event_s[i].data.fd);
             
             }else if(event_s[i].events & EPOLLOUT){
                 
@@ -167,7 +169,7 @@ bool Epoll::Epoll_wait(){
                 
             }else{
                 
-
+                //anything else
             }
         }
 
