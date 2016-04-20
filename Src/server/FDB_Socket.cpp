@@ -114,7 +114,7 @@ Socket::Socket(sa_family_t family,int listen_num){
 
     Socket__(family,listen_num);
     //setReuseAddr(true);
-    //setReusePort(true);
+    setReusePort(true);
     bzero(&address,sizeof(address));
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = htonl(INADDR_ANY);

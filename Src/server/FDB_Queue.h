@@ -16,7 +16,7 @@ template <typename T>
 class FDB_Queue
 {
 private:
-    queue<T> data;              //对列数据对象
+    std::queue<T> data;              //对列数据对象
     std::mutex queue_mutex;     //对列类中的锁
     unsigned int size;          //对列中对象的个数
 public:
@@ -63,6 +63,11 @@ void FDB_Queue<T>::FDB_Queue_pop()
     {
         if (queue_mutex.try_lock())
         {   
+            if (size == 0)
+            {
+                queue_mutex.unlock();
+                break;
+            }
             data.pop();
             size--;
             queue_mutex.unlock();
@@ -80,7 +85,7 @@ T FDB_Queue<T>::FDB_Queue_front()
         {
             T tr = data.front();
             queue_mutex.unlock();
-            return tr
+            return tr;
         }
     }
 }
