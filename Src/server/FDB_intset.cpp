@@ -6,20 +6,10 @@
  ************************************************************************/
 
 
-#include<iostream>
-#include<vector>
-#include<functional>
-#include<cstdio>
-#include<algorithm>
-
-
-#define MY_SHORT 1
-#define MY_INT 2
-#define MY_LONG 3
-
 using namespace std;
 #include"FDB_intset.h"
-//构造函数
+
+/*构造函数*/
 my_intset::my_intset()
 {
     tra = MY_SHORT;
@@ -28,7 +18,7 @@ my_intset::my_intset()
 
 }
 
-//析构函数
+/*析构函数*/
 my_intset::~my_intset()
 {
     for(auto i = v1.end()-v1.begin(); i > 0; i--){
@@ -41,7 +31,7 @@ my_intset::~my_intset()
         v3.push_back( *(v3.begin()+i) );
     }
 }
-//一组重载的向集合插入元素函数
+/*一组重载的向集合插入元素函数*/
 void my_intset::my_insert(short s)
 {
     if(tra == MY_SHORT){
@@ -60,7 +50,7 @@ void my_intset::my_insert(int s)
             v2.push_back(i);
         }
         v2.push_back(s);
-        tra = MY_INT;                 //由short类型转为int类型，改变tra值为MY_INT
+        tra = MY_INT;                 /*由short类型转为int类型，改变tra值为MY_INT*/
     }else if(tra == MY_INT){
         v2.push_back(s);
     }else if(tra == MY_LONG){
@@ -79,12 +69,12 @@ void my_intset::my_insert(long s)
         }
     }
 
-    tra = MY_LONG;           //一旦有一个long类型值插入集合就必须为long类型，改变tra值为MY_LONG
+    tra = MY_LONG;           /*一旦有一个long类型值插入集合就必须为long类型，改变tra值为MY_LONG */
     v3.push_back(s);
 }
 
 
-//输出集合函数
+/*输出集合函数*/
 void my_intset::print_int()
 {
     if(tra == MY_SHORT){
@@ -105,7 +95,7 @@ void my_intset::print_int()
     
 }
 
-//对集合中元素按照升序排序
+/*对集合中元素按照升序排序*/
 int my_intset::my_less_sort()
 {
     if(tra == MY_SHORT){
@@ -121,7 +111,7 @@ int my_intset::my_less_sort()
     return 0;
 }
 
-//对集合中元素按照降序排序
+/*对集合中元素按照降序排序*/
 int my_intset::my_greater_sort()
 {
     if(tra == MY_SHORT){
@@ -138,7 +128,7 @@ int my_intset::my_greater_sort()
 }
 
 
-//返回整数集合包含的元素个数
+/*返回整数集合包含的元素个数*/
 int my_intset::get_size(){
     if(tra == MY_SHORT){
         counts = v1.size();
@@ -152,7 +142,7 @@ int my_intset::get_size(){
     return counts;
 }
 
-//返回整数集合占用的内存字节数
+/*返回整数集合占用的内存字节数*/
 int my_intset::get_bit_size(){
     if(tra == MY_SHORT){
         return (counts*2);
@@ -166,7 +156,7 @@ int my_intset::get_bit_size(){
 }
 
 
-//一组重载的从整数集合中移除给定元素函数
+/*一组重载的从整数集合中移除给定元素函数*/
 bool my_intset::intset_delete(short s){
 
     if (tra != MY_SHORT){
@@ -210,7 +200,7 @@ bool my_intset::intset_delete(long s){
     }
 }
 
-//一组重载的在vector中查找指定的元素
+/*一组重载的在vector中查找指定的元素*/
 bool my_intset::find_intset(short s)
 {
 
@@ -225,8 +215,8 @@ bool my_intset::find_intset(short s)
     }
 
     this->my_less_sort();
-    //v1.my_less_sort();           //先给集合按升序排序
-    int found = 0;                    //二分法（又叫折半查找法）查找数组a  
+    //v1.my_less_sort();           /*先给集合按升序排序*/
+    int found = 0;                 /*二分法（又叫折半查找法）查找数组a */ 
     int mid;
     int low = 0;  
     int high = v1.size();  
@@ -242,13 +232,13 @@ bool my_intset::find_intset(short s)
         }  
 
         if(*i < s){
-            low = mid+1;          //mid往右移动  
+            low = mid+1;          /*mid往右移动*/  
         }else{
-            high = mid-1;         //mid往左移动右逢源  
+            high = mid-1;         /*mid往左移动右逢源*/ 
         }  
 
     }
-    if (found)              //fond的初始值为0，一旦找到，found变量被置1,引发此条件语句，从而输出找到的结果，否则告知用户找不到。
+    if (found)              /*fond的初始值为0，一旦找到，found变量被置1,引发此条件语句，从而输出找到的结果，否则告知用户找不到。*/
        return true;
     
     std::cout << "查找的元素不存在" << std::endl;
@@ -270,9 +260,9 @@ bool my_intset::find_intset(int s)
         return false;
     }
 
-    this->my_less_sort();           //先给集合按升序排序
+    this->my_less_sort();           /*先给集合按升序排序*/
 
-    int found = 0;                    //二分法（又叫折半查找法）查找数组a  
+    int found = 0;                    /*二分法（又叫折半查找法）查找数组a  */
     int mid;
     int low = 0;  
     int high = v2.size();  
@@ -288,13 +278,13 @@ bool my_intset::find_intset(int s)
         }  
 
         if(*i < s){
-            low = mid+1;          //mid往右移动  
+            low = mid+1;          /* mid往右移动*/ 
         }else{
-            high = mid-1;         //mid往左移动右逢源  
+            high = mid-1;         /* mid往左移动右逢源 */ 
         }  
 
     }
-    if (found)              //fond的初始值为0，一旦找到，found变量被置1,引发此条件语句，从而输出找到的结果，否则告知用户找不到。
+    if (found)              /* fond的初始值为0，一旦找到，found变量被置1,引发此条件语句，从而输出找到的结果，否则告知用户找不到。*/
        return true;
     
     std::cout << "查找的元素不存在" << std::endl;
@@ -310,8 +300,8 @@ bool my_intset::find_intset(long s)
         return false;
     }
 
-    this->my_less_sort();           //先给集合按升序排序
-    int found = 0;                    //二分法（又叫折半查找法）查找数组a  
+    this->my_less_sort();           /*先给集合按升序排序*/
+    int found = 0;                    /* 二分法（又叫折半查找法）查找数组a  */
     int mid;
     int low = 0;  
     int high = v3.size();  
@@ -327,46 +317,16 @@ bool my_intset::find_intset(long s)
         }  
 
         if(*i < s){
-            low = mid+1;          //mid往右移动  
+            low = mid+1;          /* mid往右移动 */ 
         }else{
-            high = mid-1;         //mid往左移动右逢源  
+            high = mid-1;         /* mid往左移动右逢源*/  
         }  
 
     }
-    if (found)              //fond的初始值为0，一旦找到，found变量被置1,引发此条件语句，从而输出找到的结果，否则告知用户找不到。
+    if (found)              /* fond的初始值为0，一旦找到，found变量被置1,引发此条件语句，从而输出找到的结果，否则告知用户找不到。*/
        return true;
     
     std::cout << "查找的元素不存在" << std::endl;
     return false;
 }
 
-
-/*
-int main(int argc,char *argv[])
-{
-    short i = 3;
-    int j = 1;
-    long k = 2;
-
-    long y = 4;
-    my_intset v;
-    v.my_insert(i);
-    v.my_insert(j);
-    v.print_int();
-
-    v.my_insert(k);
-    v.my_insert(y);
-    //v.my_less_sort();
-    //v.my_greater_sort();
-
-    std::cout << "hello" << std::endl;
-    //v.print_int();
-  v.intset_delete(k);
-    v.print_int();
-
-    std::cout << v.find_intset(i) << std::endl;
-    std::cout << v.find_intset(j) << std::endl;
-    std::cout << v.find_intset(k) << std::endl;
-
-    return 0;
-}*/
