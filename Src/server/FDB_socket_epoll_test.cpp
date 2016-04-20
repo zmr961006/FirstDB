@@ -15,14 +15,41 @@
 
 #include"./FDB_epoll.cpp"
 #include"./FDB_epoll.h"
-int main(){
+#include<thread>
 
-    Socket a(AF_INET,10);
-    std::cout << a.fd()<< std::endl;
-    int fd = a.fd();
+static int fd ;
+void func(){
+    std::cout << "AAAAAAAAAAAAAA" << std::endl;
+    Epoll epo(fd);
+    epo.Epoll_wait();
+}
+
+void funb(){
+
+    std::cout << "GGGGGGGGGGGGG" << std::endl;
     Epoll epo(fd);
     epo.Epoll_wait();
 
 
+}
+
+
+
+//static int fd ;
+
+int main(){
+
+    Socket a(AF_INET,10);
+    std::cout << a.fd()<< std::endl;
+    fd = a.fd();
+    /*Epoll epo(fd);
+    epo.Epoll_wait();*/
+    thread t1(func);
+    thread t2(funb);   
+    //thread t2(func);
+    //thread t3(func);
+    t1.join();
+    t2.join();
+    //t3.join();
 }
 
