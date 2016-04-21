@@ -9,39 +9,30 @@
 #define _FDB_USER_H
 
 
-class User_id{
-    
-    public:
-        
-        User_id();
-        User_id(int sockaddr,int connfd ,struct sockaddr & u);
-        int User_return_conn();
-        
-    private:
-        
-        int sockfd_;
-        int connfd_;
-        int hash;
-        struct sockaddr user;
-        
-};
-
-
-
 class User{
 
     public:
             
         User();    
+<<<<<<< HEAD
         
         User_add();
         User_del();
         User_mod();
         
         
+=======
+
+        void User_add(const Accept &rhs);
+        bool User_del(int rhs_fd);
+        //bool User_mod();
+	bool User_find(int rhs_fd);
+ 	Accept User_return(int rhs_fd);
+    
+>>>>>>> ebd6387166589780ff449f4ce22fd164972a8445
     private:
         
-        std::list<User_id>  User_data;
+        std::vector<Accept>  User_data;
             
 
 };

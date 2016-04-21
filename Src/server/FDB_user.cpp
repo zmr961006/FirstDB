@@ -6,5 +6,70 @@
  ************************************************************************/
 
 #include<iostream>
+#include<vector>
+#include"./FDB_user.h"
+#include"./FDB_accept.h"
 using namespace std;
 
+User::User()
+{
+
+}
+
+void User::User_add(const Accept &rhs)
+{
+    User_data.push_back(rhs);
+}
+
+bool User::User_del(int rhs_fd)
+{
+    for (auto item = User_data.begin(); item != User_data.end(); item ++)
+    {
+        if ((*item).Accept_return() == rhs_fd)
+        {
+            User_data.erase(item);
+            return true;
+        }
+    }
+    
+    return false;
+}
+
+/*bool User::user_mod(const Accept &rhs)
+{
+    for (auto item = User_data.begin(); item != User_data.end(); item ++)
+    {
+        if ((*item).Accept_return() == rhs.Accept_return())
+        {
+            User_data.erase(item);
+            User_data(rhs);
+            return true;
+        }
+    }
+    
+    return false;
+}*/
+
+bool User::User_find(int rhs_fd)
+{
+    for (auto item : User_data)
+    {
+        if (rhs_fd == item.Accept_return())
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+Accept User::User_return(int rhs_fd)
+{
+    for (auto item : User_data)
+    {
+        if (rhs_fd == item.Accept_return())
+        {
+            return item;
+        }
+    }
+}
