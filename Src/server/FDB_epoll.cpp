@@ -13,7 +13,7 @@
 using namespace std;
 
 
-Epoll::Epoll(int fd){
+Epoll::Epoll(int fd){                /*EPoll构造函数*/
 
     epoll_fd = epoll_create1(0);
     Epoll_create_events();
@@ -26,7 +26,7 @@ Epoll::Epoll(int fd){
 }
 
 
-bool Epoll::Epoll_setnonblock(int fd){
+bool Epoll::Epoll_setnonblock(int fd){          /*设置非阻塞*/
     
     int old_option = fcntl(fd,F_GETFL);
     int new_option = old_option | O_NONBLOCK;
@@ -35,7 +35,7 @@ bool Epoll::Epoll_setnonblock(int fd){
 
 } 
 
-bool Epoll::Epoll_reset(int fd){
+bool Epoll::Epoll_reset(int fd){                /*重新设置LIN LET SHOT */ 
 
     epoll_event event;
     event.data.fd = fd;
@@ -45,7 +45,7 @@ bool Epoll::Epoll_reset(int fd){
 }
 
 
-bool Epoll::Epoll_del(int fd){
+bool Epoll::Epoll_del(int fd){                  /*删除套接字*/
 
     epoll_event event;
     event.data.fd = fd;
@@ -53,7 +53,7 @@ bool Epoll::Epoll_del(int fd){
 
 }
 
-bool Epoll::Epoll_add_listen(int fd , bool enable_et){
+bool Epoll::Epoll_add_listen(int fd , bool enable_et){     /*添加监听套接字*/
 
     epoll_event event;
     event.data.fd = fd;
@@ -71,7 +71,7 @@ bool Epoll::Epoll_add_listen(int fd , bool enable_et){
 
 
 
-bool Epoll::Epoll_add(int fd,bool enable_et,bool oneshot){
+bool Epoll::Epoll_add(int fd,bool enable_et,bool oneshot){     /*添加fd 到Epoll*/
     
     epoll_event event;
     event.data.fd = fd;
@@ -93,7 +93,7 @@ bool Epoll::Epoll_add(int fd,bool enable_et,bool oneshot){
 }
 
 
-bool Epoll::Epoll_create_events(){
+bool Epoll::Epoll_create_events(){                    /*建立Epoll 文件描述符集合*/
 
     event_s = new epoll_event[MAX_NUM];
     if(!event_s){
@@ -116,7 +116,7 @@ Epoll::~Epoll(){
 }
 
 
-bool Epoll::Epoll_wait(){
+bool Epoll::Epoll_wait(){                                 /*epoll 核心wait*/
 
     bool do_work = true;
     bool test;
@@ -187,7 +187,7 @@ bool Epoll::Epoll_wait(){
 
 
 
-bool Epoll::Epoll_getMAX_NUM(){
+bool Epoll::Epoll_getMAX_NUM(){                     /*epoll 最大监听套接字个数*/
     
     MAX_NUM = 100;
     return true;
