@@ -19,25 +19,31 @@ int main(int argc,char *argv[])
     long k = 2;
 
     long y = 4;
-    my_intset v;
-    v.my_insert(i);
+
+    std::string s = "my name is hxj";
+    std::string e = "my";
+
+    my_intset v;         /*定义测试对象*/
+    v.my_insert(i);      /*向集合里面插入元素*/
     v.my_insert(j);
-    v.print_int();
+
+    v.print_int();       /*输出集合中的元素*/
 
     v.my_insert(k);
     v.my_insert(y);
-    //v.my_less_sort();
-    //v.my_greater_sort();
+    v.my_insert(s);
+    v.my_insert(e);
+
+
+    v.my_less_sort();    /*给集合中的元素按升序整体排序*/
+
+    /*v.my_greater_sort();*/
 
     std::cout << "hello" << std::endl;
-    //v.print_int();
-  v.intset_delete(k);
-    v.print_int();
-/*
-    std::cout << v.find_intset(i) << std::endl;
-    std::cout << v.find_intset(j) << std::endl;
-    std::cout << v.find_intset(k) << std::endl;
+    /*v.intset_delete(s);*/
 
-*/
+    v.print_int();
+    /*std::cout << v.find_intset(s) << std::endl;*/
+    /*std::cout << v.get_bit_size() << std::endl;*/
     return 0;
 }
