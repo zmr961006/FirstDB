@@ -8,6 +8,17 @@
 #ifndef _FDB_IO_H
 #define _FDB_IO_H
 
+int Write();
+
+
+int Rread();
+
+
+int Open();
+
+
+int Close();
+
 
 
 
