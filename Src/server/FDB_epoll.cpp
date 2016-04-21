@@ -195,3 +195,13 @@ bool Epoll::Epoll_getMAX_NUM(){
 }
 
 
+
+/*void Epoll::Epoll_do(){
+    
+    Epoll epo(sock_fd);
+    epo.Epoll_wait();
+    
+
+}*/
+
+

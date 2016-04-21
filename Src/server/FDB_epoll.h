@@ -44,7 +44,8 @@ class Epoll{
         bool Epoll_getMAX_NUM();    
         bool Epoll_create_events();    
         bool Epoll_add_listen(int fd,bool enable_et);    
-
+        bool Epoll_do();
+        
         void (*work)(int);
         void (*timer)(int);
 

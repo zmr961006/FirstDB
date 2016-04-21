@@ -33,12 +33,12 @@ class User{
     public:
             
         User();    
-
+        
         User_add();
         User_del();
         User_mod();
-
-    
+        
+        
     private:
         
         std::list<User_id>  User_data;

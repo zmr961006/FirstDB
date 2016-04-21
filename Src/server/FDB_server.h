@@ -14,28 +14,32 @@
 #include"./FDB_accept.h"
 #include"./FDB_buffer.h"
 #include"./FDB_epoll.h"
-
+#include<thread>
 
 
 class server{
 
     public:
             
-        server(int status,int connfd_num);
+        server(int status,int connfd_num,int server_s);
         bool server_start();
         bool server_end();
         bool server_change(int status);
         int server_get_status();
-
+        int server_fd();
+        //static void server_work();
+    
     private:
 
         int server_status;
         int connfd_num   ;
         int change       ;
-
+        int sockfd       ;
+        int server_threads;
 
 };
 
+static void server_work(int fd);
 
 
 

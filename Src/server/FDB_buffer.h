@@ -15,7 +15,7 @@ class Buffer{
 
     public:
             
-        Buffer();
+        Buffer() = default;
         Buffer(int read_l,int write_l);
         ~Buffer() = default;
         

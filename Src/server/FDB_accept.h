@@ -39,7 +39,7 @@ class Accept{
         struct sockaddr_in client_addr;
         socklen_t client_addr_length = sizeof(client_addr);
            
-        buffer connfd_buf;
+        Buffer connfd_buf;
             
 
 };
