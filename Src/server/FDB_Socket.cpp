@@ -21,13 +21,13 @@ typedef struct sockaddr SA;
 
 
 
-Socket::~Socket(){
+Socket::~Socket(){                      
 
     ::close(sockfd_);
 
 }
 
-bool Socket::Socket__(sa_family_t family,int listen_num){
+bool Socket::Socket__(sa_family_t family,int listen_num){    /*创建一个Socket*/
     
     backlog = listen_num;
     sockfd_ = socket(family,SOCK_STREAM,0);
@@ -37,7 +37,7 @@ bool Socket::Socket__(sa_family_t family,int listen_num){
 
 }
 
-int Socket::setnonblocking(){
+int Socket::setnonblocking(){              /*设置非阻塞*/
     
     int old_option = fcntl(sockfd_,F_GETFL);
     int new_option = old_option | O_NONBLOCK;
@@ -47,7 +47,7 @@ int Socket::setnonblocking(){
 }
 
 
-bool Socket::bindAddress(){
+bool Socket::bindAddress(){                /*绑定IP 端口*/
     
     //int len = sizeof(*myaddr);
     std::cout << "sockfd = " << sockfd_ << " len = " << sizeof(address) << std::endl;
@@ -62,7 +62,7 @@ bool Socket::bindAddress(){
 }
 
 
-bool Socket::listen(int backlog){
+bool Socket::listen(int backlog){       /*监听最大链接数*/
     
     int ret ;
     ret = ::listen(sockfd_,backlog);
@@ -75,7 +75,7 @@ bool Socket::listen(int backlog){
 }
 
 
-bool Socket::setReuseAddr(bool on){
+bool Socket::setReuseAddr(bool on){      /*设置reuseaddr 标志*/
     
     int optval = on ? 1 : 0;
     ::setsockopt(sockfd_,SOL_SOCKET,SO_REUSEADDR,&optval,static_cast<socklen_t>(sizeof optval));
@@ -86,7 +86,7 @@ bool Socket::setReuseAddr(bool on){
 
 
 
-bool Socket::setReusePort(bool on){
+bool Socket::setReusePort(bool on){      /*设置reuseport*/
 
     int optval = on ? 1 : 0;
     ::setsockopt(sockfd_,SOL_SOCKET,SO_REUSEPORT,&optval,static_cast<socklen_t>(sizeof optval));
@@ -98,7 +98,7 @@ bool Socket::setReusePort(bool on){
 
 
 
-bool Socket::setKeepAlive(bool on){
+bool Socket::setKeepAlive(bool on){      /*设置保活*/
     
     int optval = on ? 1 : 0;
     ::setsockopt(sockfd_,SOL_SOCKET,SO_KEEPALIVE,&optval,static_cast<socklen_t>(sizeof optval));

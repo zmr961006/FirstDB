@@ -19,7 +19,7 @@
 #include<fcntl.h>
 #include<stdlib.h>
 #include<sys/epoll.h>
-
+#include"./FDB_buffer.h"
 
 
 
@@ -39,8 +39,8 @@ class Accept{
         struct sockaddr_in client_addr;
         socklen_t client_addr_length = sizeof(client_addr);
            
-    
-
+        Buffer connfd_buf;
+            
 
 };
 

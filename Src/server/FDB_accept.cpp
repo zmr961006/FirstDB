@@ -7,6 +7,7 @@
 
 #include<iostream>
 #include"./FDB_accept.h"
+#include"./FDB_buffer.h"
 
 
 Accept::Accept(int sockfd){
