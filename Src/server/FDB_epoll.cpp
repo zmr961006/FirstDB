@@ -8,6 +8,7 @@
 #include<iostream>
 #include"./FDB_epoll.h"
 #include"./FDB_accept.h"
+#include<thread>
 
 using namespace std;
 
@@ -156,6 +157,7 @@ bool Epoll::Epoll_wait(){
             
                 /*测试读取信息*/
                 char buf[1024];
+                std::cout <<"ths id : " <<std::this_thread::get_id() << std::endl;
                 std::cout << "get\n" << std::endl;
                 std::cout << "id = events " << event_s[i].data.fd << " " << std::endl;
                 read(event_s[i].data.fd,buf,1024);
