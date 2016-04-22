@@ -14,16 +14,19 @@
 
 class User
 {
-private: 
+    private: 
+
         std::vector<Accept>  User_data;
-public:
+
+    public:
         User();    
 
         void User_add(Accept rhs);
         bool User_del(int rhs_fd);
-        //bool User_mod();
-	bool User_find(int rhs_fd);
- 	Accept User_return(int rhs_fd);
+        bool User_mod();
+	    bool User_find(int rhs_fd);
+        bool User_show();
+ 	    Accept User_return(int rhs_fd);
 };
 
 

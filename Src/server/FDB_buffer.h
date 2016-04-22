@@ -19,11 +19,13 @@ class Buffer{
         Buffer(int read_l,int write_l);
         ~Buffer() = default;
         
-        int read_buff(int length);
+        int connfd_read(char *str);    
+
         int return_read_length();
         int re_read_flash();
             
-        int write_buff(int length);
+        int connfd_write(char *str);    
+
         int return_write_length();
         int re_write_flash();
         

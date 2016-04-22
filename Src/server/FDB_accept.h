@@ -30,6 +30,8 @@ class Accept{
         Accept(int sockfd);
         ~Accept()= default;
         int Accept_return();
+        int Accept_Write(char * str);
+        int Accept_Read(char * str);
 
 
     private:
@@ -37,8 +39,7 @@ class Accept{
         int sock_fd;
         int id     ;
         struct sockaddr_in client_addr;
-        socklen_t client_addr_length = sizeof(client_addr);
-           
+        socklen_t client_addr_length = sizeof(client_addr);  
         Buffer connfd_buf;
             
 

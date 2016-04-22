@@ -12,13 +12,13 @@
 #include<thread>
 #include"./FDB_buffer.h"
 
-//static User user;
+User user;
 
 
 int main(){
 
     server DB(1,100,2);
     DB.server_start();
-
+    
 
 }
