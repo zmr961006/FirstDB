@@ -12,6 +12,9 @@
 #include<thread>
 #include"./FDB_buffer.h"
 
+//static User user;
+
+
 int main(){
 
     server DB(1,100,2);

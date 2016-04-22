@@ -8,10 +8,11 @@
 #include<iostream>
 #include"./FDB_epoll.h"
 #include"./FDB_accept.h"
+
 #include<thread>
 
 using namespace std;
-
+//extern User user;
 
 Epoll::Epoll(int fd){                /*EPoll构造函数*/
 
@@ -148,9 +149,9 @@ bool Epoll::Epoll_wait(){                                 /*epoll 核心wait*/
             }else if(sockfd == sock_fd){
                 
                 Accept connt(sockfd);
-
+                //Accept *connt = new Accept(sockfd);
                 connfd = connt.Accept_return();
-
+                //user.User_add(connt);   
                 Epoll_add(connfd,true,false);
 
             }else if(event_s[i].events & EPOLLIN){
