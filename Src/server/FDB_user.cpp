@@ -16,7 +16,7 @@ User::User()
 
 }
 
-void User::User_add(const Accept &rhs)
+void User::User_add( Accept rhs)
 {
     User_data.push_back(rhs);
 }
@@ -35,7 +35,7 @@ bool User::User_del(int rhs_fd)
     return false;
 }
 
-/*bool User::user_mod(const Accept &rhs)
+/*bool User::user_mod(Accept rhs)
 {
     for (auto item = User_data.begin(); item != User_data.end(); item ++)
     {
@@ -52,13 +52,16 @@ bool User::User_del(int rhs_fd)
 
 bool User::User_find(int rhs_fd)
 {
+int size = 0;
     for (auto item : User_data)
     {
-        if (rhs_fd == item.Accept_return())
+size++;
+        /*if (rhs_fd == item.Accept_return())
         {
             return true;
-        }
+        }*/
     }
+std::cout << size << std::endl;
 
     return false;
 }
