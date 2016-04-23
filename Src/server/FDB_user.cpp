@@ -8,9 +8,6 @@
 #include<iostream>
 #include<vector>
 #include"./FDB_user.h"
-#include"./FDB_accept.h"
-using namespace std;
-
 User::User()
 {
 

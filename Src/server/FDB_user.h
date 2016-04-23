@@ -12,6 +12,8 @@
 #include<vector>
 #include"./FDB_accept.h"
 
+class Accept;
+
 class User
 {
     private: 

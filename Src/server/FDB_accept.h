@@ -19,25 +19,29 @@
 #include<fcntl.h>
 #include<stdlib.h>
 #include<sys/epoll.h>
+#include<cstring>
+#include<unistd.h>
 #include"./FDB_buffer.h"
+#include"./FDB_epoll.h"
 
-
+class Epoll;
 
 class Accept{
-
+    
     public:
         Accept()= default;
         Accept(int sockfd);
         ~Accept()= default;
         int Accept_return();
-        int Accept_Write(char * str);
+        int Accept_Write(std::string str);
         int Accept_Read(char * str);
-
+        int Accept_return_flag();
 
     private:
         int connfd;
         int sock_fd;
         int id     ;
+        int connfd_flag;
         struct sockaddr_in client_addr;
         socklen_t client_addr_length = sizeof(client_addr);  
         Buffer connfd_buf;
