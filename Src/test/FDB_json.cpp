@@ -9,9 +9,9 @@
 #include<stdlib.h>
 #include<string.h>
 /*Json 测试****************/
-/*
+
 int main(){
-     基础测试，测试用例来自LVH 学长博客
+    //基础测试，测试用例来自LVH 学长博客
     std::string test ="{\"id\":1,\"name\":\"kurama\"}";
     Json::Reader reader;
     Json::Value value ;
@@ -28,10 +28,10 @@ int main(){
     int mark = 1;
     std::string pwd("123456");
 
-    std::string test = "{\"id\":1,\"name\":\"kurama\"}";
+    //std::string test = "{\"id\":1,\"name\":\"kurama\"}";
 
-    Json::Reader reader;
-    Json::Value value;
+    //Json::Reader reader;
+    //Json::Value value;
 
     if(reader.parse(test,value)){
         
@@ -63,9 +63,7 @@ int main(){
 
     std::cout << " * "<<s << std::endl;
     
-    Json::Value js;
-    reader.parse(s,js);
-    std::cout << js["pass"].asString() << std::endl;
+
     
     std::cout << "ssssssssssssssss" << std::endl;
     Json::FastWriter writer;
@@ -81,4 +79,4 @@ int main(){
     return 0;
 
 }
-*/
+
