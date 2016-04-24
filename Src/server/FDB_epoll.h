@@ -23,7 +23,7 @@
 #include<sys/epoll.h>
 #include<time.h>
 #include"./FDB_accept.h"
-
+#include"./FDB_user.h"
 
 
 class Epoll{
@@ -45,7 +45,9 @@ class Epoll{
         bool Epoll_create_events();    
         bool Epoll_add_listen(int fd,bool enable_et);    
         bool Epoll_do();
-        
+        bool Epoll_set_EPOLLOUT(int fd);
+        int  Epoll_return_fd();
+
         void (*work)(int);
         void (*timer)(int);
 

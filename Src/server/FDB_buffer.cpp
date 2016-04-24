@@ -6,5 +6,19 @@
  ************************************************************************/
 
 #include<iostream>
-using namespace std;
+#include"./FDB_buffer.h"
+
+
+int Buffer::connfd_write(std::string str,int use_less,int length){
+
+    for(int i = length - use_less;i <= length;i++){
+
+        write_buff_.push_back(str[i]);
+
+    }
+
+    return use_less;
+
+}
+
 

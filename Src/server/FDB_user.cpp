@@ -8,9 +8,6 @@
 #include<iostream>
 #include<vector>
 #include"./FDB_user.h"
-#include"./FDB_accept.h"
-using namespace std;
-
 User::User()
 {
 
@@ -56,10 +53,10 @@ int size = 0;
     for (auto item : User_data)
     {
 size++;
-        /*if (rhs_fd == item.Accept_return())
+        if (rhs_fd == item.Accept_return())
         {
             return true;
-        }*/
+        }
     }
 std::cout << size << std::endl;
 
@@ -76,3 +73,19 @@ Accept User::User_return(int rhs_fd)
         }
     }
 }
+
+bool User::User_show(){
+
+    for(auto item : User_data){
+        
+        std::cout << item.Accept_return() << std::endl;
+
+    }
+
+
+
+}
+
+
+
+
