@@ -42,15 +42,15 @@ int Accept::Accept_return(){
 
 
 int Accept::Accept_Write(std::string str){        /*先写进connfd  将剩余的数据写入buffer ,注册connfd 可写*/
-    
-    
+
+    std::cout << ":::::::::::::::\n";
     int length = str.length();
     const char * buf = str.c_str() ;
 
     int use = write(connfd,buf,length);
     
     int use_less = length - use ;
-
+    std::cout << "already send use_less: " << use_less << std::endl;
     if(use_less > 0 ){
         
         connfd_buf.connfd_write(str,use_less,length);
