@@ -21,26 +21,26 @@ Key_val::Key_val(std::string key_name, void *obj, unsigned int hash, int type_da
     if (type_data == Hash_Map_NUM)
     {
         value = new Hash_map<std::string> ;
+        //Hash_map<string> hash_map;
+        //(*(Hash_map<string> *) value) = hash_map;
     }
     /*obj*/
 }
 
-/*Key_val::~Key_val()
-{
-    delete (void *)value;
-}*/
-
-void Key_val::Key_val_add(char *key_a, std::string value_b)
+Key_val::~Key_val()
 {
     if (type == Hash_Map_NUM)
     {
-        //Hash_map_add(Hash_node_pseudo<T> rhs);
-        String b = key_a;
-        Hash_node_pseudo<string> a(b, value_b);
-        //(*(Hash_map<string> *)value).Hash_map_add(*(Hash_node_pseudo<string>*)obj);
-        (*(Hash_map<string> *)value).Hash_map_add(a);
-        std::cout << "++++++++" << std::endl;
-        (*(Hash_map<string> *)value).Hash_map_show();
+        delete (Hash_map<std::string> *)value;
+    }
+}
+
+void Key_val::Key_val_add(void *obj)
+{
+    if (type == Hash_Map_NUM)
+    {
+        (*(Hash_map<string> *)value).Hash_map_add(*(Hash_node_pseudo<string>*)obj);
+        //(*(Hash_map<string> *)value).Hash_map_show();
     }
 }
 
