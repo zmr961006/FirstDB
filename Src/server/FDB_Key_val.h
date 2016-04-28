@@ -9,11 +9,12 @@
 #define _FDB_KEY_VAL_H
 
 #include<iostream>
+//#include"./FDB_Key_val.cpp"
 #include<string>
 #include"./FDB_Data_num.h"
-#include"./FDB_Hash_map.h"
-#include"./FDB_String.h"
-#include"./FDB_String.cpp"
+#include"../hash/FDB_Hash_map.h"
+#include"../hash/FDB_String.h"
+#include"../hash/FDB_String.cpp"
 #include<sys/time.h>
 
 #define TIMR_DONE -1
@@ -30,8 +31,8 @@ private:
 public:
     Key_val() = default;
     Key_val(std::string key_name, void *obj, unsigned int hash, int type_data, int elem);
-    ~Key_val() = default;
-    void Key_val_add(char * key_a, std::string value_b);
+    ~Key_val();
+    void Key_val_add(void *obj);
     void add_cut_time(long long time);
     void add_cut_ptime(long long time);
     void set_cut_time(long long time);
