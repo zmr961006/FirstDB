@@ -8,6 +8,10 @@
 #ifndef _FDB_IO_H
 #define _FDB_IO_H
 
+#include<iostream>
+#include<unistd.h>
+
+
 int Write();
 
 
@@ -17,7 +21,7 @@ int Rread();
 int Open();
 
 
-int Close();
+int Close(int fd);
 
 
 

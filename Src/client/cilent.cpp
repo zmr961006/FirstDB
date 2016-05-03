@@ -25,9 +25,12 @@ int str_cil(int sockfd){
     for(;;){
         scanf("%s",sendline);
         write(sockfd,sendline,1024);
-        //read(recvline,fd,1024);
-        //std::cout << recvline << std::endl;
+        while(read(sockfd,recvline,1024) > 0){  
+            std::cout << recvline << std::endl;
+            bzero(recvline,1024);
+        }
         bzero(sendline,1024);
+        bzero(recvline,1024);
     }
 
 

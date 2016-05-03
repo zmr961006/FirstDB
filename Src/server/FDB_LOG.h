@@ -57,4 +57,5 @@ public:
     std::vector<std::string> FDB_LOG_Read();  //读文件不用加锁，处于初始化作用
 };
 
+
 #endif

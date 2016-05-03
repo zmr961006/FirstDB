@@ -10,4 +10,9 @@
 
 
 
+int Close(int fd){
 
+
+    close(fd);
+
+}
