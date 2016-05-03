@@ -46,6 +46,8 @@ public:
     void Hash_map_show();                           //测试函数，打印哈希表的数据
     bool Hash_map_find(Hash_node_pseudo<T> rhs);    //测试rhs键值对是否存在在哈希表中
     T Hash_map_value(String rhs);                   //返回哈希表中键位rhs的键值对的值
+    std::vector<Hash_node_pseudo<T>> Hash_map_all();  //将所有结点保存到vector容器中返回
+    int Hash_map_size();                            //返回使用大小
 
     unsigned int GetKey_char(const void *key);      //hash函数
     unsigned int GetKey_int(unsigned int key);      //hash函数
@@ -295,6 +297,40 @@ T Hash_map<T>::Hash_map_value(String rhs)
         }
     }
 }
+
+template <typename T>
+std::vector<Hash_node_pseudo<T>> Hash_map<T>::Hash_map_all()
+{
+    std::vector<Hash_node_pseudo<T>> vec; 
+    
+    for (auto item : hash)
+    {
+        for (auto iterr : item)
+        {
+            vec.push_back( iterr );
+        }
+    }
+
+    if (rehashhidx != -1)
+    {
+        for (auto item : rehash)
+        {
+            for (auto iterr : item)
+            {
+                vec.push_back(iterr);
+            }
+        }
+    }
+
+    return vec;
+}
+
+template <typename T>
+int Hash_map<T>::Hash_map_size()
+{
+    return used + reused;
+}
+
 
 template <typename T>
 void Hash_map<T>::Hash_map_show()

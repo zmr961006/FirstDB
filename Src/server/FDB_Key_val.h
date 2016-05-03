@@ -15,6 +15,9 @@
 #include"../hash/FDB_Hash_map.h"
 #include"../hash/FDB_String.h"
 #include"../hash/FDB_String.cpp"
+#include"../ziplist/FDB_ziplist.h"
+#include"../stack/FDB_Stack.h"
+#include"../stack/FDB_Queue.h"
 #include<sys/time.h>
 
 #define TIMR_DONE -1
@@ -33,6 +36,10 @@ public:
     Key_val(std::string key_name, void *obj, unsigned int hash, int type_data, int elem);
     ~Key_val();
     void Key_val_add(void *obj);
+    bool Key_val_del(void *obj);
+    void Key_val_value(void *buff);
+    void Key_val_destory();
+    int Key_val_size();
     void add_cut_time(long long time);
     void add_cut_ptime(long long time);
     void set_cut_time(long long time);
