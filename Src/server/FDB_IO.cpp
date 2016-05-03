@@ -6,5 +6,13 @@
  ************************************************************************/
 
 #include<iostream>
-using namespace std;
+#include"./FDB_IO.h"
 
+
+
+int Close(int fd){
+
+
+    close(fd);
+
+}

@@ -8,24 +8,27 @@
 #ifndef _FDB_USER_H
 #define _FDB_USER_H
 
+#include<iostream>
+#include<vector>
+#include"./FDB_accept.h"
 
-class User{
+class Accept;
+
+class User
+{
+    private: 
+
+        std::vector<Accept>  User_data;
 
     public:
-            
         User();    
 
-        void User_add(const Accept &rhs);
+        void User_add(Accept rhs);
         bool User_del(int rhs_fd);
-        //bool User_mod();
+        bool User_mod();
 	    bool User_find(int rhs_fd);
+        bool User_show();
  	    Accept User_return(int rhs_fd);
-    
-    private:
-        
-        std::vector<Accept>  User_data;
-            
-
 };
 
 
