@@ -84,6 +84,14 @@ bool Socket::setReuseAddr(bool on){      /*设置reuseaddr 标志*/
 
 }
 
+bool Socket::setbuffsize(bool on){
+    
+    int optval = on ? 1: 0;
+    int size = 4096;
+    ::setsockopt(sockfd_,SOL_SOCKET,SO_SNDBUF,&size,sizeof(optval));
+
+
+}
 
 
 bool Socket::setReusePort(bool on){      /*设置reuseport*/
@@ -115,6 +123,7 @@ Socket::Socket(sa_family_t family,int listen_num){
     Socket__(family,listen_num);
     //setReuseAddr(true);
     setReusePort(true);
+    setbuffsize(true);
     bzero(&address,sizeof(address));
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = htonl(INADDR_ANY);
