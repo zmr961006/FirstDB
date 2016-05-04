@@ -6,7 +6,7 @@
  ************************************************************************/
 
 #include<iostream>
-#include"../server/FDB_ziplist.h"
+#include"./FDB_ziplist.h"
 using namespace std;
 
 int main()
@@ -36,6 +36,14 @@ int main()
     {
         cout << "oh, my god!" << endl;
     }
+
+    vector<int> c;
+    c = a.Ziplist_return();
+    cout << c[0] << endl;
+    cout << c[1] << endl;
+    a.Ziplist_destory();
+    cout << "size: " << a.Ziplist_size() << endl;
+    cout << "size_bytes: " <<a.Ziplist_size_bytes() << endl;
 
     return 0;
 }
