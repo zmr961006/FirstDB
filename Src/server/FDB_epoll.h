@@ -48,7 +48,8 @@ class Epoll{
         bool Epoll_set_EPOLLOUT(int fd);
         int  Epoll_return_fd();
 
-        void (*work)(int);
+        bool work(int sokfd,std::string,char *buf);
+        //bool do_translate(std::string,char *buf);   
         void (*timer)(int);
 
     private:
