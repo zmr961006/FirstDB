@@ -176,6 +176,9 @@ bool Epoll::Epoll_wait(){                                 /*epoll 核心wait*/
             }else if(event_s[i].events & EPOLLIN){
             
                 /*测试读取信,此处应当包含一个md5解密和一个JSon解析模块*/
+                /*第一阶段设计，在EPOLLIN 这里直接处理请求并回复*/
+                /*第二阶段设计，添加备机，组装节点*/
+                /*第三阶段设计，组织分布式存储结构*/
                 char buf[1024];
                 //std::cout <<"ths id : " <<std::this_thread::get_id() << std::endl;
                 /*
@@ -239,5 +242,16 @@ bool Epoll::Epoll_getMAX_NUM(){                     /*epoll 最大监听套接�
     
 
 }*/
+
+
+bool Epoll::work(int sockfd,std::string string,char *buf){
+    
+
+
+
+}
+
+
+
 
 
