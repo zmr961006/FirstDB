@@ -30,22 +30,22 @@ void fun(void)
     a.Hash_map_add(g);
     a.Hash_map_show();
     a.Hash_map_add(e);
+a.Hash_map_show();
     a.Hash_map_add(f);
 
     a.Hash_map_show();
     a.Hash_map_add(d);
-
     String str("123");
-    cout << "str:" <<a.Hash_map_value(str) << endl;
-    cout << "++++++++++++++++++++++++++++++" << endl;
+    //cout << "str:" <<a.Hash_map_value(str) << endl;
+    //cout << "++++++++++++++++++++++++++++++" << endl;
 
-    a.Hash_map_show();
-    a.Hash_map_del(d);
-    a.Hash_map_show();
-    a.Hash_map_del(d);
-    a.Hash_map_show();
-    a.Hash_map_destory();
-    a.Hash_map_show();
+    //a.Hash_map_show();
+    //a.Hash_map_del(d);
+    //a.Hash_map_show();
+    //a.Hash_map_del(d);
+    //a.Hash_map_show();
+    //a.Hash_map_destory();
+    //a.Hash_map_show();
     
     Hash_node_pseudo<String> t1("qwe","def");
     Hash_node_pseudo<String> t2("wer","def");
@@ -60,10 +60,13 @@ void fun(void)
     Hash_node_pseudo<String> t11("gfg","def");
     Hash_node_pseudo<String> t12("hgh","def");
     Hash_node_pseudo<String> t13("hjg","def");
+Hash_node_pseudo<String> t14("xy","def");
     a.Hash_map_add(t1);
     a.Hash_map_add(t2);
     a.Hash_map_add(t3);
+//a.Hash_map_show();
     a.Hash_map_add(t4);
+//a.Hash_map_show();
     a.Hash_map_add(t5);
     a.Hash_map_add(t6);
     a.Hash_map_add(t7);
@@ -71,7 +74,10 @@ void fun(void)
     a.Hash_map_add(t9);
     a.Hash_map_add(t0);
     a.Hash_map_add(t11);
+a.Hash_map_show();
     a.Hash_map_add(t12);
+a.Hash_map_show();
+a.Hash_map_add(t14);
     a.Hash_map_add(t13);
     a.Hash_map_show();
 
@@ -90,6 +96,17 @@ void fun(void)
     a.Hash_map_show();
     a.Hash_map_del(t13);
     a.Hash_map_show();
+a.Hash_map_del(b);
+a.Hash_map_show();
+a.Hash_map_del(c);
+a.Hash_map_show();
+a.Hash_map_del(e);
+a.Hash_map_show();
+a.Hash_map_del(f);
+a.Hash_map_show();
+std::cout << "xy" << std::endl;
+a.Hash_map_del(g);
+a.Hash_map_show();
 }
 
 int main()
