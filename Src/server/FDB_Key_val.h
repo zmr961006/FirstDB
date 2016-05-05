@@ -12,12 +12,12 @@
 //#include"./FDB_Key_val.cpp"
 #include<string>
 #include"./FDB_Data_num.h"
-#include"../hash/FDB_Hash_map.h"
-#include"../hash/FDB_String.h"
-#include"../hash/FDB_String.cpp"
-#include"../ziplist/FDB_ziplist.h"
-#include"../stack/FDB_Stack.h"
-#include"../stack/FDB_Queue.h"
+#include"./FDB_Hash_map.h"
+#include"./FDB_String.h"
+#include"./FDB_String.cpp"
+#include"./FDB_ziplist.h"
+#include"./FDB_Stack.h"
+#include"./FDB_Queue.h"
 #include<sys/time.h>
 
 #define TIMR_DONE -1
