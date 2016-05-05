@@ -47,7 +47,7 @@ class Socket{
         bool setReuseAddr(bool on);                        /*设置重用地址*/
         bool setReusePort(bool on);                        /*设置重用端口*/
         int  setnonblocking();                             /*设置非阻塞套接字*/
-
+        bool setbuffsize(bool on);      
         bool setKeepAlive(bool on);                        /*设置保活机制*/
         bool test_accept();
 

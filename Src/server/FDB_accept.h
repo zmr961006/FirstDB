@@ -36,6 +36,7 @@ class Accept{
         int Accept_Write(std::string str);
         int Accept_Read(char * str);
         int Accept_return_flag();
+        int Accept_send_buffer();    
 
     private:
         int connfd;

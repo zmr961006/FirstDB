@@ -21,4 +21,21 @@ int Buffer::connfd_write(std::string str,int use_less,int length){
 
 }
 
+int Buffer::return_read_length(){
+    
+
+    return read_buff_.size();
+
+}
+
+
+
+int Buffer::return_write_length(){
+    
+
+    return write_buff_.size();
+
+
+}
+
 
