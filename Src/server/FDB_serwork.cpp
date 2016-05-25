@@ -10,3 +10,46 @@
 
 using namespace std;
 
+
+Server_work::Server_work(int connfd){
+
+    
+    connfd_sockfd = connfd;
+
+}
+
+
+bool Server_work::do_work(){
+
+
+
+
+
+
+}
+
+
+int Server_work::Server_read(){
+
+
+
+
+    
+}
+
+
+bool Server_work::Server_translation
+
+
+
+bool Server_work::Server_dowork(){
+    
+    
+    
+    
+
+}
+
+
+
+
