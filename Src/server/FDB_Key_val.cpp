@@ -10,13 +10,14 @@
 
 using namespace std;
 
-Key_val::Key_val(std::string key_name, void *obj, unsigned int hash, int type_data, int elem)
+Key_val::Key_val(std::string key_name, unsigned int hash, int type_data, int elem)
 {
     key = key_name;
     type  = type_data;
     hash_key = hash;
     cut_time = -1;
     Server_ID = elem;
+    flag = 0;
     /*obj*/
     if (type_data == Hash_Map_pseudo_NUM)
     {
@@ -33,7 +34,6 @@ Key_val::Key_val(std::string key_name, void *obj, unsigned int hash, int type_da
     else if (type_data == String_NUM)
     {
         value = new String;
-        (*(String *)value) = (*(String *)obj);
     }
     else if (type_data == Stack_NUM)
     {
@@ -46,32 +46,75 @@ Key_val::Key_val(std::string key_name, void *obj, unsigned int hash, int type_da
     /*obj*/
 }
 
-Key_val::~Key_val()
+Key_val::Key_val(const Key_val &a)
 {
+    key = a.key;
+    type  = a.type;
+    hash_key = a.hash_key;
+    cut_time = -1;
+    Server_ID = a.Server_ID;
+    flag = 0;
+    /*obj*/
     if (type == Hash_Map_pseudo_NUM)
     {
-        delete (Hash_map_pseudo<std::string> *) value;
+        value = new Hash_map_pseudo<std::string>;
+ (*(Hash_map_pseudo<std::string> *)value) = (*(Hash_map_pseudo<std::string> *)a.value);
     }
     else if (type == Hash_Map_NUM)
     {
-        delete (Hash_map<std::string> *)value;
+        value = new Hash_map<std::string> ;
+(*(Hash_map<std::string> *)value) = (*(Hash_map<std::string> *)a.value);
     }
     else if (type == Ziplist_NUM)
     {
-        delete (Ziplist<std::string> *)value;
+        value = new Ziplist<std::string>;
+(*(Ziplist<std::string> *)value) = (*(Ziplist<std::string> *)a.value);
     }
     else if (type == String_NUM)
     {
-        delete (String *)value;
+        value = new String;
+        (*(String *)value) = (*(String *)a.value);
     }
     else if (type == Stack_NUM)
     {
-        delete (FDB_Stack<std::string>*)value;
+        value = new FDB_Stack<std::string>;
+(*(FDB_Stack<std::string> *)value) = (*(FDB_Stack<std::string> *)a.value);
     }
     else if (type == Queue_NUM)
     {
-        delete (FDB_Queue<std::string>*)value;
+        value = new FDB_Queue<std::string>;
+(*(FDB_Queue<std::string> *)value) = (*(FDB_Queue<std::string> *)a.value);
     }
+    /*obj*/
+}
+
+
+Key_val::~Key_val()
+{
+        if (type == Hash_Map_pseudo_NUM)
+        {
+            delete (Hash_map_pseudo<std::string> *) value;
+        }
+        else if (type == Hash_Map_NUM)
+        {
+            delete (Hash_map<std::string> *)value;
+        }
+        else if (type == Ziplist_NUM)
+        {
+            delete (Ziplist<std::string> *)value;
+        }
+        else if (type == String_NUM)
+        {
+            delete (String *)value;
+        }
+        else if (type == Stack_NUM)
+        {
+            delete (FDB_Stack<std::string>*)value;
+        }
+        else if (type == Queue_NUM)
+        {
+            delete (FDB_Queue<std::string>*)value;
+        }
 }
 
 void Key_val::Key_val_add(void *obj)
@@ -91,11 +134,14 @@ void Key_val::Key_val_add(void *obj)
     else if (type == Hash_Map_NUM)
     {
         (*(Hash_map<string> *)value).Hash_map_add(*(Hash_node_pseudo<std::string>*)obj);
-        //(*(Hash_map<string> *)value).Hash_map_show();
     }
     else if (type == Ziplist_NUM)
     {
         (*(Ziplist<std::string> *)value).Ziplist_add(*(std::string *)obj);
+    }
+    else if (type == String_NUM)
+    {
+        (*(String *)value) = (*(String *)obj);
     }
     else if (type == Stack_NUM)
     {
@@ -213,6 +259,11 @@ void Key_val::Key_val_destory()
     {
         (*(FDB_Queue<std::string> *)value).FDB_Queue_destory();
     }
+}
+
+void Key_val::Key_val_flag()
+{
+    flag = 1;
 }
 
 int Key_val::Key_val_size()
