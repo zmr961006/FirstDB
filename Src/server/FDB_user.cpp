@@ -8,9 +8,6 @@
 #include<iostream>
 #include<vector>
 #include"./FDB_user.h"
-#include"./FDB_accept.h"
-using namespace std;
-
 User::User()
 {
 
@@ -66,7 +63,7 @@ std::cout << size << std::endl;
     return false;
 }
 
-Accept User::User_return(int rhs_fd)
+Accept  User::User_return(int rhs_fd)
 {
     for (auto item : User_data)
     {

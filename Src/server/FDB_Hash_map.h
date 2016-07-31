@@ -46,6 +46,8 @@ public:
     void Hash_map_show();                           //测试函数，打印哈希表的数据
     bool Hash_map_find(Hash_node_pseudo<T> rhs);    //测试rhs键值对是否存在在哈希表中
     T Hash_map_value(String rhs);                   //返回哈希表中键位rhs的键值对的值
+    std::vector<Hash_node_pseudo<T>> Hash_map_all();  //将所有结点保存到vector容器中返回
+    int Hash_map_size();                            //返回使用大小
 
     unsigned int GetKey_char(const void *key);      //hash函数
     unsigned int GetKey_int(unsigned int key);      //hash函数
@@ -95,6 +97,10 @@ void Hash_map<T>::Hash_map_rehash()
     int i = 0;
     int sum = 0;
     //实现了键值对从hash向rehash的迁移
+    if (resize == 0)
+    {
+        return;
+    }
     while (1)
     {
         while (hash[i].size() != 0)
@@ -105,8 +111,10 @@ void Hash_map<T>::Hash_map_rehash()
             reused++;
             rehashhidx++;
             used--;
+            ++sum;
         }
-        if ( (++sum > REHASH_DEFAULT) || (rehashhidx == size))
+        //if ( (++sum > REHASH_DEFAULT) || (rehashhidx == size))
+        if ( (sum > REHASH_DEFAULT) || (used == 0))
         {
             break;
         }
@@ -151,9 +159,12 @@ void Hash_map<T>::Hash_map_add(Hash_node_pseudo<T> rhs)
     //标志不为-1，代表rehash正在使用，将数据添加到rehash表中，并进行数据迁移
     if (rehashhidx != -1)
     {
+        if (resize == 0)
+        {
+            return ;
+        }
         rehash[key%resize].push_front(rhs);
         reused++;
-        
         Hash_map_rehash();
     }
     else 
@@ -220,7 +231,7 @@ void Hash_map<T>::Hash_map_del(Hash_node_pseudo<T> rhs)
     unsigned int hash_key = GetKey_char(GET_CHAR(rhs));
     
     //若hash表大小是使用量的十倍则用rehash表进行对hash表减少空间的操作
-    if ((size/used >= 10) && (rehashhidx == -1))
+    if ((used != 0) && (size/used >= 10) && (rehashhidx == -1))
     {
         rehashhidx = 0;
         resize = size / 2;
@@ -237,8 +248,10 @@ void Hash_map<T>::Hash_map_del(Hash_node_pseudo<T> rhs)
         {
             if (rhs.Hash_key() == (*item).Hash_key())
             {
-                hash[hash_key % resize].erase(item);
+
+                rehash[hash_key % resize].erase(item);
                 reused--;
+                Hash_map_rehash();
                 return;
             }
             else
@@ -295,6 +308,40 @@ T Hash_map<T>::Hash_map_value(String rhs)
         }
     }
 }
+
+template <typename T>
+std::vector<Hash_node_pseudo<T>> Hash_map<T>::Hash_map_all()
+{
+    std::vector<Hash_node_pseudo<T>> vec; 
+    
+    for (auto item : hash)
+    {
+        for (auto iterr : item)
+        {
+            vec.push_back( iterr );
+        }
+    }
+
+    if (rehashhidx != -1)
+    {
+        for (auto item : rehash)
+        {
+            for (auto iterr : item)
+            {
+                vec.push_back(iterr);
+            }
+        }
+    }
+
+    return vec;
+}
+
+template <typename T>
+int Hash_map<T>::Hash_map_size()
+{
+    return used + reused;
+}
+
 
 template <typename T>
 void Hash_map<T>::Hash_map_show()

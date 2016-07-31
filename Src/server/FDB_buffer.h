@@ -24,8 +24,8 @@ class Buffer{
         int return_read_length();
         int re_read_flash();
             
-        int connfd_write(char *str);    
-
+        int connfd_write(std::string str,int ues_less,int length);    
+        int connfd_send_buffer();
         int return_write_length();
         int re_write_flash();
         
