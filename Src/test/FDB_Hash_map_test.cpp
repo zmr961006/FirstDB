@@ -7,7 +7,6 @@
 
 #include<iostream>
 #include"../server/FDB_String.h"
-#include"../server/FDB_String.cpp"
 #include"../server/FDB_Hash_map.h"
 #include"../server/FDB_Hash_node.h"
 #include"../server/FDB_Hash_pseudo.h"

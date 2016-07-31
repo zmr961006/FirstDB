@@ -27,6 +27,8 @@ public:
     T FDB_Stack_top(); 			//读取栈首元素
     unsigned int FDB_Stack_size(); 	//返回栈元素个数
     void FDB_Stack_destory();
+
+    FDB_Stack& operator= (const FDB_Stack& a);
 };
 
 template <typename T>
@@ -124,6 +126,13 @@ void FDB_Stack<T>::FDB_Stack_destory()
             break;
         }
     }
+}
+
+template <typename T>
+FDB_Stack<T>& FDB_Stack<T>::operator= (const FDB_Stack &a)
+{
+    size = a.size;
+    data = a.data;
 }
 
 #endif

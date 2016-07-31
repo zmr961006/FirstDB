@@ -7,27 +7,26 @@
 
 #include<iostream>
 #include"../server/FDB_Key_val.h"
-#include"../server/FDB_Key_val.cpp"
 #include"../server/FDB_Hash_node.h"
 #include<unistd.h>
 #include<string>
 using namespace std;
 
-void func()
+/*void func()
 {
-    Key_val k("123", 0, 0, 1, 0);
+    Key_val k("123", 0, 1, 0);
     void *obj;
     Hash_node_pseudo<string> a("wrx", "19");
 Hash_node_pseudo<string> a1("wr1", "18");
 Hash_node_pseudo<string> a2("wr2", "17");
-Hash_node_pseudo<string> a3("wrx", "");
+Hash_node_pseudo<string> a3("wr3", "");
 
 obj = new Hash_node_pseudo<string>;
 
 (*(Hash_node_pseudo<string>*)obj) = a3;
 if(k.Key_val_del(obj) == false)
 {
-    //cout << "error" << endl;
+    cout << "error" << endl;
 }
 
 (*(Hash_node_pseudo<string>*)obj) = a;
@@ -36,7 +35,7 @@ if(k.Key_val_del(obj) == false)
 (*(Hash_node_pseudo<string>*)obj) = a3;
 if(k.Key_val_del(obj) == false)
 {
-    //cout << "error" << endl;
+    cout << "error" << endl;
 }
 
 (*(Hash_node_pseudo<string>*)obj) = a1;
@@ -44,28 +43,28 @@ if(k.Key_val_del(obj) == false)
 
 (*(Hash_node_pseudo<string>*)obj) = a2;
     k.Key_val_add(obj);
-
+delete (Hash_node_pseudo<string> *) obj;
 void *buff;
 buff = new vector<Hash_node_pseudo<string>> ;
 k.Key_val_value(buff);
 for (auto item : (*(vector<Hash_node_pseudo<string>>*) buff))
 {
-    //item.Hash_show();
+    item.Hash_show();
 }
 
-//cout << k.Key_val_size() << endl;
+cout << k.Key_val_size() << endl;
 
 k.Key_val_destory();
-//cout << k.Key_val_size() << endl;
+cout << k.Key_val_size() << endl;
 
-    delete (Hash_node_pseudo<string> *) obj;
+    //delete (Hash_node_pseudo<string> *) obj;
     delete (vector<Hash_node_pseudo<string>> *) buff;
-    /*cout << k.get_type() << endl;
+    cout << k.get_type() << endl;
     cout << k.get_hash() << endl;
-    cout << k.get_key() << endl;*/
-}
+    cout << k.get_key() << endl;
+}*/
 
-void func1()
+/*void func1()
 {
     void *obj;
     Hash_node_pseudo<string> a("wrx", "19");
@@ -73,19 +72,19 @@ void func1()
     (*(Hash_node_pseudo<string>*)obj) = a;
     delete (Hash_node_pseudo<string> *) obj; 
 //内存泄漏
-}
+}*/
 
-void func2()
+/*void func2()
 {
     void *obj;
     String a = "100";
     obj = new String;
     delete (String *)obj;
-}
+}*/
 
 void func3()
 {
-    Key_val k("123", 0, 0, 0, 0);
+    Key_val k("123", 0, 0, 0);
 void *obj;
 Hash_node_pseudo<string> a("wrx", "19");
 Hash_node_pseudo<string> a1("wr1", "18");
@@ -101,20 +100,20 @@ obj = new Hash_node_pseudo<string>;
 (*(Hash_node_pseudo<string>*)obj) = a;
 if(k.Key_val_del(obj) == false)
 {
-    cout << "error1" << endl;
+    //cout << "error1" << endl;
 }
 
 (*(Hash_node_pseudo<string>*)obj) = a;
 k.Key_val_add(obj);
-cout << k.Key_val_size() << endl;
-cout << k.get_type() << endl;
+//cout << k.Key_val_size() << endl;
+//cout << k.get_type() << endl;
 
 k.Key_val_destory();
 
 (*(Hash_node_pseudo<string>*)obj) = a;
 if(k.Key_val_del(obj) == false)
 {
-    cout << "error2" << endl;
+    //cout << "error2" << endl;
 }
 
 (*(Hash_node_pseudo<string>*)obj) = a1;
@@ -134,8 +133,8 @@ k.Key_val_destory();
     k.Key_val_add(obj);
 (*(Hash_node_pseudo<string>*)obj) = a7;
     k.Key_val_add(obj);
-cout << k.Key_val_size() << endl;
-cout << k.get_type() << endl;
+//cout << k.Key_val_size() << endl;
+//cout << k.get_type() << endl;
 
 k.Key_val_destory();
 
@@ -143,9 +142,9 @@ delete (Hash_node_pseudo<string> *) obj;
 
 }
 
-void func4()
+/*void func4()
 {
-   Key_val k("123", 0, 0, 2, 0);
+   Key_val k("123", 0, 2, 0);
    string a("1");
    string a1("2");
    string a2("3");
@@ -172,42 +171,49 @@ k.Key_val_add(obj);
 
 k.Key_val_del(obj);
 
-//cout << k.Key_val_size() << endl;
+cout << k.Key_val_size() << endl;
 
 buff = new vector<string>;
 k.Key_val_value(buff);
-/*for (auto item : (*(vector<string>*)buff))
+for (auto item : (*(vector<string>*)buff))
 {
     cout << item << endl;
-}*/
+}
 delete (vector<string> *) buff;
-k.Key_val_destory();
-//cout << k.Key_val_size() << endl;
 buff = new vector<string>;
 k.Key_val_value(buff);
-/*for (auto item : (*(vector<string>*)buff))
+for (auto item : (*(vector<string>*)buff))
 {
     cout << item << endl;
-}*/
+}
+delete (vector<string> *) buff;
+k.Key_val_destory();
+cout << k.Key_val_size() << endl;
+buff = new vector<string>;
+k.Key_val_value(buff);
+for (auto item : (*(vector<string>*)buff))
+{
+    cout << item << endl;
+}
 
 delete (string *)obj;
 delete (vector<string> *) buff;
 
-}
+}*/
 
-void func5()
+/*void func5()
 {
     String a("123");
     void *obj;
     obj = new String;
     (*(String *) obj) = a;
-    Key_val k("123", obj, 0, 3, 0);
+    Key_val k("123", 0, 3, 0);
+k.Key_val_add(obj);
    
-delete (String *)obj;
+    delete (String *)obj;
 
     void *buff;
     buff = new String;
-
 
     k.Key_val_value(buff);
 
@@ -215,11 +221,11 @@ delete (String *)obj;
     
     delete (String *)buff;
  
-}
+}*/
 
 void func6()
 {
-    Key_val k("123", 0, 0, 4, 0);
+    Key_val k("123", 0, 4, 0);
     string a("1");
 string a1("2");
 string a2("3");
@@ -240,20 +246,20 @@ k.Key_val_add(obj);
 void *buff;
 buff = new string;
 k.Key_val_value(buff);
-//cout << (*(string *)buff) << endl;
+cout << (*(string *)buff) << endl;
 k.Key_val_del(obj);
 k.Key_val_value(buff);
-//cout << (*(string *)buff) << endl;
-//cout << k.Key_val_size() << endl;
+cout << (*(string *)buff) << endl;
+cout << k.Key_val_size() << endl;
 k.Key_val_destory();
-//cout << k.Key_val_size() << endl;
+cout << k.Key_val_size() << endl;
 delete (string *) obj;
 delete (string *) buff;  
 }
 
 void func7()
 {
-    Key_val k("123", 0, 0, 5, 0);
+    Key_val k("123", 0, 5, 0);
     string a("1");
 string a1("2");
 string a2("3");
@@ -261,6 +267,7 @@ string a3("4");
 string a4("5");
     void *obj;
     obj = new string;
+
     (*(string *)obj) = a;
     k.Key_val_add(obj);
 (*(string *)obj) = a1;
@@ -292,8 +299,8 @@ int main()
     while(1)
     {
 	//func();
-	func ();
+	func7 ();
 	usleep(10);
     }
-func3();
+//func3();
 }
