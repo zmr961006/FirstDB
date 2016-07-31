@@ -1,0 +1,506 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Accept	FDB_accept.cpp	/^Accept::Accept(int sockfd){$/;"	f	class:Accept
+Accept	FDB_accept.h	/^class Accept{$/;"	c
+Accept_Read	FDB_accept.cpp	/^int Accept::Accept_Read(char * str){$/;"	f	class:Accept
+Accept_Write	FDB_accept.cpp	/^int Accept::Accept_Write(std::string str){        \/*先写进connfd  将剩余的数据写入buffer ,注册connfd 可写*\/$/;"	f	class:Accept
+Accept_return	FDB_accept.cpp	/^int Accept::Accept_return(){$/;"	f	class:Accept
+Accept_return_flag	FDB_accept.cpp	/^int Accept::Accept_return_flag(){$/;"	f	class:Accept
+Accept_send_buffer	FDB_accept.cpp	/^int Accept::Accept_send_buffer(){$/;"	f	class:Accept
+Buffer	FDB_buffer.h	/^class Buffer{$/;"	c
+Buffer_Add	FDB_LOG.cpp	/^bool LOG_Buffer::Buffer_Add(const char *str, int size)$/;"	f	class:LOG_Buffer
+Buffer_Write	FDB_LOG.cpp	/^bool LOG_Buffer::Buffer_Write()$/;"	f	class:LOG_Buffer
+Close	FDB_IO.cpp	/^int Close(int fd){$/;"	f
+Ctl_info	FDB_ctl_info.h	/^class Ctl_info{$/;"	c
+DB	FDB_Data_All.h	/^    Data_Base *DB;$/;"	m	class:Data_All
+DB_DEFAULT	FDB_Data_All.h	11;"	d
+DEFAULT_NULL	FDB_String.h	20;"	d
+DEFAULT_SIZE	FDB_String.h	21;"	d
+Data_All	FDB_Data_All.h	/^    Data_All():db_num(DB_DEFAULT), DB(new Data_Base[DB_DEFAULT]) {  }$/;"	f	class:Data_All
+Data_All	FDB_Data_All.h	/^    Data_All(int num):db_num(num), DB(new Data_Base[num]) {  }$/;"	f	class:Data_All
+Data_All	FDB_Data_All.h	/^class Data_All$/;"	c
+Data_Base	FDB_Data_Base.cpp	/^Data_Base::Data_Base(int hash_def, int rehash_def)$/;"	f	class:Data_Base
+Data_Base	FDB_Data_Base.h	/^class Data_Base$/;"	c
+Data_Base_add	FDB_Data_Base.cpp	/^void Data_Base::Data_Base_add(Key_val rhs)$/;"	f	class:Data_Base
+Data_Base_del	FDB_Data_Base.cpp	/^bool Data_Base::Data_Base_del(std::string rhs)$/;"	f	class:Data_Base
+Data_Base_rehash	FDB_Data_Base.cpp	/^void Data_Base::Data_Base_rehash()$/;"	f	class:Data_Base
+Date	FDB_Date.h	/^class Date$/;"	c
+Date_time	FDB_Date.h	/^char* Date::Date_time()$/;"	f	class:Date
+Delete_my	FDB_skiplist.cpp	/^bool list_skip<E>::Delete_my(E e)$/;"	f	class:list_skip
+Epoll	FDB_epoll.cpp	/^Epoll::Epoll(int fd){                \/*EPoll构造函数*\/$/;"	f	class:Epoll
+Epoll	FDB_epoll.h	/^class Epoll{$/;"	c
+Epoll_add	FDB_epoll.cpp	/^bool Epoll::Epoll_add(int fd,bool enable_et,bool oneshot){     \/*添加fd 到Epoll*\/$/;"	f	class:Epoll
+Epoll_add_listen	FDB_epoll.cpp	/^bool Epoll::Epoll_add_listen(int fd , bool enable_et){     \/*添加监听套接字*\/$/;"	f	class:Epoll
+Epoll_create_events	FDB_epoll.cpp	/^bool Epoll::Epoll_create_events(){                    \/*建立Epoll 文件描述符集合*\/$/;"	f	class:Epoll
+Epoll_del	FDB_epoll.cpp	/^bool Epoll::Epoll_del(int fd){                  \/*删除套接字*\/$/;"	f	class:Epoll
+Epoll_getMAX_NUM	FDB_epoll.cpp	/^bool Epoll::Epoll_getMAX_NUM(){                     \/*epoll 最大监听套接字个数*\/$/;"	f	class:Epoll
+Epoll_reset	FDB_epoll.cpp	/^bool Epoll::Epoll_reset(int fd){                \/*重新设置LIN LET SHOT *\/ $/;"	f	class:Epoll
+Epoll_return_fd	FDB_epoll.cpp	/^int Epoll::Epoll_return_fd(){$/;"	f	class:Epoll
+Epoll_set_EPOLLOUT	FDB_epoll.cpp	/^bool Epoll::Epoll_set_EPOLLOUT(int fd){$/;"	f	class:Epoll
+Epoll_setnonblock	FDB_epoll.cpp	/^bool Epoll::Epoll_setnonblock(int fd){          \/*设置非阻塞*\/$/;"	f	class:Epoll
+Epoll_wait	FDB_epoll.cpp	/^bool Epoll::Epoll_wait(){                                 \/*epoll 核心wait*\/$/;"	f	class:Epoll
+Eval	FDB_skiplist.h	/^    int Eval;              \/*用于确定级号*\/$/;"	m	class:list_skip
+F	FDB_md5.cpp	/^inline MD5::uint4 MD5::F(uint4 x, uint4 y, uint4 z) { return x&y | ~x&z; } $/;"	f	class:MD5
+FDB_LOG	FDB_LOG.h	/^class FDB_LOG$/;"	c
+FDB_LOG_ADD	FDB_LOG.cpp	/^bool FDB_LOG::FDB_LOG_ADD(const char *a)$/;"	f	class:FDB_LOG
+FDB_LOG_Read	FDB_LOG.cpp	/^std::vector<std::string> FDB_LOG::FDB_LOG_Read()$/;"	f	class:FDB_LOG
+FDB_LOG_Write	FDB_LOG.cpp	/^bool FDB_LOG::FDB_LOG_Write()$/;"	f	class:FDB_LOG
+FDB_Queue	FDB_Queue.h	/^FDB_Queue<T>::FDB_Queue()$/;"	f	class:FDB_Queue
+FDB_Queue	FDB_Queue.h	/^class FDB_Queue$/;"	c
+FDB_Queue_back	FDB_Queue.h	/^T FDB_Queue<T>::FDB_Queue_back()$/;"	f	class:FDB_Queue
+FDB_Queue_empty	FDB_Queue.h	/^bool FDB_Queue<T>::FDB_Queue_empty()$/;"	f	class:FDB_Queue
+FDB_Queue_front	FDB_Queue.h	/^T FDB_Queue<T>::FDB_Queue_front()$/;"	f	class:FDB_Queue
+FDB_Queue_pop	FDB_Queue.h	/^void FDB_Queue<T>::FDB_Queue_pop()$/;"	f	class:FDB_Queue
+FDB_Queue_push	FDB_Queue.h	/^void FDB_Queue<T>::FDB_Queue_push(const T &rhs)$/;"	f	class:FDB_Queue
+FDB_Queue_size	FDB_Queue.h	/^unsigned int FDB_Queue<T>::FDB_Queue_size()$/;"	f	class:FDB_Queue
+FDB_Stack	FDB_Stack.h	/^FDB_Stack<T>::FDB_Stack()$/;"	f	class:FDB_Stack
+FDB_Stack	FDB_Stack.h	/^class FDB_Stack$/;"	c
+FDB_Stack_destory	FDB_Stack.h	/^void FDB_Stack<T>::FDB_Stack_destory()$/;"	f	class:FDB_Stack
+FDB_Stack_empty	FDB_Stack.h	/^bool FDB_Stack<T>::FDB_Stack_empty()$/;"	f	class:FDB_Stack
+FDB_Stack_pop	FDB_Stack.h	/^void FDB_Stack<T>::FDB_Stack_pop()$/;"	f	class:FDB_Stack
+FDB_Stack_push	FDB_Stack.h	/^void FDB_Stack<T>::FDB_Stack_push(const T &rhs)$/;"	f	class:FDB_Stack
+FDB_Stack_size	FDB_Stack.h	/^unsigned int FDB_Stack<T>::FDB_Stack_size()$/;"	f	class:FDB_Stack
+FDB_Stack_top	FDB_Stack.h	/^T FDB_Stack<T>::FDB_Stack_top()$/;"	f	class:FDB_Stack
+FF	FDB_md5.cpp	/^inline void MD5::FF(uint4 &a, uint4 b, uint4 c, uint4 d, uint4 x, uint4 s, uint4 ac) {$/;"	f	class:MD5
+FREE	FDB_String.h	18;"	d
+G	FDB_md5.cpp	/^inline MD5::uint4 MD5::G(uint4 x, uint4 y, uint4 z) { return x&z | y&~z; } $/;"	f	class:MD5
+GET_CHAR	FDB_Hash_map.h	18;"	d
+GG	FDB_md5.cpp	/^inline void MD5::GG(uint4 &a, uint4 b, uint4 c, uint4 d, uint4 x, uint4 s, uint4 ac) {$/;"	f	class:MD5
+GetKey_char	FDB_Data_Base.cpp	/^unsigned int Data_Base::GetKey_char(const void *key){$/;"	f	class:Data_Base
+GetKey_char	FDB_Hash_map.h	/^unsigned int Hash_map<T>::GetKey_char(const void *key){$/;"	f	class:Hash_map
+GetKey_int	FDB_Data_Base.cpp	/^unsigned int Data_Base::GetKey_int(unsigned int key){$/;"	f	class:Data_Base
+GetKey_int	FDB_Hash_map.h	/^unsigned int Hash_map<T>::GetKey_int(unsigned int key){$/;"	f	class:Hash_map
+Get_hash_key	FDB_Hash_node.h	/^unsigned int Hash_node_pseudo<T>::Get_hash_key()$/;"	f	class:Hash_node_pseudo
+H	FDB_md5.cpp	/^inline MD5::uint4 MD5::H(uint4 x, uint4 y, uint4 z) { return x^y^z; } $/;"	f	class:MD5
+HASH_DEFAULT	FDB_Hash_map.h	21;"	d
+HASH_MIN	FDB_Hash_map.h	23;"	d
+HH	FDB_md5.cpp	/^inline void MD5::HH(uint4 &a, uint4 b, uint4 c, uint4 d, uint4 x, uint4 s, uint4 ac) {$/;"	f	class:MD5
+Hash_Map_NUM	FDB_Data_num.h	12;"	d
+Hash_Map_pseudo_NUM	FDB_Data_num.h	11;"	d
+Hash_key	FDB_Hash_node.h	/^String Hash_node_pseudo<T>::Hash_key()$/;"	f	class:Hash_node_pseudo
+Hash_map	FDB_Hash_map.h	/^Hash_map<T>::Hash_map()$/;"	f	class:Hash_map
+Hash_map	FDB_Hash_map.h	/^Hash_map<T>::Hash_map(Hash_map_pseudo<T> rhs)$/;"	f	class:Hash_map
+Hash_map	FDB_Hash_map.h	/^class Hash_map$/;"	c
+Hash_map_add	FDB_Hash_map.h	/^void Hash_map<T>::Hash_map_add(Hash_node_pseudo<T> rhs)$/;"	f	class:Hash_map
+Hash_map_all	FDB_Hash_map.h	/^std::vector<Hash_node_pseudo<T>> Hash_map<T>::Hash_map_all()$/;"	f	class:Hash_map
+Hash_map_change	FDB_Hash_map.h	/^void Hash_map<T>::Hash_map_change(Hash_node_pseudo<T> rhs)$/;"	f	class:Hash_map
+Hash_map_del	FDB_Hash_map.h	/^void Hash_map<T>::Hash_map_del(Hash_node_pseudo<T> rhs)$/;"	f	class:Hash_map
+Hash_map_destory	FDB_Hash_map.h	/^void Hash_map<T>::Hash_map_destory()$/;"	f	class:Hash_map
+Hash_map_find	FDB_Hash_map.h	/^bool Hash_map<T>::Hash_map_find(Hash_node_pseudo<T> rhs)$/;"	f	class:Hash_map
+Hash_map_pseudo	FDB_Hash_pseudo.h	/^class Hash_map_pseudo$/;"	c
+Hash_map_rehash	FDB_Hash_map.h	/^void Hash_map<T>::Hash_map_rehash()$/;"	f	class:Hash_map
+Hash_map_show	FDB_Hash_map.h	/^void Hash_map<T>::Hash_map_show()$/;"	f	class:Hash_map
+Hash_map_size	FDB_Hash_map.h	/^int Hash_map<T>::Hash_map_size()$/;"	f	class:Hash_map
+Hash_map_value	FDB_Hash_map.h	/^T Hash_map<T>::Hash_map_value(String rhs)$/;"	f	class:Hash_map
+Hash_node_pseudo	FDB_Hash_node.h	/^Hash_node_pseudo<T>::Hash_node_pseudo(const String & Key, const T & data)$/;"	f	class:Hash_node_pseudo
+Hash_node_pseudo	FDB_Hash_node.h	/^class Hash_node_pseudo$/;"	c
+Hash_pseudo_change	FDB_Hash_pseudo.h	/^void Hash_map_pseudo<T>::Hash_pseudo_change(Hash_node_pseudo<T> rhs)$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_change	FDB_Hash_pseudo.h	/^void Hash_map_pseudo<T>::Hash_pseudo_change(const String & a, const T & b)$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_data	FDB_Hash_pseudo.h	/^std::vector<Hash_node_pseudo<T>> Hash_map_pseudo<T>::Hash_pseudo_data()$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_del	FDB_Hash_pseudo.h	/^void Hash_map_pseudo<T>::Hash_pseudo_del(const String & rhs)$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_destory	FDB_Hash_pseudo.h	/^void Hash_map_pseudo<T>::Hash_pseudo_destory()$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_find	FDB_Hash_pseudo.h	/^T Hash_map_pseudo<T>::Hash_pseudo_find(const String & rhs)$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_set	FDB_Hash_pseudo.h	/^void Hash_map_pseudo<T>::Hash_pseudo_set(Hash_node_pseudo<T> rhs)$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_set	FDB_Hash_pseudo.h	/^void Hash_map_pseudo<T>::Hash_pseudo_set(const String & a, const T & b)$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_show	FDB_Hash_pseudo.h	/^void Hash_map_pseudo<T>::Hash_pseudo_show()$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_size	FDB_Hash_pseudo.h	/^int Hash_map_pseudo<T>::Hash_pseudo_size()$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_test	FDB_Hash_pseudo.h	/^bool Hash_map_pseudo<T>::Hash_pseudo_test(const String & rhs)$/;"	f	class:Hash_map_pseudo
+Hash_set	FDB_Hash_node.h	/^void Hash_node_pseudo<T>::Hash_set(const String & Key, const T & data)$/;"	f	class:Hash_node_pseudo
+Hash_show	FDB_Hash_node.h	/^void Hash_node_pseudo<T>::Hash_show()$/;"	f	class:Hash_node_pseudo
+Hash_value	FDB_Hash_node.h	/^T Hash_node_pseudo<T>::Hash_value()$/;"	f	class:Hash_node_pseudo
+I	FDB_md5.cpp	/^inline MD5::uint4 MD5::I(uint4 x, uint4 y, uint4 z) { return y ^ (x | ~z); }$/;"	f	class:MD5
+II	FDB_md5.cpp	/^inline void MD5::II(uint4 &a, uint4 b, uint4 c, uint4 d, uint4 x, uint4 s, uint4 ac) {$/;"	f	class:MD5
+Insert	FDB_skiplist.cpp	/^int list_skip<E>::Insert(E e)$/;"	f	class:list_skip
+JSon	FDB_json.cpp	/^JSon::JSon(std::string key,std::string operation,int type_data,int type_data2,std::string buf){$/;"	f	class:JSon
+JSon	FDB_json.h	/^class JSon{$/;"	c
+Json_get_ack	FDB_json.cpp	/^int JSon::Json_get_ack(){$/;"	f	class:JSon
+Json_get_buf	FDB_json.cpp	/^std::string JSon::Json_get_buf(){$/;"	f	class:JSon
+Json_get_key	FDB_json.cpp	/^std::string JSon::Json_get_key(){$/;"	f	class:JSon
+Json_get_operation	FDB_json.cpp	/^std::string JSon::Json_get_operation(){$/;"	f	class:JSon
+Json_get_size	FDB_json.cpp	/^int JSon::Json_get_size(){$/;"	f	class:JSon
+Json_get_typedata	FDB_json.cpp	/^int JSon::Json_get_typedata(){$/;"	f	class:JSon
+Json_get_typedata2	FDB_json.cpp	/^int JSon::Json_get_typedata2(){$/;"	f	class:JSon
+Key_val	FDB_Key_val.cpp	/^Key_val::Key_val(std::string key_name, void *obj, unsigned int hash, int type_data, int elem)$/;"	f	class:Key_val
+Key_val	FDB_Key_val.h	/^class Key_val$/;"	c
+Key_val_add	FDB_Key_val.cpp	/^void Key_val::Key_val_add(void *obj)$/;"	f	class:Key_val
+Key_val_del	FDB_Key_val.cpp	/^bool Key_val::Key_val_del(void *obj)$/;"	f	class:Key_val
+Key_val_destory	FDB_Key_val.cpp	/^void Key_val::Key_val_destory()$/;"	f	class:Key_val
+Key_val_size	FDB_Key_val.cpp	/^int Key_val::Key_val_size()$/;"	f	class:Key_val
+Key_val_value	FDB_Key_val.cpp	/^void Key_val::Key_val_value(void *buff)$/;"	f	class:Key_val
+LEN	FDB_String.h	17;"	d
+LOG_BUFFER_MAX	FDB_LOG.h	21;"	d
+LOG_BUFFER_SIZE	FDB_LOG.h	22;"	d
+LOG_Buffer	FDB_LOG.cpp	/^LOG_Buffer::LOG_Buffer()$/;"	f	class:LOG_Buffer
+LOG_Buffer	FDB_LOG.h	/^class LOG_Buffer$/;"	c
+LOG_SIZE	FDB_LOG.h	23;"	d
+LOG_fd	FDB_LOG.h	/^class LOG_fd$/;"	c
+MAX_NUM	FDB_epoll.h	/^        int MAX_NUM = 100; \/*假定有100，应当从配置文件中读取*\/$/;"	m	class:Epoll
+MD5	FDB_md5.cpp	/^MD5::MD5()$/;"	f	class:MD5
+MD5	FDB_md5.cpp	/^MD5::MD5(const std::string &text)$/;"	f	class:MD5
+MD5	FDB_md5.h	/^class MD5$/;"	c
+MY_INT	FDB_intset.h	10;"	d
+MY_LONG	FDB_intset.h	11;"	d
+MY_SHORT	FDB_intset.h	9;"	d
+Print	FDB_String.cpp	/^void String::Print()$/;"	f	class:String
+Queue_NUM	FDB_Data_num.h	16;"	d
+REHASH_DEFAULT	FDB_Hash_map.h	22;"	d
+S11	FDB_md5.cpp	14;"	d	file:
+S12	FDB_md5.cpp	15;"	d	file:
+S13	FDB_md5.cpp	16;"	d	file:
+S14	FDB_md5.cpp	17;"	d	file:
+S21	FDB_md5.cpp	18;"	d	file:
+S22	FDB_md5.cpp	19;"	d	file:
+S23	FDB_md5.cpp	20;"	d	file:
+S24	FDB_md5.cpp	21;"	d	file:
+S31	FDB_md5.cpp	22;"	d	file:
+S32	FDB_md5.cpp	23;"	d	file:
+S33	FDB_md5.cpp	24;"	d	file:
+S34	FDB_md5.cpp	25;"	d	file:
+S41	FDB_md5.cpp	26;"	d	file:
+S42	FDB_md5.cpp	27;"	d	file:
+S43	FDB_md5.cpp	28;"	d	file:
+S44	FDB_md5.cpp	29;"	d	file:
+SA	FDB_Socket.cpp	/^typedef struct sockaddr SA;$/;"	t	typeref:struct:sockaddr	file:
+STRING_MAX	FDB_String.h	16;"	d
+Search_my	FDB_skiplist.cpp	/^E list_skip<E>::Search_my(E e)$/;"	f	class:list_skip
+Server_ID	FDB_Key_val.h	/^    int Server_ID;$/;"	m	class:Key_val
+Server_dowork	FDB_serwork.cpp	/^bool Server_work::Server_dowork(){$/;"	f	class:Server_work
+Server_read	FDB_serwork.cpp	/^int Server_work::Server_read(){$/;"	f	class:Server_work
+Server_work	FDB_serwork.cpp	/^Server_work::Server_work(int connfd){$/;"	f	class:Server_work
+Server_work	FDB_serwork.h	/^class Server_work{$/;"	c
+Set_hash_key	FDB_Hash_node.h	/^void Hash_node_pseudo<T>::Set_hash_key(unsigned int a)$/;"	f	class:Hash_node_pseudo
+SkipNode	FDB_skiplist.h	/^    SkipNode(int size){link = new SkipNode<E>*[size];}$/;"	f	class:SkipNode
+SkipNode	FDB_skiplist.h	/^class SkipNode{$/;"	c
+Socket	FDB_Socket.cpp	/^Socket::Socket(sa_family_t family,int listen_num){$/;"	f	class:Socket
+Socket	FDB_Socket.h	/^        explicit Socket(int sockfd):sockfd_(sockfd){}   \/*如果存在直接赋值*\/$/;"	f	class:Socket
+Socket	FDB_Socket.h	/^class Socket{$/;"	c
+Socket__	FDB_Socket.cpp	/^bool Socket::Socket__(sa_family_t family,int listen_num){    \/*创建一个Socket*\/$/;"	f	class:Socket
+Stack_NUM	FDB_Data_num.h	15;"	d
+String	FDB_String.cpp	/^String::String()$/;"	f	class:String
+String	FDB_String.cpp	/^String::String(char *rhs)$/;"	f	class:String
+String	FDB_String.cpp	/^String::String(const String &rhs)$/;"	f	class:String
+String	FDB_String.h	/^class String$/;"	c
+StringAdd	FDB_String.cpp	/^String& String::StringAdd(const String &str2)$/;"	f	class:String
+StringAdd	FDB_String.cpp	/^String& String::StringAdd(const char *s)$/;"	f	class:String
+StringChange	FDB_String.cpp	/^String& String::StringChange(const String &st)$/;"	f	class:String
+StringChange	FDB_String.cpp	/^String& String::StringChange(const char *s)$/;"	f	class:String
+StringClear	FDB_String.cpp	/^String& String::StringClear()$/;"	f	class:String
+StringGetChar	FDB_String.cpp	/^char * String::StringGetChar()$/;"	f	class:String
+StringSizeClear	FDB_String.cpp	/^String& String::StringSizeClear(size_t pos, size_t len)$/;"	f	class:String
+String_NUM	FDB_Data_num.h	14;"	d
+TIMR_DONE	FDB_Key_val.h	23;"	d
+Tail_key	FDB_skiplist.h	/^    E Tail_key;            \/*限定结点值在一定范围内*\/$/;"	m	class:list_skip
+Task	FDB_thread_pool.h	/^    typedef std::function<void()> Task;$/;"	t	class:ThreadPool
+ThreadPool	FDB_thread_pool.cpp	/^ThreadPool::ThreadPool(const std::string &name):name_(name),maxQueueSize_(0),running_(false){  $/;"	f	class:ThreadPool
+ThreadPool	FDB_thread_pool.h	/^        ThreadPool(){};               \/*这个类不可复制*\/$/;"	f	class:ThreadPool
+ThreadPool	FDB_thread_pool.h	/^class ThreadPool{$/;"	c
+User	FDB_user.cpp	/^User::User()$/;"	f	class:User
+User	FDB_user.h	/^class User$/;"	c
+User_add	FDB_user.cpp	/^void User::User_add( Accept rhs)$/;"	f	class:User
+User_data	FDB_user.h	/^        std::vector<Accept>  User_data;$/;"	m	class:User
+User_del	FDB_user.cpp	/^bool User::User_del(int rhs_fd)$/;"	f	class:User
+User_find	FDB_user.cpp	/^bool User::User_find(int rhs_fd)$/;"	f	class:User
+User_return	FDB_user.cpp	/^Accept  User::User_return(int rhs_fd)$/;"	f	class:User
+User_show	FDB_user.cpp	/^bool User::User_show(){$/;"	f	class:User
+Ziplist	FDB_ziplist.h	/^    Ziplist() {  }                  $/;"	f	class:Ziplist
+Ziplist	FDB_ziplist.h	/^Ziplist<T>::Ziplist(std::vector<T> rhs)$/;"	f	class:Ziplist
+Ziplist	FDB_ziplist.h	/^class Ziplist$/;"	c
+Ziplist_NUM	FDB_Data_num.h	13;"	d
+Ziplist_add	FDB_ziplist.h	/^void Ziplist<T>::Ziplist_add(T rhs)$/;"	f	class:Ziplist
+Ziplist_del	FDB_ziplist.h	/^void Ziplist<T>::Ziplist_del(T rhs)$/;"	f	class:Ziplist
+Ziplist_del_more	FDB_ziplist.h	/^bool Ziplist<T>::Ziplist_del_more(T first, T last)$/;"	f	class:Ziplist
+Ziplist_destory	FDB_ziplist.h	/^void Ziplist<T>::Ziplist_destory()$/;"	f	class:Ziplist
+Ziplist_find	FDB_ziplist.h	/^bool Ziplist<T>::Ziplist_find(T rhs)$/;"	f	class:Ziplist
+Ziplist_return	FDB_ziplist.h	/^std::vector<T> Ziplist<T>::Ziplist_return()$/;"	f	class:Ziplist
+Ziplist_show	FDB_ziplist.h	/^void Ziplist<T>::Ziplist_show()$/;"	f	class:Ziplist
+Ziplist_size	FDB_ziplist.h	/^int Ziplist<T>::Ziplist_size()$/;"	f	class:Ziplist
+Ziplist_size_bytes	FDB_ziplist.h	/^int Ziplist<T>::Ziplist_size_bytes()$/;"	f	class:Ziplist
+_DATE_H	FDB_Date.h	9;"	d
+_FDB_ACCEPT_H	FDB_accept.h	9;"	d
+_FDB_BUFFER_H	FDB_buffer.h	9;"	d
+_FDB_CTL_INFO_H	FDB_ctl_info.h	9;"	d
+_FDB_DATA_ALL_H	FDB_Data_All.h	9;"	d
+_FDB_DATA_BASE_H	FDB_Data_Base.h	9;"	d
+_FDB_DATA_NUM_H	FDB_Data_num.h	9;"	d
+_FDB_EPOLL_H	FDB_epoll.h	9;"	d
+_FDB_HASH_MAP_H	FDB_Hash_map.h	9;"	d
+_FDB_HASH_NODE_H	FDB_Hash_node.h	9;"	d
+_FDB_HASH_PSEUDO_H	FDB_Hash_pseudo.h	9;"	d
+_FDB_IO_H	FDB_IO.h	9;"	d
+_FDB_JSON_H	FDB_json.h	9;"	d
+_FDB_KEY_VAL_H	FDB_Key_val.h	9;"	d
+_FDB_KS_H	FDB_ks.h	9;"	d
+_FDB_LOG_H	FDB_LOG.h	9;"	d
+_FDB_NOCOPYABLE_H	FDB_nocopyable.h	9;"	d
+_FDB_QUEUE_H	FDB_Queue.h	9;"	d
+_FDB_SERVER_H	FDB_server.h	9;"	d
+_FDB_SERWORK_H	FDB_serwork.h	9;"	d
+_FDB_SOCKET_H	FDB_Socket.h	9;"	d
+_FDB_STACK_H	FDB_Stack.h	9;"	d
+_FDB_STRING_H	FDB_String.h	9;"	d
+_FDB_THREAD_POOL_H	FDB_thread_pool.h	9;"	d
+_FDB_TIMER_H	FDB_timer.h	9;"	d
+_FDB_USER_H	FDB_user.h	9;"	d
+_FDB_ZIPLIST_H	FDB_ziplist.h	9;"	d
+_MD5_H	FDB_md5.h	4;"	d
+ack	FDB_json.h	/^        int ack;$/;"	m	class:JSon
+add_cut_ptime	FDB_Key_val.cpp	/^void Key_val::add_cut_ptime(long long time)$/;"	f	class:Key_val
+add_cut_time	FDB_Key_val.cpp	/^void Key_val::add_cut_time(long long time)$/;"	f	class:Key_val
+address	FDB_Socket.h	/^        struct sockaddr_in address;      $/;"	m	class:Socket	typeref:struct:Socket::sockaddr_in
+aof_buffer	FDB_LOG.h	/^    LOG_Buffer aof_buffer[LOG_BUFFER_SIZE];$/;"	m	class:FDB_LOG
+backlog	FDB_Socket.h	/^        int backlog;$/;"	m	class:Socket
+bindAddress	FDB_Socket.cpp	/^bool Socket::bindAddress(){                \/*绑定IP 端口*\/$/;"	f	class:Socket
+bit_size	FDB_intset.h	/^    int bit_size;                          \/*集合所占字节数*\/$/;"	m	class:my_intset
+blocksize	FDB_md5.h	/^	enum {blocksize = 64}; $/;"	e	enum:MD5::__anon1
+buf_SIZE	FDB_epoll.h	/^        int buf_SIZE;$/;"	m	class:Epoll
+buffer	FDB_LOG.h	/^    char (*buffer)[LOG_SIZE];$/;"	m	class:LOG_Buffer
+buffer	FDB_md5.h	/^	uint1 buffer[blocksize];  $/;"	m	class:MD5
+change	FDB_server.h	/^        int change       ;$/;"	m	class:server
+cliaddr	FDB_Socket.h	/^        struct sockaddr_in cliaddr;$/;"	m	class:Socket	typeref:struct:Socket::sockaddr_in
+client_addr	FDB_accept.h	/^        struct sockaddr_in client_addr;$/;"	m	class:Accept	typeref:struct:Accept::sockaddr_in
+client_addr_length	FDB_accept.h	/^        socklen_t client_addr_length = sizeof(client_addr);  $/;"	m	class:Accept
+cluster	FDB_ctl_info.h	/^        int cluster;$/;"	m	class:Ctl_info
+connfd	FDB_accept.h	/^        int connfd;$/;"	m	class:Accept
+connfd_buf	FDB_accept.h	/^        Buffer connfd_buf;$/;"	m	class:Accept
+connfd_flag	FDB_accept.h	/^        int connfd_flag;$/;"	m	class:Accept
+connfd_num	FDB_ctl_info.h	/^        int connfd_num;$/;"	m	class:Ctl_info
+connfd_num	FDB_server.h	/^        int connfd_num   ;$/;"	m	class:server
+connfd_sockfd	FDB_serwork.h	/^        int connfd_sockfd  ;   $/;"	m	class:Server_work
+connfd_write	FDB_buffer.cpp	/^int Buffer::connfd_write(std::string str,int use_less,int length){$/;"	f	class:Buffer
+count	FDB_md5.h	/^	uint4 count[2];           \/*64位的高低位计数器*\/$/;"	m	class:MD5
+counts	FDB_intset.h	/^    long counts;                           \/*集合包含的元素个数*\/$/;"	m	class:my_intset
+cut_time	FDB_Key_val.h	/^    long long  cut_time;$/;"	m	class:Key_val
+data	FDB_Hash_pseudo.h	/^    std::vector<Hash_node_pseudo<T> > data;     \/\/保存键值对的容器$/;"	m	class:Hash_map_pseudo
+data	FDB_Queue.h	/^    std::queue<T> data;              \/\/对列数据对象$/;"	m	class:FDB_Queue
+data	FDB_Stack.h	/^    std::stack<T> data;		\/\/栈数据对象$/;"	m	class:FDB_Stack
+data	FDB_skiplist.h	/^    E data;             $/;"	m	class:SkipNode
+data	FDB_ziplist.h	/^    std::vector<T> data;            \/\/vector容器列表$/;"	m	class:Ziplist
+date	FDB_Date.h	/^    char date[30];$/;"	m	class:Date
+db_num	FDB_Data_All.h	/^    int db_num;$/;"	m	class:Data_All
+decode	FDB_md5.cpp	/^void MD5::decode(uint4 output[], const uint1 input[], size_type len)$/;"	f	class:MD5
+decrypt	FDB_ks.cpp	/^void passwd::decrypt()$/;"	f	class:passwd
+digest	FDB_md5.h	/^	uint1 digest[16];         \/*结果*\/$/;"	m	class:MD5
+do_accept	FDB_Socket.cpp	/^int Socket::do_accept(){$/;"	f	class:Socket
+do_work	FDB_serwork.cpp	/^bool Server_work::do_work(){$/;"	f	class:Server_work
+encode	FDB_md5.cpp	/^void MD5::encode(uint1 output[], const uint4 input[], size_type len)$/;"	f	class:MD5
+encryption	FDB_ks.cpp	/^void passwd::encryption()$/;"	f	class:passwd
+epoll_fd	FDB_epoll.h	/^        int epoll_fd;$/;"	m	class:Epoll
+epoll_num	FDB_ctl_info.h	/^        int epoll_num;$/;"	m	class:Ctl_info
+event_s	FDB_epoll.h	/^        epoll_event *event_s;$/;"	m	class:Epoll
+express	FDB_ks.h	/^    std::string express;               \/*明文字符串*\/$/;"	m	class:passwd
+fd	FDB_LOG.h	/^    int fd;$/;"	m	class:LOG_fd
+fd	FDB_Socket.h	/^        int fd()const{return sockfd_; }$/;"	f	class:Socket
+fd	FDB_timer.h	/^        int fd;$/;"	m	class:timer
+finalize	FDB_md5.cpp	/^MD5& MD5::finalize()$/;"	f	class:MD5
+finalized	FDB_md5.h	/^	bool finalized;$/;"	m	class:MD5
+find_intset	FDB_intset.cpp	/^bool my_intset::find_intset(int s)$/;"	f	class:my_intset
+find_intset	FDB_intset.cpp	/^bool my_intset::find_intset(long s)$/;"	f	class:my_intset
+find_intset	FDB_intset.cpp	/^bool my_intset::find_intset(short s)$/;"	f	class:my_intset
+find_intset	FDB_intset.cpp	/^bool my_intset::find_intset(std::string s)$/;"	f	class:my_intset
+flag	FDB_timer.h	/^        bool flag;                     \/*是否循环定时标志位*\/$/;"	m	class:timer
+free	FDB_String.h	/^    int free;		\/\/字符串已经使用长度$/;"	m	class:String
+get_bit_size	FDB_intset.cpp	/^int my_intset::get_bit_size(){$/;"	f	class:my_intset
+get_cut_time	FDB_Key_val.cpp	/^long long Key_val::get_cut_time()$/;"	f	class:Key_val
+get_data	FDB_skiplist.h	/^    E get_data(){return data;}$/;"	f	class:SkipNode
+get_hash	FDB_Key_val.cpp	/^unsigned int Key_val::get_hash()$/;"	f	class:Key_val
+get_key	FDB_Key_val.cpp	/^std::string Key_val::get_key()$/;"	f	class:Key_val
+get_size	FDB_intset.cpp	/^int my_intset::get_size(){$/;"	f	class:my_intset
+get_type	FDB_Key_val.cpp	/^int Key_val::get_type()$/;"	f	class:Key_val
+getfree	FDB_String.cpp	/^int String::getfree() const$/;"	f	class:String
+getsize	FDB_String.cpp	/^int String::getsize() const$/;"	f	class:String
+hash	FDB_Data_Base.h	/^    std::vector<std::list<Key_val>> hash;$/;"	m	class:Data_Base
+hash	FDB_Hash_map.h	/^    std::vector<std::list<Hash_node_pseudo<T>>> hash;   \/\/hash表的实现$/;"	m	class:Hash_map
+hash_key	FDB_Key_val.h	/^    unsigned int hash_key;$/;"	m	class:Key_val
+hash_num	FDB_Hash_node.h	/^    unsigned int hash_num;      \/\/键值对键的hash值$/;"	m	class:Hash_node_pseudo
+head	FDB_skiplist.h	/^    SkipNode<E>* head;     \/*跳跃表的头指针*\/$/;"	m	class:list_skip
+hexdigest	FDB_md5.cpp	/^std::string MD5::hexdigest() const$/;"	f	class:MD5
+id	FDB_accept.h	/^        int id     ;$/;"	m	class:Accept
+init	FDB_md5.cpp	/^void MD5::init()$/;"	f	class:MD5
+intset_delete	FDB_intset.cpp	/^bool my_intset::intset_delete(int s){$/;"	f	class:my_intset
+intset_delete	FDB_intset.cpp	/^bool my_intset::intset_delete(long s){$/;"	f	class:my_intset
+intset_delete	FDB_intset.cpp	/^bool my_intset::intset_delete(short s){$/;"	f	class:my_intset
+intset_delete	FDB_intset.cpp	/^bool my_intset::intset_delete(std::string s)$/;"	f	class:my_intset
+isFull	FDB_thread_pool.h	/^        bool isFull() const{$/;"	f	class:ThreadPool
+json_obj	FDB_json.h	/^        Json::Value json_obj;$/;"	m	class:JSon
+key	FDB_Hash_node.h	/^    String key;                 \/\/键值对的键$/;"	m	class:Hash_node_pseudo
+key	FDB_Key_val.h	/^    std::string key;$/;"	m	class:Key_val
+key	FDB_ks.h	/^    int key;                           \/*密钥*\/$/;"	m	class:passwd
+last	FDB_skiplist.h	/^    SkipNode<E>** last;$/;"	m	class:list_skip
+level	FDB_skiplist.cpp	/^int list_skip<E>::level()$/;"	f	class:list_skip
+levels	FDB_skiplist.h	/^    int levels;            \/*已存在的非空层数*\/$/;"	m	class:list_skip
+link	FDB_skiplist.h	/^    SkipNode<E>** link;              \/*一维指针数组*\/$/;"	m	class:SkipNode
+list_skip	FDB_skiplist.cpp	/^list_skip<E>::list_skip(E large, int MaxE, float p)$/;"	f	class:list_skip
+list_skip	FDB_skiplist.h	/^class list_skip{$/;"	c
+listen	FDB_Socket.cpp	/^bool Socket::listen(int backlog){       \/*监听最大链接数*\/$/;"	f	class:Socket
+log_fd	FDB_LOG.h	/^    LOG_fd log_fd;$/;"	m	class:LOG_Buffer
+main	FDB_test_server.cpp	/^int main(){$/;"	f
+master	FDB_ctl_info.h	/^        int master;$/;"	m	class:Ctl_info
+maxQueueSize_	FDB_thread_pool.h	/^        size_t maxQueueSize_;                                           \/*任务队列最大长度*\/$/;"	m	class:ThreadPool
+maxlevel	FDB_skiplist.h	/^    int maxlevel;          \/*跳跃表所允许的最大级数*\/$/;"	m	class:list_skip
+message	FDB_json.h	/^        std::string message;$/;"	m	class:JSon
+message	FDB_serwork.h	/^        std::string message;$/;"	m	class:Server_work
+mutex_	FDB_thread_pool.h	/^        mutable  std::mutex mutex_;                                     \/*线程池的锁*\/$/;"	m	class:ThreadPool
+mutex_buffer	FDB_LOG.h	/^    std::mutex mutex_buffer;$/;"	m	class:LOG_Buffer
+mutex_fd	FDB_LOG.h	/^    std::mutex mutex_fd;$/;"	m	class:LOG_fd
+my_greater_sort	FDB_intset.cpp	/^int my_intset::my_greater_sort()$/;"	f	class:my_intset
+my_insert	FDB_intset.cpp	/^void my_intset::my_insert(int s)$/;"	f	class:my_intset
+my_insert	FDB_intset.cpp	/^void my_intset::my_insert(long s)$/;"	f	class:my_intset
+my_insert	FDB_intset.cpp	/^void my_intset::my_insert(short s)$/;"	f	class:my_intset
+my_insert	FDB_intset.cpp	/^void my_intset::my_insert(std::string s)$/;"	f	class:my_intset
+my_intset	FDB_intset.cpp	/^my_intset::my_intset()$/;"	f	class:my_intset
+my_intset	FDB_intset.h	/^class my_intset$/;"	c
+my_less_sort	FDB_intset.cpp	/^int my_intset::my_less_sort()$/;"	f	class:my_intset
+my_output	FDB_ks.cpp	/^void passwd::my_output()$/;"	f	class:passwd
+name_	FDB_thread_pool.h	/^        std::string name_; $/;"	m	class:ThreadPool
+new_value	FDB_timer.h	/^        struct itimerspec  new_value;  \/*定时器时间结构*\/$/;"	m	class:timer	typeref:struct:timer::itimerspec
+nocopyable	FDB_nocopyable.h	/^        nocopyable(){}$/;"	f	class:nocopyable
+nocopyable	FDB_nocopyable.h	/^class nocopyable{$/;"	c
+noexcept	FDB_String.h	/^    String(String &&rhs) noexcept;$/;"	m	class:String
+notEmptyCond_	FDB_thread_pool.h	/^        std::condition_variable notEmptyCond_;                          \/*条件变量不为空*\/$/;"	m	class:ThreadPool
+notFullCond_	FDB_thread_pool.h	/^        std::condition_variable notFullCond_;                           \/*条件变量未满*\/$/;"	m	class:ThreadPool
+now	FDB_timer.h	/^        struct timespec now;           \/*现在时间*\/$/;"	m	class:timer	typeref:struct:timer::timespec
+operator !=	FDB_String.cpp	/^bool operator!=(const String &lhs, const String &rhs)$/;"	f
+operator +	FDB_String.cpp	/^String operator+(const String &lhs, const String &rhs)$/;"	f
+operator +	FDB_String.cpp	/^String operator+(const String &lhs, const char *rhs)$/;"	f
+operator +=	FDB_String.cpp	/^String& String::operator+=(const String &rhs)$/;"	f	class:String
+operator +=	FDB_String.cpp	/^String& String::operator+=(const char *rhs)$/;"	f	class:String
+operator <	FDB_String.cpp	/^bool operator<(const String &lhs, const String &rhs)$/;"	f
+operator <	FDB_skiplist.h	/^    friend int operator<(SkipNode<E> t1, SkipNode<E> t2)$/;"	f	class:SkipNode
+operator <<	FDB_String.cpp	/^std::ostream& operator<<(std::ostream &os, const String &rhs)$/;"	f
+operator <<	FDB_md5.cpp	/^std::ostream& operator<<(std::ostream& out, MD5 md5)$/;"	f
+operator =	FDB_String.cpp	/^String& String::operator=(const String &rhs) $/;"	f	class:String
+operator =	FDB_String.cpp	/^String& String::operator=(const char *rhs)$/;"	f	class:String
+operator ==	FDB_String.cpp	/^bool operator==(const String &lhs, const String &rhs)$/;"	f
+operator ==	FDB_skiplist.h	/^    friend int operator==(SkipNode<E> t1, SkipNode<E> t2)$/;"	f	class:SkipNode
+operator >	FDB_String.cpp	/^bool operator>(const String &lhs, const String &rhs)$/;"	f
+operator >	FDB_skiplist.h	/^    friend int operator>(SkipNode<E> t1, SkipNode<E> t2)$/;"	f	class:SkipNode
+operator >>	FDB_String.cpp	/^std::istream& operator>>(std::istream &is, String &rhs)$/;"	f
+operator []	FDB_String.cpp	/^char& String::operator[](int i)$/;"	f	class:String
+out_my	FDB_skiplist.cpp	/^void list_skip<E>::out_my()$/;"	f	class:list_skip
+passwd	FDB_ks.cpp	/^passwd::passwd(std::string s, int k)$/;"	f	class:passwd
+passwd	FDB_ks.h	/^class passwd$/;"	c
+print_int	FDB_intset.cpp	/^void my_intset::print_int()$/;"	f	class:my_intset
+pushTask	FDB_thread_pool.cpp	/^void ThreadPool::pushTask(Task task){                          \/*线程池添加任务*\/$/;"	f	class:ThreadPool
+queueSize	FDB_thread_pool.h	/^        size_t queueSize() const {                                      \/*当前任务队列长度*\/$/;"	f	class:ThreadPool
+queue_	FDB_thread_pool.h	/^        std::deque<Task> queue_;                                        $/;"	m	class:ThreadPool
+queue_mutex	FDB_Queue.h	/^    std::mutex queue_mutex;     \/\/对列类中的锁$/;"	m	class:FDB_Queue
+read_buff_	FDB_buffer.h	/^        std::vector<char>  read_buff_;$/;"	m	class:Buffer
+read_index_end	FDB_buffer.h	/^        int read_index_end   ;$/;"	m	class:Buffer
+read_index_start	FDB_buffer.h	/^        int read_index_start ;$/;"	m	class:Buffer
+read_info	FDB_ctl_info.cpp	/^bool Ctl_info::read_info(){$/;"	f	class:Ctl_info
+read_info__	FDB_ctl_info.cpp	/^bool Ctl_info::read_info__(std::fstream & s){$/;"	f	class:Ctl_info
+read_info_select	FDB_ctl_info.cpp	/^bool Ctl_info::read_info_select(std::string temp,std::string b){$/;"	f	class:Ctl_info
+read_length	FDB_buffer.h	/^        int read_length      ;                    \/*read and write = ( start - end )*\/$/;"	m	class:Buffer
+read_max	FDB_buffer.h	/^        int read_max         ;$/;"	m	class:Buffer
+rehash	FDB_Data_Base.h	/^    std::vector<std::list<Key_val>> rehash;$/;"	m	class:Data_Base
+rehash	FDB_Hash_map.h	/^    std::vector<std::list<Hash_node_pseudo<T>>> rehash; \/\/rehash表的实现$/;"	m	class:Hash_map
+rehash_default	FDB_Data_Base.h	/^    int rehash_default;$/;"	m	class:Data_Base
+rehashhidx	FDB_Data_Base.h	/^    int rehashhidx;$/;"	m	class:Data_Base
+rehashhidx	FDB_Hash_map.h	/^    int rehashhidx;             \/\/标志rehash是否使用（-1的代表未使用）$/;"	m	class:Hash_map
+resize	FDB_Data_Base.h	/^    unsigned long resize;$/;"	m	class:Data_Base
+resize	FDB_Hash_map.h	/^    unsigned long resize;       \/\/rehash表的大小$/;"	m	class:Hash_map
+return_read_length	FDB_buffer.cpp	/^int Buffer::return_read_length(){$/;"	f	class:Buffer
+return_write_length	FDB_buffer.cpp	/^int Buffer::return_write_length(){$/;"	f	class:Buffer
+reused	FDB_Data_Base.h	/^    unsigned long reused;$/;"	m	class:Data_Base
+reused	FDB_Hash_map.h	/^    unsigned long reused;       \/\/键值对保存在rehash表中的大小$/;"	m	class:Hash_map
+rotate_left	FDB_md5.cpp	/^inline MD5::uint4 MD5::rotate_left(uint4 x, int n) {$/;"	f	class:MD5
+running_	FDB_thread_pool.h	/^        bool running_;$/;"	m	class:ThreadPool
+sec_time	FDB_timer.h	/^        int sec_time;                  \/*定时时间*\/$/;"	m	class:timer
+sec_times	FDB_timer.h	/^        int sec_times;                 \/*定时触发间隔时间*\/$/;"	m	class:timer
+server	FDB_server.cpp	/^server::server(int status ,int connfd_num,int server_s){   \/*构造服务器基础信息*\/$/;"	f	class:server
+server	FDB_server.h	/^class server{$/;"	c
+server_fd	FDB_server.cpp	/^int server::server_fd(){$/;"	f	class:server
+server_start	FDB_server.cpp	/^bool server::server_start(){                               \/*开启多线程服务器*\/$/;"	f	class:server
+server_status	FDB_server.h	/^        int server_status;$/;"	m	class:server
+server_threads	FDB_server.h	/^        int server_threads;$/;"	m	class:server
+server_work	FDB_server.cpp	/^static void server_work(int fd){$/;"	f	file:
+setKeepAlive	FDB_Socket.cpp	/^bool Socket::setKeepAlive(bool on){      \/*设置保活*\/$/;"	f	class:Socket
+setMaxQueueSize	FDB_thread_pool.h	/^        void setMaxQueueSize(size_t maxSize) {                          \/*设置任务队列最大长度*\/$/;"	f	class:ThreadPool
+setReuseAddr	FDB_Socket.cpp	/^bool Socket::setReuseAddr(bool on){      \/*设置reuseaddr 标志*\/$/;"	f	class:Socket
+setReusePort	FDB_Socket.cpp	/^bool Socket::setReusePort(bool on){      \/*设置reuseport*\/$/;"	f	class:Socket
+setThreadPoolInitCallback	FDB_thread_pool.h	/^        void setThreadPoolInitCallback(Task  callback){                 \/*设置线程初始化回调*\/$/;"	f	class:ThreadPool
+set_cut_ptime	FDB_Key_val.cpp	/^void Key_val::set_cut_ptime(long long time)$/;"	f	class:Key_val
+set_cut_time	FDB_Key_val.cpp	/^void Key_val::set_cut_time(long long time)$/;"	f	class:Key_val
+set_data	FDB_skiplist.h	/^    void set_data(E m){data = m;}$/;"	f	class:SkipNode
+set_hash_key	FDB_Key_val.cpp	/^void Key_val::set_hash_key(unsigned int hash)$/;"	f	class:Key_val
+setbuffsize	FDB_Socket.cpp	/^bool Socket::setbuffsize(bool on){$/;"	f	class:Socket
+setnonblocking	FDB_Socket.cpp	/^int Socket::setnonblocking(){              \/*设置非阻塞*\/$/;"	f	class:Socket
+show_all	FDB_ctl_info.cpp	/^bool Ctl_info::show_all(){$/;"	f	class:Ctl_info
+size	FDB_Data_Base.h	/^    unsigned long size;$/;"	m	class:Data_Base
+size	FDB_Hash_map.h	/^    unsigned long size;         \/\/hash表的大小$/;"	m	class:Hash_map
+size	FDB_Queue.h	/^    unsigned int size;          \/\/对列中对象的个数$/;"	m	class:FDB_Queue
+size	FDB_Stack.h	/^    unsigned int size; 		\/\/栈中对象的个数$/;"	m	class:FDB_Stack
+size	FDB_String.h	/^    int size; 		\/\/字符串已用长度$/;"	m	class:String
+size_counts	FDB_intset.h	/^    long size_counts;                      \/*集合占用的内存字节数*\/$/;"	m	class:my_intset
+size_type	FDB_md5.h	/^	typedef unsigned int size_type; $/;"	t	class:MD5
+slave	FDB_ctl_info.h	/^        int slave ;$/;"	m	class:Ctl_info
+slave_ip_port1	FDB_ctl_info.h	/^        std::string slave_ip_port1;$/;"	m	class:Ctl_info
+slave_ip_port2	FDB_ctl_info.h	/^        std::string slave_ip_port2;$/;"	m	class:Ctl_info
+slave_master	FDB_ctl_info.h	/^        std::string slave_master;$/;"	m	class:Ctl_info
+slave_num	FDB_ctl_info.h	/^        int slave_num;$/;"	m	class:Ctl_info
+sock_fd	FDB_accept.h	/^        int sock_fd;$/;"	m	class:Accept
+sock_fd	FDB_epoll.h	/^        int sock_fd ;$/;"	m	class:Epoll
+sockfd	FDB_server.h	/^        int sockfd       ;$/;"	m	class:server
+sockfd_	FDB_Socket.h	/^        int sockfd_ ;$/;"	m	class:Socket
+stack_mutex	FDB_Stack.h	/^    std::mutex stack_mutex; 	\/\/栈类中的锁$/;"	m	class:FDB_Stack
+start	FDB_thread_pool.cpp	/^void ThreadPool::start(int threadNums){      \/*启动线程池*\/$/;"	f	class:ThreadPool
+state	FDB_md5.h	/^	uint4 state[4];           \/*md5计算后尚未转换为字符的md5值*\/$/;"	m	class:MD5
+stop	FDB_thread_pool.cpp	/^void ThreadPool::stop(){                            \/*销毁线程池*\/$/;"	f	class:ThreadPool
+str	FDB_String.h	/^    char *str; 		\/\/空闲长度$/;"	m	class:String
+t	FDB_Date.h	/^    struct tm *t;$/;"	m	class:Date	typeref:struct:Date::tm
+tail	FDB_skiplist.h	/^    SkipNode<E>* tail;     \/*尾结点指针*\/$/;"	m	class:list_skip
+take	FDB_thread_pool.cpp	/^ThreadPool::Task ThreadPool::take(){                                          \/*返回任务队列中的任务*\/$/;"	f	class:ThreadPool
+test_accept	FDB_Socket.cpp	/^bool Socket::test_accept(){$/;"	f	class:Socket
+threadFunc	FDB_thread_pool.cpp	/^void ThreadPool::threadFunc(){                                                \/*线程池回调函数*\/$/;"	f	class:ThreadPool
+threadInitCallback_	FDB_thread_pool.h	/^        Task threadInitCallback_;                                       \/*回调函数*\/$/;"	m	class:ThreadPool
+threads_	FDB_thread_pool.h	/^        std::vector<std::thread*> threads_;                             \/*线程池*\/$/;"	m	class:ThreadPool
+time_s	FDB_timer.h	/^        unsigned long time_s;          \/*定时次数*\/ $/;"	m	class:timer
+timer	FDB_epoll.h	/^        void (*timer)(int);$/;"	m	class:Epoll
+timer	FDB_timer.cpp	/^timer::timer(){$/;"	f	class:timer
+timer	FDB_timer.h	/^class timer{$/;"	c
+timer_loop	FDB_timer.cpp	/^bool timer::timer_loop(int sec,unsigned long times,int sectimes,bool loop){$/;"	f	class:timer
+timer_re	FDB_timer.cpp	/^bool timer::timer_re(){$/;"	f	class:timer
+timer_settime	FDB_timer.cpp	/^bool timer::timer_settime(){$/;"	f	class:timer
+timer_test	FDB_timer.cpp	/^bool timer::timer_test(){$/;"	f	class:timer
+tra	FDB_intset.h	/^    int tra;                               \/*整数类型转换的次数*\/$/;"	m	class:my_intset
+transform	FDB_md5.cpp	/^void MD5::transform(const uint1 block[blocksize])$/;"	f	class:MD5
+tv	FDB_Date.h	/^    struct timeval tv;$/;"	m	class:Date	typeref:struct:Date::timeval
+type	FDB_Key_val.h	/^    int type;$/;"	m	class:Key_val
+uint1	FDB_md5.h	/^	typedef unsigned char uint1; \/*  8bit 1个字节*\/$/;"	t	class:MD5
+uint4	FDB_md5.h	/^	typedef unsigned int uint4;  \/*  32bit 4 个字节 *\/$/;"	t	class:MD5
+update	FDB_md5.cpp	/^void MD5::update(const char input[], size_type length)$/;"	f	class:MD5
+update	FDB_md5.cpp	/^void MD5::update(const unsigned char input[], size_type length)$/;"	f	class:MD5
+used	FDB_Data_Base.h	/^    unsigned long used;$/;"	m	class:Data_Base
+used	FDB_Hash_map.h	/^    unsigned long used;         \/\/键值对保存在hash表中的大小$/;"	m	class:Hash_map
+used	FDB_LOG.h	/^    int used;$/;"	m	class:LOG_Buffer
+user	FDB_test_server.cpp	/^User user;$/;"	v
+v1	FDB_intset.h	/^    std::vector<short> v1;$/;"	m	class:my_intset
+v2	FDB_intset.h	/^    std::vector<int> v2;$/;"	m	class:my_intset
+v3	FDB_intset.h	/^    std::vector<long> v3;$/;"	m	class:my_intset
+v4	FDB_intset.h	/^    std::vector<std::string > v4;          \/*如果操作的元素是字符类型的*\/$/;"	m	class:my_intset
+value	FDB_Hash_node.h	/^    T value;                    \/\/键值对的值$/;"	m	class:Hash_node_pseudo
+value	FDB_Key_val.h	/^    void *value;$/;"	m	class:Key_val
+work	FDB_epoll.cpp	/^bool Epoll::work(int sockfd,std::string string,char *buf){$/;"	f	class:Epoll
+write_buff_	FDB_buffer.h	/^        std::vector<char>  write_buff_;$/;"	m	class:Buffer
+write_index_end	FDB_buffer.h	/^        int write_index_end  ;$/;"	m	class:Buffer
+write_index_start	FDB_buffer.h	/^        int write_index_start;                    \/*read and write index *\/$/;"	m	class:Buffer
+write_info	FDB_ctl_info.cpp	/^bool Ctl_info::write_info(){$/;"	f	class:Ctl_info
+write_length	FDB_buffer.h	/^        int write_length     ;$/;"	m	class:Buffer
+write_max	FDB_buffer.h	/^        int write_max        ;$/;"	m	class:Buffer
+~Data_All	FDB_Data_All.cpp	/^Data_All::~Data_All()$/;"	f	class:Data_All
+~Epoll	FDB_epoll.cpp	/^Epoll::~Epoll(){$/;"	f	class:Epoll
+~Key_val	FDB_Key_val.cpp	/^Key_val::~Key_val()$/;"	f	class:Key_val
+~LOG_Buffer	FDB_LOG.cpp	/^LOG_Buffer::~LOG_Buffer()$/;"	f	class:LOG_Buffer
+~SkipNode	FDB_skiplist.h	/^    ~SkipNode(){delete []link;}$/;"	f	class:SkipNode
+~Socket	FDB_Socket.cpp	/^Socket::~Socket(){                      $/;"	f	class:Socket
+~String	FDB_String.cpp	/^String::~String()$/;"	f	class:String
+~ThreadPool	FDB_thread_pool.cpp	/^ThreadPool::~ThreadPool(){    \/*析构函数*\/$/;"	f	class:ThreadPool
+~Ziplist	FDB_ziplist.h	/^    ~Ziplist() {  } $/;"	f	class:Ziplist
+~list_skip	FDB_skiplist.cpp	/^list_skip<E>::~list_skip()$/;"	f	class:list_skip
+~my_intset	FDB_intset.cpp	/^my_intset::~my_intset()$/;"	f	class:my_intset
+~nocopyable	FDB_nocopyable.h	/^        ~nocopyable(){}$/;"	f	class:nocopyable
+~timer	FDB_timer.cpp	/^timer::~timer(){$/;"	f	class:timer
