@@ -7,7 +7,6 @@
 
 #include<iostream>
 #include"./FDB_String.h"
-#include"./FDB_String.cpp"
 using namespace std;
 
 int main()

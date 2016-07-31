@@ -7,9 +7,7 @@
 
 #include<iostream>
 #include"../server/FDB_Data_All.h"
-#include"../server/FDB_Data_All.cpp"
 #include"../server/FDB_Data_Base.h"
-#include"../server/FDB_Data_Base.cpp"
 #include"../server/FDB_Key_val.h"
 #include<vector>
 #include<string>

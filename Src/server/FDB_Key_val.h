@@ -9,12 +9,10 @@
 #define _FDB_KEY_VAL_H
 
 #include<iostream>
-//#include"./FDB_Key_val.cpp"
 #include<string>
 #include"./FDB_Data_num.h"
 #include"./FDB_Hash_map.h"
 #include"./FDB_String.h"
-#include"./FDB_String.cpp"
 #include"./FDB_ziplist.h"
 #include"./FDB_Stack.h"
 #include"./FDB_Queue.h"
