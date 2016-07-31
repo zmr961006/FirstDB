@@ -12,7 +12,6 @@
 #include<list>
 #include<vector>
 #include"./FDB_Key_val.h"
-#include"./FDB_Key_val.cpp"
 
 class Data_Base
 {

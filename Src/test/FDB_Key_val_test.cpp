@@ -7,7 +7,6 @@
 
 #include<iostream>
 #include"../server/FDB_Key_val.h"
-#include"../server/FDB_Key_val.cpp"
 #include"../server/FDB_Hash_node.h"
 #include<unistd.h>
 #include<string>
