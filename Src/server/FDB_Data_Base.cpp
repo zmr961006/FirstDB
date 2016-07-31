@@ -8,7 +8,6 @@
 #ifndef FDB_DATA_BASE_CPP
 #define FDB_DATA_BASE_CPP
 
-#include<iostream>
 #include"./FDB_Data_Base.h"
 using namespace std;
 
