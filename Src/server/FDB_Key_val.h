@@ -32,13 +32,16 @@ private:
     long long  cut_time;
     int Server_ID;
 public:
+//int flag = 0;
     Key_val() = default;
-    Key_val(std::string key_name, void *obj, unsigned int hash, int type_data, int elem);
+    Key_val(std::string key_name, int type_data, int elem);
+    Key_val(const Key_val &a);
     ~Key_val();
     void Key_val_add(void *obj);
     bool Key_val_del(void *obj);
     void Key_val_value(void *buff);
     void Key_val_destory();
+    void Key_val_flag();
     int Key_val_size();
     void add_cut_time(long long time);
     void add_cut_ptime(long long time);

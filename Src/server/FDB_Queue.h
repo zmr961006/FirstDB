@@ -27,6 +27,9 @@ public:
     T FDB_Queue_back();         //读取队尾元素
     void FDB_Queue_push(const T &rhs);      //向对列添加元素
     unsigned int FDB_Queue_size();          //返回对列元素个数
+    void FDB_Queue_destory();
+
+     FDB_Queue& operator= (const FDB_Queue &a);
 }; 
     
 template <typename T>
@@ -132,4 +135,27 @@ unsigned int FDB_Queue<T>::FDB_Queue_size()
         }
     }
 }
+
+template <typename T>
+void FDB_Queue<T>::FDB_Queue_destory()
+{
+    while (1)
+    {
+        if (queue_mutex.try_lock())
+        {
+            size = 0;
+            std::queue<T>().swap(data);
+            queue_mutex.unlock();
+            break;
+        }
+    }
+}
+
+template <typename T>
+FDB_Queue<T>& FDB_Queue<T>::operator= (const FDB_Queue &a)
+{
+    size = a.size;
+    data = a.data;
+}
+
 #endif
