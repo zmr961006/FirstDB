@@ -1,0 +1,1381 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALL	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^ALL = DIR | FILE | LINKS$/;"	v
+ALL_NO_LINK	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^ALL_NO_LINK = DIR | FILE$/;"	v
+Accept	Src/server/FDB_accept.cpp	/^Accept::Accept(int sockfd){$/;"	f	class:Accept
+Accept	Src/server/FDB_accept.h	/^class Accept{$/;"	c
+Accept_Read	Src/server/FDB_accept.cpp	/^int Accept::Accept_Read(char * str){$/;"	f	class:Accept
+Accept_Write	Src/server/FDB_accept.cpp	/^int Accept::Accept_Write(std::string str){        \/*先写进connfd  将剩余的数据写入buffer ,注册connfd 可写*\/$/;"	f	class:Accept
+Accept_return	Src/server/FDB_accept.cpp	/^int Accept::Accept_return(){$/;"	f	class:Accept
+Accept_return_flag	Src/server/FDB_accept.cpp	/^int Accept::Accept_return_flag(){$/;"	f	class:Accept
+Accept_send_buffer	Src/server/FDB_accept.cpp	/^int Accept::Accept_send_buffer(){$/;"	f	class:Accept
+AntPatternToRETest	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^    class AntPatternToRETest(unittest.TestCase):$/;"	c	function:glob
+Args	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef std::vector<PathArgument> Args;$/;"	t	class:Json::Path
+ArrayIndex	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef UInt ArrayIndex;$/;"	t	class:Json::Value
+ArrayIndex	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef Value::ArrayIndex ArrayIndex;$/;"	t	class:Json::ValueInternalArray
+BatchAllocator	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^   BatchAllocator( unsigned int objectsPerPage = 255 )$/;"	f	class:Json::BatchAllocator
+BatchAllocator	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^class BatchAllocator$/;"	c	namespace:Json
+BatchInfo	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^   struct BatchInfo$/;"	s	class:Json::BatchAllocator
+BucketIndex	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef unsigned int BucketIndex;$/;"	t	class:Json::ValueInternalMap
+Buffer	Src/server/FDB_buffer.h	/^class Buffer{$/;"	c
+Buffer_Add	Src/server/FDB_LOG.cpp	/^bool LOG_Buffer::Buffer_Add(const char *str, int size)$/;"	f	class:LOG_Buffer
+Buffer_Write	Src/server/FDB_LOG.cpp	/^bool LOG_Buffer::Buffer_Write()$/;"	f	class:LOG_Buffer
+Builder	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^import SCons.Builder$/;"	i
+CPPTL_AUTOLINK_DLL	Src/jsoncpp-src-0.5.0/include/json/autolink.h	12;"	d
+CPPTL_AUTOLINK_DLL	Src/jsoncpp-src-0.5.0/include/json/autolink.h	14;"	d
+CPPTL_AUTOLINK_NAME	Src/jsoncpp-src-0.5.0/include/json/autolink.h	11;"	d
+CPPTL_JSON_FEATURES_H_INCLUDED	Src/jsoncpp-src-0.5.0/include/json/features.h	2;"	d
+CPPTL_JSON_H_INCLUDED	Src/jsoncpp-src-0.5.0/include/json/value.h	2;"	d
+CPPTL_JSON_READER_H_INCLUDED	Src/jsoncpp-src-0.5.0/include/json/reader.h	2;"	d
+CZString	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      class CZString $/;"	c	class:Json::Value
+CZString	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::CZString::CZString( const CZString &other )$/;"	f	class:Json::Value::CZString
+CZString	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::CZString::CZString( const char *cstr, DuplicationPolicy allocate )$/;"	f	class:Json::Value::CZString
+CZString	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::CZString::CZString( int index )$/;"	f	class:Json::Value::CZString
+Char	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      typedef char Char;$/;"	t	class:Json::Reader
+ChildValues	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      typedef std::vector<std::string> ChildValues;$/;"	t	class:Json::StyledStreamWriter
+ChildValues	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      typedef std::vector<std::string> ChildValues;$/;"	t	class:Json::StyledWriter
+Close	Src/server/FDB_IO.cpp	/^int Close(int fd){$/;"	f
+CommentInfo	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      struct CommentInfo$/;"	s	class:Json::Value
+CommentInfo	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::CommentInfo::CommentInfo()$/;"	f	class:Json::Value::CommentInfo
+CommentPlacement	Src/jsoncpp-src-0.5.0/include/json/value.h	/^   enum CommentPlacement$/;"	g	namespace:Json
+Ctl_info	Src/server/FDB_ctl_info.h	/^class Ctl_info{$/;"	c
+DB	Src/server/FDB_Data_All.h	/^    Data_Base *DB;$/;"	m	class:Data_All
+DB_DEFAULT	Src/server/FDB_Data_All.h	11;"	d
+DEFAULT_NULL	Src/server/FDB_String.h	20;"	d
+DEFAULT_SIZE	Src/server/FDB_String.h	21;"	d
+DIR	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^DIR = 1$/;"	v
+DIR_LINK	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^DIR_LINK = 4$/;"	v
+Data_All	Src/server/FDB_Data_All.h	/^    Data_All():db_num(DB_DEFAULT), DB(new Data_Base[DB_DEFAULT]) {  }$/;"	f	class:Data_All
+Data_All	Src/server/FDB_Data_All.h	/^    Data_All(int num):db_num(num), DB(new Data_Base[num]) {  }$/;"	f	class:Data_All
+Data_All	Src/server/FDB_Data_All.h	/^class Data_All$/;"	c
+Data_Base	Src/server/FDB_Data_Base.cpp	/^Data_Base::Data_Base(int hash_def, int rehash_def)$/;"	f	class:Data_Base
+Data_Base	Src/server/FDB_Data_Base.h	/^class Data_Base$/;"	c
+Data_Base_add	Src/server/FDB_Data_Base.cpp	/^void Data_Base::Data_Base_add(Key_val rhs)$/;"	f	class:Data_Base
+Data_Base_del	Src/server/FDB_Data_Base.cpp	/^bool Data_Base::Data_Base_del(std::string rhs)$/;"	f	class:Data_Base
+Data_Base_rehash	Src/server/FDB_Data_Base.cpp	/^void Data_Base::Data_Base_rehash()$/;"	f	class:Data_Base
+Date	Src/server/FDB_Date.h	/^class Date$/;"	c
+Date_time	Src/server/FDB_Date.h	/^char* Date::Date_time()$/;"	f	class:Date
+DefaultValueAllocator	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^class DefaultValueAllocator : public ValueAllocator$/;"	c	namespace:Json	file:
+Delete_my	Src/server/FDB_skiplist.cpp	/^bool list_skip<E>::Delete_my(E e)$/;"	f	class:list_skip
+DummyValueAllocatorInitializer	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^   DummyValueAllocatorInitializer() $/;"	f	struct:Json::DummyValueAllocatorInitializer
+DummyValueAllocatorInitializer	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^static struct DummyValueAllocatorInitializer {$/;"	s	namespace:Json	file:
+DuplicationPolicy	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         enum DuplicationPolicy $/;"	g	class:Json::Value::CZString
+ElementTree	Src/jsoncpp-src-0.5.0/makerelease.py	/^import xml.etree.ElementTree as ElementTree$/;"	i
+Environment	Src/jsoncpp-src-0.5.0/scons-tools/globtool.py	/^   from SCons.Script import Environment$/;"	i
+Epoll	Src/server/FDB_epoll.cpp	/^Epoll::Epoll(int fd){                \/*EPoll构造函数*\/$/;"	f	class:Epoll
+Epoll	Src/server/FDB_epoll.h	/^class Epoll{$/;"	c
+Epoll_add	Src/server/FDB_epoll.cpp	/^bool Epoll::Epoll_add(int fd,bool enable_et,bool oneshot){     \/*添加fd 到Epoll*\/$/;"	f	class:Epoll
+Epoll_add_listen	Src/server/FDB_epoll.cpp	/^bool Epoll::Epoll_add_listen(int fd , bool enable_et){     \/*添加监听套接字*\/$/;"	f	class:Epoll
+Epoll_create_events	Src/server/FDB_epoll.cpp	/^bool Epoll::Epoll_create_events(){                    \/*建立Epoll 文件描述符集合*\/$/;"	f	class:Epoll
+Epoll_del	Src/server/FDB_epoll.cpp	/^bool Epoll::Epoll_del(int fd){                  \/*删除套接字*\/$/;"	f	class:Epoll
+Epoll_getMAX_NUM	Src/server/FDB_epoll.cpp	/^bool Epoll::Epoll_getMAX_NUM(){                     \/*epoll 最大监听套接字个数*\/$/;"	f	class:Epoll
+Epoll_reset	Src/server/FDB_epoll.cpp	/^bool Epoll::Epoll_reset(int fd){                \/*重新设置LIN LET SHOT *\/ $/;"	f	class:Epoll
+Epoll_return_fd	Src/server/FDB_epoll.cpp	/^int Epoll::Epoll_return_fd(){$/;"	f	class:Epoll
+Epoll_set_EPOLLOUT	Src/server/FDB_epoll.cpp	/^bool Epoll::Epoll_set_EPOLLOUT(int fd){$/;"	f	class:Epoll
+Epoll_setnonblock	Src/server/FDB_epoll.cpp	/^bool Epoll::Epoll_setnonblock(int fd){          \/*设置非阻塞*\/$/;"	f	class:Epoll
+Epoll_wait	Src/server/FDB_epoll.cpp	/^bool Epoll::Epoll_wait(){                                 \/*epoll 核心wait*\/$/;"	f	class:Epoll
+ErrorInfo	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      class ErrorInfo$/;"	c	class:Json::Reader
+Errors	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      typedef std::deque<ErrorInfo> Errors;$/;"	t	class:Json::Reader
+Eval	Src/server/FDB_skiplist.h	/^    int Eval;              \/*用于确定级号*\/$/;"	m	class:list_skip
+F	Src/server/FDB_md5.cpp	/^inline MD5::uint4 MD5::F(uint4 x, uint4 y, uint4 z) { return x&y | ~x&z; } $/;"	f	class:MD5
+FDB_LOG	Src/server/FDB_LOG.h	/^class FDB_LOG$/;"	c
+FDB_LOG_ADD	Src/server/FDB_LOG.cpp	/^bool FDB_LOG::FDB_LOG_ADD(const char *a)$/;"	f	class:FDB_LOG
+FDB_LOG_Read	Src/server/FDB_LOG.cpp	/^std::vector<std::string> FDB_LOG::FDB_LOG_Read()$/;"	f	class:FDB_LOG
+FDB_LOG_Write	Src/server/FDB_LOG.cpp	/^bool FDB_LOG::FDB_LOG_Write()$/;"	f	class:FDB_LOG
+FDB_Queue	Src/server/FDB_Queue.h	/^FDB_Queue<T>::FDB_Queue()$/;"	f	class:FDB_Queue
+FDB_Queue	Src/server/FDB_Queue.h	/^class FDB_Queue$/;"	c
+FDB_Queue_back	Src/server/FDB_Queue.h	/^T FDB_Queue<T>::FDB_Queue_back()$/;"	f	class:FDB_Queue
+FDB_Queue_empty	Src/server/FDB_Queue.h	/^bool FDB_Queue<T>::FDB_Queue_empty()$/;"	f	class:FDB_Queue
+FDB_Queue_front	Src/server/FDB_Queue.h	/^T FDB_Queue<T>::FDB_Queue_front()$/;"	f	class:FDB_Queue
+FDB_Queue_pop	Src/server/FDB_Queue.h	/^void FDB_Queue<T>::FDB_Queue_pop()$/;"	f	class:FDB_Queue
+FDB_Queue_push	Src/server/FDB_Queue.h	/^void FDB_Queue<T>::FDB_Queue_push(const T &rhs)$/;"	f	class:FDB_Queue
+FDB_Queue_size	Src/server/FDB_Queue.h	/^unsigned int FDB_Queue<T>::FDB_Queue_size()$/;"	f	class:FDB_Queue
+FDB_Stack	Src/server/FDB_Stack.h	/^FDB_Stack<T>::FDB_Stack()$/;"	f	class:FDB_Stack
+FDB_Stack	Src/server/FDB_Stack.h	/^class FDB_Stack$/;"	c
+FDB_Stack_destory	Src/server/FDB_Stack.h	/^void FDB_Stack<T>::FDB_Stack_destory()$/;"	f	class:FDB_Stack
+FDB_Stack_empty	Src/server/FDB_Stack.h	/^bool FDB_Stack<T>::FDB_Stack_empty()$/;"	f	class:FDB_Stack
+FDB_Stack_pop	Src/server/FDB_Stack.h	/^void FDB_Stack<T>::FDB_Stack_pop()$/;"	f	class:FDB_Stack
+FDB_Stack_push	Src/server/FDB_Stack.h	/^void FDB_Stack<T>::FDB_Stack_push(const T &rhs)$/;"	f	class:FDB_Stack
+FDB_Stack_size	Src/server/FDB_Stack.h	/^unsigned int FDB_Stack<T>::FDB_Stack_size()$/;"	f	class:FDB_Stack
+FDB_Stack_top	Src/server/FDB_Stack.h	/^T FDB_Stack<T>::FDB_Stack_top()$/;"	f	class:FDB_Stack
+FF	Src/server/FDB_md5.cpp	/^inline void MD5::FF(uint4 &a, uint4 b, uint4 c, uint4 d, uint4 x, uint4 s, uint4 ac) {$/;"	f	class:MD5
+FILE	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^FILE = 2$/;"	v
+FILE_LINK	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^FILE_LINK = 8$/;"	v
+FREE	Src/server/FDB_String.h	18;"	d
+FS	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^import SCons.Node.FS$/;"	i
+Factories	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      typedef std::deque<TestCaseFactory> Factories;$/;"	t	class:JsonTest::Runner
+Failure	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^   class Failure$/;"	c	namespace:JsonTest
+Failures	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      typedef std::deque<Failure> Failures;$/;"	t	class:JsonTest::TestResult
+FastWriter	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^   class JSON_API FastWriter : public Writer$/;"	c	namespace:Json
+FastWriter	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^FastWriter::FastWriter()$/;"	f	class:Json::FastWriter
+Features	Src/jsoncpp-src-0.5.0/include/json/features.h	/^   class JSON_API Features$/;"	c	namespace:Json
+Features	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Features::Features()$/;"	f	class:Json::Features
+G	Src/server/FDB_md5.cpp	/^inline MD5::uint4 MD5::G(uint4 x, uint4 y, uint4 z) { return x&z | y&~z; } $/;"	f	class:MD5
+GET_CHAR	Src/server/FDB_Hash_map.h	18;"	d
+GG	Src/server/FDB_md5.cpp	/^inline void MD5::GG(uint4 &a, uint4 b, uint4 c, uint4 d, uint4 x, uint4 s, uint4 ac) {$/;"	f	class:MD5
+GetKey_char	Src/server/FDB_Data_Base.cpp	/^unsigned int Data_Base::GetKey_char(const void *key){$/;"	f	class:Data_Base
+GetKey_char	Src/server/FDB_Hash_map.h	/^unsigned int Hash_map<T>::GetKey_char(const void *key){$/;"	f	class:Hash_map
+GetKey_int	Src/server/FDB_Data_Base.cpp	/^unsigned int Data_Base::GetKey_int(unsigned int key){$/;"	f	class:Data_Base
+GetKey_int	Src/server/FDB_Hash_map.h	/^unsigned int Hash_map<T>::GetKey_int(unsigned int key){$/;"	f	class:Hash_map
+Get_hash_key	Src/server/FDB_Hash_node.h	/^unsigned int Hash_node_pseudo<T>::Get_hash_key()$/;"	f	class:Hash_node_pseudo
+Glob	Src/jsoncpp-src-0.5.0/scons-tools/globtool.py	/^   def Glob( env, includes = None, excludes = None, dir = '.' ):$/;"	f	function:generate
+H	Src/server/FDB_md5.cpp	/^inline MD5::uint4 MD5::H(uint4 x, uint4 y, uint4 z) { return x^y^z; } $/;"	f	class:MD5
+HASH_DEFAULT	Src/server/FDB_Hash_map.h	21;"	d
+HASH_MIN	Src/server/FDB_Hash_map.h	23;"	d
+HH	Src/server/FDB_md5.cpp	/^inline void MD5::HH(uint4 &a, uint4 b, uint4 c, uint4 d, uint4 x, uint4 s, uint4 ac) {$/;"	f	class:MD5
+HashKey	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef unsigned int HashKey;$/;"	t	class:Json::ValueInternalMap
+Hash_Map_NUM	Src/server/FDB_Data_num.h	12;"	d
+Hash_Map_pseudo_NUM	Src/server/FDB_Data_num.h	11;"	d
+Hash_key	Src/server/FDB_Hash_node.h	/^String Hash_node_pseudo<T>::Hash_key()$/;"	f	class:Hash_node_pseudo
+Hash_map	Src/server/FDB_Hash_map.h	/^Hash_map<T>::Hash_map()$/;"	f	class:Hash_map
+Hash_map	Src/server/FDB_Hash_map.h	/^Hash_map<T>::Hash_map(Hash_map_pseudo<T> rhs)$/;"	f	class:Hash_map
+Hash_map	Src/server/FDB_Hash_map.h	/^class Hash_map$/;"	c
+Hash_map_add	Src/server/FDB_Hash_map.h	/^void Hash_map<T>::Hash_map_add(Hash_node_pseudo<T> rhs)$/;"	f	class:Hash_map
+Hash_map_all	Src/server/FDB_Hash_map.h	/^std::vector<Hash_node_pseudo<T>> Hash_map<T>::Hash_map_all()$/;"	f	class:Hash_map
+Hash_map_change	Src/server/FDB_Hash_map.h	/^void Hash_map<T>::Hash_map_change(Hash_node_pseudo<T> rhs)$/;"	f	class:Hash_map
+Hash_map_del	Src/server/FDB_Hash_map.h	/^void Hash_map<T>::Hash_map_del(Hash_node_pseudo<T> rhs)$/;"	f	class:Hash_map
+Hash_map_destory	Src/server/FDB_Hash_map.h	/^void Hash_map<T>::Hash_map_destory()$/;"	f	class:Hash_map
+Hash_map_find	Src/server/FDB_Hash_map.h	/^bool Hash_map<T>::Hash_map_find(Hash_node_pseudo<T> rhs)$/;"	f	class:Hash_map
+Hash_map_pseudo	Src/server/FDB_Hash_pseudo.h	/^class Hash_map_pseudo$/;"	c
+Hash_map_rehash	Src/server/FDB_Hash_map.h	/^void Hash_map<T>::Hash_map_rehash()$/;"	f	class:Hash_map
+Hash_map_show	Src/server/FDB_Hash_map.h	/^void Hash_map<T>::Hash_map_show()$/;"	f	class:Hash_map
+Hash_map_size	Src/server/FDB_Hash_map.h	/^int Hash_map<T>::Hash_map_size()$/;"	f	class:Hash_map
+Hash_map_value	Src/server/FDB_Hash_map.h	/^T Hash_map<T>::Hash_map_value(String rhs)$/;"	f	class:Hash_map
+Hash_node_pseudo	Src/server/FDB_Hash_node.h	/^Hash_node_pseudo<T>::Hash_node_pseudo(const String & Key, const T & data)$/;"	f	class:Hash_node_pseudo
+Hash_node_pseudo	Src/server/FDB_Hash_node.h	/^class Hash_node_pseudo$/;"	c
+Hash_pseudo_change	Src/server/FDB_Hash_pseudo.h	/^void Hash_map_pseudo<T>::Hash_pseudo_change(Hash_node_pseudo<T> rhs)$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_change	Src/server/FDB_Hash_pseudo.h	/^void Hash_map_pseudo<T>::Hash_pseudo_change(const String & a, const T & b)$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_data	Src/server/FDB_Hash_pseudo.h	/^std::vector<Hash_node_pseudo<T>> Hash_map_pseudo<T>::Hash_pseudo_data()$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_del	Src/server/FDB_Hash_pseudo.h	/^void Hash_map_pseudo<T>::Hash_pseudo_del(const String & rhs)$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_destory	Src/server/FDB_Hash_pseudo.h	/^void Hash_map_pseudo<T>::Hash_pseudo_destory()$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_find	Src/server/FDB_Hash_pseudo.h	/^T Hash_map_pseudo<T>::Hash_pseudo_find(const String & rhs)$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_set	Src/server/FDB_Hash_pseudo.h	/^void Hash_map_pseudo<T>::Hash_pseudo_set(Hash_node_pseudo<T> rhs)$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_set	Src/server/FDB_Hash_pseudo.h	/^void Hash_map_pseudo<T>::Hash_pseudo_set(const String & a, const T & b)$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_show	Src/server/FDB_Hash_pseudo.h	/^void Hash_map_pseudo<T>::Hash_pseudo_show()$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_size	Src/server/FDB_Hash_pseudo.h	/^int Hash_map_pseudo<T>::Hash_pseudo_size()$/;"	f	class:Hash_map_pseudo
+Hash_pseudo_test	Src/server/FDB_Hash_pseudo.h	/^bool Hash_map_pseudo<T>::Hash_pseudo_test(const String & rhs)$/;"	f	class:Hash_map_pseudo
+Hash_set	Src/server/FDB_Hash_node.h	/^void Hash_node_pseudo<T>::Hash_set(const String & Key, const T & data)$/;"	f	class:Hash_node_pseudo
+Hash_show	Src/server/FDB_Hash_node.h	/^void Hash_node_pseudo<T>::Hash_show()$/;"	f	class:Hash_node_pseudo
+Hash_value	Src/server/FDB_Hash_node.h	/^T Hash_node_pseudo<T>::Hash_value()$/;"	f	class:Hash_node_pseudo
+I	Src/server/FDB_md5.cpp	/^inline MD5::uint4 MD5::I(uint4 x, uint4 y, uint4 z) { return y ^ (x | ~z); }$/;"	f	class:MD5
+II	Src/server/FDB_md5.cpp	/^inline void MD5::II(uint4 &a, uint4 b, uint4 c, uint4 d, uint4 x, uint4 s, uint4 ac) {$/;"	f	class:MD5
+Id	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      typedef unsigned int Id;$/;"	t	struct:JsonTest::PredicateContext
+InArgs	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef std::vector<const PathArgument *> InArgs;$/;"	t	class:Json::Path
+Insert	Src/server/FDB_skiplist.cpp	/^int list_skip<E>::Insert(E e)$/;"	f	class:list_skip
+Int	Src/jsoncpp-src-0.5.0/include/json/forwards.h	/^   typedef int Int;$/;"	t	namespace:Json
+Int	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef Json::Int Int;$/;"	t	class:Json::Value
+InternalFlags	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      enum InternalFlags { $/;"	g	class:Json::ValueInternalLink
+IsCheck	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   struct IsCheck$/;"	s	struct:ValueTest	file:
+IsCheck	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^ValueTest::IsCheck::IsCheck()$/;"	f	class:ValueTest::IsCheck
+IteratorState	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         IteratorState() $/;"	f	struct:Json::ValueInternalArray::IteratorState
+IteratorState	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         IteratorState() $/;"	f	struct:Json::ValueInternalMap::IteratorState
+IteratorState	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      struct IteratorState \/\/ Must be a POD$/;"	s	class:Json::ValueInternalArray
+IteratorState	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      struct IteratorState$/;"	s	class:Json::ValueInternalMap
+JSONCPP_BATCHALLOCATOR_H_INCLUDED	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	2;"	d
+JSONTEST_ASSERT	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	196;"	d
+JSONTEST_ASSERT_EQUAL	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	218;"	d
+JSONTEST_ASSERT_PRED	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	205;"	d
+JSONTEST_ASSERT_STRING_EQUAL	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	224;"	d
+JSONTEST_FIXTURE	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	230;"	d
+JSONTEST_FIXTURE	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^JSONTEST_FIXTURE( ValueTest, isArray )$/;"	f
+JSONTEST_FIXTURE	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^JSONTEST_FIXTURE( ValueTest, isBool )$/;"	f
+JSONTEST_FIXTURE	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^JSONTEST_FIXTURE( ValueTest, isDouble )$/;"	f
+JSONTEST_FIXTURE	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^JSONTEST_FIXTURE( ValueTest, isInt )$/;"	f
+JSONTEST_FIXTURE	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^JSONTEST_FIXTURE( ValueTest, isNull )$/;"	f
+JSONTEST_FIXTURE	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^JSONTEST_FIXTURE( ValueTest, isObject )$/;"	f
+JSONTEST_FIXTURE	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^JSONTEST_FIXTURE( ValueTest, isString )$/;"	f
+JSONTEST_FIXTURE	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^JSONTEST_FIXTURE( ValueTest, isUInt )$/;"	f
+JSONTEST_FIXTURE	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^JSONTEST_FIXTURE( ValueTest, size )$/;"	f
+JSONTEST_FIXTURE_FACTORY	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	248;"	d
+JSONTEST_H_INCLUDED	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	2;"	d
+JSONTEST_REGISTER_FIXTURE	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	251;"	d
+JSON_API	Src/jsoncpp-src-0.5.0/include/json/config.h	34;"	d
+JSON_API	Src/jsoncpp-src-0.5.0/include/json/config.h	36;"	d
+JSON_API	Src/jsoncpp-src-0.5.0/include/json/config.h	38;"	d
+JSON_API	Src/jsoncpp-src-0.5.0/include/json/config.h	40;"	d
+JSON_ASSERT	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	17;"	d	file:
+JSON_ASSERT_MESSAGE	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	18;"	d	file:
+JSON_ASSERT_UNREACHABLE	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	16;"	d	file:
+JSON_AUTOLINK_H_INCLUDED	Src/jsoncpp-src-0.5.0/include/json/autolink.h	2;"	d
+JSON_CONFIG_H_INCLUDED	Src/jsoncpp-src-0.5.0/include/json/config.h	2;"	d
+JSON_FORWARDS_H_INCLUDED	Src/jsoncpp-src-0.5.0/include/json/forwards.h	2;"	d
+JSON_JSON_H_INCLUDED	Src/jsoncpp-src-0.5.0/include/json/json.h	2;"	d
+JSON_USE_CPPTL	Src/jsoncpp-src-0.5.0/include/json/config.h	29;"	d
+JSON_USE_EXCEPTION	Src/jsoncpp-src-0.5.0/include/json/config.h	24;"	d
+JSON_WRITER_H_INCLUDED	Src/jsoncpp-src-0.5.0/include/json/writer.h	2;"	d
+JSon	Src/server/FDB_json.cpp	/^JSon::JSon(std::string key,std::string operation,int type_data,int type_data2,std::string buf){$/;"	f	class:JSon
+JSon	Src/server/FDB_json.h	/^class JSon{$/;"	c
+Json	Src/jsoncpp-src-0.5.0/include/json/features.h	/^namespace Json {$/;"	n
+Json	Src/jsoncpp-src-0.5.0/include/json/forwards.h	/^namespace Json {$/;"	n
+Json	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^namespace Json {$/;"	n
+Json	Src/jsoncpp-src-0.5.0/include/json/value.h	/^namespace Json {$/;"	n
+Json	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^namespace Json {$/;"	n
+Json	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^namespace Json {$/;"	n
+Json	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^namespace Json {$/;"	n	file:
+Json	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^namespace Json {$/;"	n	file:
+Json	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^namespace Json {$/;"	n	file:
+JsonTest	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^namespace JsonTest {$/;"	n	file:
+JsonTest	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^namespace JsonTest {$/;"	n
+Json_get_ack	Src/server/FDB_json.cpp	/^int JSon::Json_get_ack(){$/;"	f	class:JSon
+Json_get_buf	Src/server/FDB_json.cpp	/^std::string JSon::Json_get_buf(){$/;"	f	class:JSon
+Json_get_key	Src/server/FDB_json.cpp	/^std::string JSon::Json_get_key(){$/;"	f	class:JSon
+Json_get_operation	Src/server/FDB_json.cpp	/^std::string JSon::Json_get_operation(){$/;"	f	class:JSon
+Json_get_size	Src/server/FDB_json.cpp	/^int JSon::Json_get_size(){$/;"	f	class:JSon
+Json_get_typedata	Src/server/FDB_json.cpp	/^int JSon::Json_get_typedata(){$/;"	f	class:JSon
+Json_get_typedata2	Src/server/FDB_json.cpp	/^int JSon::Json_get_typedata2(){$/;"	f	class:JSon
+Key_val	Src/server/FDB_Key_val.cpp	/^Key_val::Key_val(std::string key_name, void *obj, unsigned int hash, int type_data, int elem)$/;"	f	class:Key_val
+Key_val	Src/server/FDB_Key_val.h	/^class Key_val$/;"	c
+Key_val_add	Src/server/FDB_Key_val.cpp	/^void Key_val::Key_val_add(void *obj)$/;"	f	class:Key_val
+Key_val_del	Src/server/FDB_Key_val.cpp	/^bool Key_val::Key_val_del(void *obj)$/;"	f	class:Key_val
+Key_val_destory	Src/server/FDB_Key_val.cpp	/^void Key_val::Key_val_destory()$/;"	f	class:Key_val
+Key_val_size	Src/server/FDB_Key_val.cpp	/^int Key_val::Key_val_size()$/;"	f	class:Key_val
+Key_val_value	Src/server/FDB_Key_val.cpp	/^void Key_val::Key_val_value(void *buff)$/;"	f	class:Key_val
+Kind	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      enum Kind$/;"	g	class:Json::PathArgument
+LEN	Src/server/FDB_String.h	17;"	d
+LINKS	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^LINKS = DIR_LINK | FILE_LINK$/;"	v
+LOG_BUFFER_MAX	Src/server/FDB_LOG.h	21;"	d
+LOG_BUFFER_SIZE	Src/server/FDB_LOG.h	22;"	d
+LOG_Buffer	Src/server/FDB_LOG.cpp	/^LOG_Buffer::LOG_Buffer()$/;"	f	class:LOG_Buffer
+LOG_Buffer	Src/server/FDB_LOG.h	/^class LOG_Buffer$/;"	c
+LOG_SIZE	Src/server/FDB_LOG.h	23;"	d
+LOG_fd	Src/server/FDB_LOG.h	/^class LOG_fd$/;"	c
+Location	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      typedef const Char *Location;$/;"	t	class:Json::Reader
+MAX_NUM	Src/server/FDB_epoll.h	/^        int MAX_NUM = 100; \/*假定有100，应当从配置文件中读取*\/$/;"	m	class:Epoll
+MD5	Src/server/FDB_md5.cpp	/^MD5::MD5()$/;"	f	class:MD5
+MD5	Src/server/FDB_md5.cpp	/^MD5::MD5(const std::string &text)$/;"	f	class:MD5
+MD5	Src/server/FDB_md5.h	/^class MD5$/;"	c
+MY_INT	Src/server/FDB_intset.h	10;"	d
+MY_LONG	Src/server/FDB_intset.h	11;"	d
+MY_SHORT	Src/server/FDB_intset.h	9;"	d
+Members	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef std::vector<std::string> Members;$/;"	t	class:Json::Value
+NOATOM	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	30;"	d	file:
+NOBITMAP	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	41;"	d	file:
+NOCLIPBOARD	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	56;"	d	file:
+NOCOLOR	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	36;"	d	file:
+NOCOMM	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	19;"	d	file:
+NOCTLMGR	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	61;"	d	file:
+NODBCS	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	33;"	d	file:
+NODEFERWINDOWPOS	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	50;"	d	file:
+NODRAWTEXT	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	38;"	d	file:
+NODRIVERS	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	23;"	d	file:
+NOGDI	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	21;"	d	file:
+NOGDICAPMASKS	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	35;"	d	file:
+NOGDIOBJ	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	37;"	d	file:
+NOICONS	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	57;"	d	file:
+NOIME	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	17;"	d	file:
+NOKEYBOARDINFO	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	34;"	d	file:
+NOKEYSTATES	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	52;"	d	file:
+NOLANGUAGE	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	31;"	d	file:
+NOLFILEIO	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	27;"	d	file:
+NOLOGERROR	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	24;"	d	file:
+NOLSTRING	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	32;"	d	file:
+NOMB	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	58;"	d	file:
+NOMCX	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	16;"	d	file:
+NOMDI	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	60;"	d	file:
+NOMEMMGR	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	26;"	d	file:
+NOMENUS	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	54;"	d	file:
+NOMETAFILE	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	43;"	d	file:
+NOMSG	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	46;"	d	file:
+NOOPENFILE	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	28;"	d	file:
+NOPROFILER	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	25;"	d	file:
+NORASTEROPS	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	42;"	d	file:
+NORESOURCE	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	29;"	d	file:
+NORPC	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	20;"	d	file:
+NOSCALABLEFONT	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	40;"	d	file:
+NOSCROLL	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	55;"	d	file:
+NOSERVICE	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	15;"	d	file:
+NOSHOWWINDOW	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	49;"	d	file:
+NOSOUND	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	18;"	d	file:
+NOSYSCOMMANDS	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	59;"	d	file:
+NOSYSMETRICS	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	44;"	d	file:
+NOSYSTEMPARAMSINFO	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	45;"	d	file:
+NOTEXTMETRIC	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	39;"	d	file:
+NOUSER	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	22;"	d	file:
+NOVIRTUALKEYCODES	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	51;"	d	file:
+NOWH	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	53;"	d	file:
+NOWINMESSAGES	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	62;"	d	file:
+NOWINOFFSETS	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	48;"	d	file:
+NOWINSTYLES	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	47;"	d	file:
+Node	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^import SCons.Node.FS$/;"	i
+Nodes	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      typedef std::stack<Value *> Nodes;$/;"	t	class:Json::Reader
+ObjectValues	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef CppTL::SmallMap<CZString, Value> ObjectValues;$/;"	t	class:Json::Value
+ObjectValues	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef std::map<CZString, Value> ObjectValues;$/;"	t	class:Json::Value
+OptionParser	Src/jsoncpp-src-0.5.0/doxybuild.py	/^    from optparse import OptionParser$/;"	i
+OptionParser	Src/jsoncpp-src-0.5.0/makerelease.py	/^    from optparse import OptionParser$/;"	i
+OptionParser	Src/jsoncpp-src-0.5.0/test/runjsontests.py	/^    from optparse import OptionParser$/;"	i
+OptionParser	Src/jsoncpp-src-0.5.0/test/rununittests.py	/^    from optparse import OptionParser$/;"	i
+PageIndex	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef unsigned int PageIndex;$/;"	t	class:Json::ValueInternalArray
+Path	Src/jsoncpp-src-0.5.0/include/json/value.h	/^   class Path$/;"	c	namespace:Json
+Path	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Path::Path( const std::string &path,$/;"	f	class:Json::Path
+PathArgument	Src/jsoncpp-src-0.5.0/include/json/value.h	/^   class PathArgument$/;"	c	namespace:Json
+PathArgument	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^PathArgument::PathArgument( Value::UInt index )$/;"	f	class:Json::PathArgument
+PathArgument	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^PathArgument::PathArgument( const char *key )$/;"	f	class:Json::PathArgument
+PathArgument	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^PathArgument::PathArgument( const std::string &key )$/;"	f	class:Json::PathArgument
+PathArgument	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^PathArgument::PathArgument()$/;"	f	class:Json::PathArgument
+PredicateContext	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^   struct PredicateContext$/;"	s	namespace:JsonTest
+Print	Src/server/FDB_String.cpp	/^void String::Print()$/;"	f	class:String
+Queue_NUM	Src/server/FDB_Data_num.h	16;"	d
+REHASH_DEFAULT	Src/server/FDB_Hash_map.h	22;"	d
+Reader	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^   class JSON_API Reader$/;"	c	namespace:Json
+Reader	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::Reader( const Features &features )$/;"	f	class:Json::Reader
+Reader	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::Reader()$/;"	f	class:Json::Reader
+Runner	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^Runner::Runner()$/;"	f	class:JsonTest::Runner
+Runner	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^   class Runner$/;"	c	namespace:JsonTest
+S11	Src/server/FDB_md5.cpp	14;"	d	file:
+S12	Src/server/FDB_md5.cpp	15;"	d	file:
+S13	Src/server/FDB_md5.cpp	16;"	d	file:
+S14	Src/server/FDB_md5.cpp	17;"	d	file:
+S21	Src/server/FDB_md5.cpp	18;"	d	file:
+S22	Src/server/FDB_md5.cpp	19;"	d	file:
+S23	Src/server/FDB_md5.cpp	20;"	d	file:
+S24	Src/server/FDB_md5.cpp	21;"	d	file:
+S31	Src/server/FDB_md5.cpp	22;"	d	file:
+S32	Src/server/FDB_md5.cpp	23;"	d	file:
+S33	Src/server/FDB_md5.cpp	24;"	d	file:
+S34	Src/server/FDB_md5.cpp	25;"	d	file:
+S41	Src/server/FDB_md5.cpp	26;"	d	file:
+S42	Src/server/FDB_md5.cpp	27;"	d	file:
+S43	Src/server/FDB_md5.cpp	28;"	d	file:
+S44	Src/server/FDB_md5.cpp	29;"	d	file:
+SA	Src/server/FDB_Socket.cpp	/^typedef struct sockaddr SA;$/;"	t	typeref:struct:sockaddr	file:
+SCONS_LOCAL_URL	Src/jsoncpp-src-0.5.0/makerelease.py	/^SCONS_LOCAL_URL = 'http:\/\/sourceforge.net\/projects\/scons\/files\/scons-local\/1.2.0\/scons-local-1.2.0.tar.gz\/download'$/;"	v
+SCons	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^import SCons.Builder$/;"	i
+SCons	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^import SCons.Node.FS$/;"	i
+SCons	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^import SCons.Util$/;"	i
+SConscript	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^from SCons.Script import *  # the usual scons stuff you get in a SConscript$/;"	i
+SFTPError	Src/jsoncpp-src-0.5.0/makerelease.py	/^class SFTPError(Exception):$/;"	c
+SOURCEFORGE_PROJECT	Src/jsoncpp-src-0.5.0/makerelease.py	/^SOURCEFORGE_PROJECT = 'jsoncpp'$/;"	v
+STRING_MAX	Src/server/FDB_String.h	16;"	d
+SVNError	Src/jsoncpp-src-0.5.0/makerelease.py	/^class SVNError(Exception):$/;"	c
+SVN_ROOT	Src/jsoncpp-src-0.5.0/makerelease.py	/^SVN_ROOT = 'https:\/\/jsoncpp.svn.sourceforge.net\/svnroot\/jsoncpp\/'$/;"	v
+SVN_TAG_ROOT	Src/jsoncpp-src-0.5.0/makerelease.py	/^SVN_TAG_ROOT = SVN_ROOT + 'tags\/jsoncpp'$/;"	v
+Search_my	Src/server/FDB_skiplist.cpp	/^E list_skip<E>::Search_my(E e)$/;"	f	class:list_skip
+SelfType	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef ValueConstIterator SelfType;$/;"	t	class:Json::ValueConstIterator
+SelfType	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef ValueIterator SelfType;$/;"	t	class:Json::ValueIterator
+SelfType	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef ValueIteratorBase SelfType;$/;"	t	class:Json::ValueIteratorBase
+Server_ID	Src/server/FDB_Key_val.h	/^    int Server_ID;$/;"	m	class:Key_val
+Server_dowork	Src/server/FDB_serwork.cpp	/^bool Server_work::Server_dowork(){$/;"	f	class:Server_work
+Server_read	Src/server/FDB_serwork.cpp	/^int Server_work::Server_read(){$/;"	f	class:Server_work
+Server_work	Src/server/FDB_serwork.cpp	/^Server_work::Server_work(int connfd){$/;"	f	class:Server_work
+Server_work	Src/server/FDB_serwork.h	/^class Server_work{$/;"	c
+Set_hash_key	Src/server/FDB_Hash_node.h	/^void Hash_node_pseudo<T>::Set_hash_key(unsigned int a)$/;"	f	class:Hash_node_pseudo
+SkipNode	Src/server/FDB_skiplist.h	/^    SkipNode(int size){link = new SkipNode<E>*[size];}$/;"	f	class:SkipNode
+SkipNode	Src/server/FDB_skiplist.h	/^class SkipNode{$/;"	c
+Socket	Src/server/FDB_Socket.cpp	/^Socket::Socket(sa_family_t family,int listen_num){$/;"	f	class:Socket
+Socket	Src/server/FDB_Socket.h	/^        explicit Socket(int sockfd):sockfd_(sockfd){}   \/*如果存在直接赋值*\/$/;"	f	class:Socket
+Socket	Src/server/FDB_Socket.h	/^class Socket{$/;"	c
+Socket__	Src/server/FDB_Socket.cpp	/^bool Socket::Socket__(sa_family_t family,int listen_num){    \/*创建一个Socket*\/$/;"	f	class:Socket
+Stack_NUM	Src/server/FDB_Data_num.h	15;"	d
+StaticString	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      explicit StaticString( const char *czstring )$/;"	f	class:Json::StaticString
+StaticString	Src/jsoncpp-src-0.5.0/include/json/value.h	/^   class JSON_API StaticString$/;"	c	namespace:Json
+String	Src/server/FDB_String.cpp	/^String::String()$/;"	f	class:String
+String	Src/server/FDB_String.cpp	/^String::String(char *rhs)$/;"	f	class:String
+String	Src/server/FDB_String.cpp	/^String::String(const String &rhs)$/;"	f	class:String
+String	Src/server/FDB_String.h	/^class String$/;"	c
+StringAdd	Src/server/FDB_String.cpp	/^String& String::StringAdd(const String &str2)$/;"	f	class:String
+StringAdd	Src/server/FDB_String.cpp	/^String& String::StringAdd(const char *s)$/;"	f	class:String
+StringChange	Src/server/FDB_String.cpp	/^String& String::StringChange(const String &st)$/;"	f	class:String
+StringChange	Src/server/FDB_String.cpp	/^String& String::StringChange(const char *s)$/;"	f	class:String
+StringClear	Src/server/FDB_String.cpp	/^String& String::StringClear()$/;"	f	class:String
+StringGetChar	Src/server/FDB_String.cpp	/^char * String::StringGetChar()$/;"	f	class:String
+StringSizeClear	Src/server/FDB_String.cpp	/^String& String::StringSizeClear(size_t pos, size_t len)$/;"	f	class:String
+String_NUM	Src/server/FDB_Data_num.h	14;"	d
+StyledStreamWriter	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^   class JSON_API StyledStreamWriter$/;"	c	namespace:Json
+StyledStreamWriter	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledStreamWriter::StyledStreamWriter( std::string indentation )$/;"	f	class:Json::StyledStreamWriter
+StyledWriter	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^   class JSON_API StyledWriter: public Writer$/;"	c	namespace:Json
+StyledWriter	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledWriter::StyledWriter()$/;"	f	class:Json::StyledWriter
+TARGZ_DEFAULT_COMPRESSION_LEVEL	Src/jsoncpp-src-0.5.0/devtools/tarball.py	/^TARGZ_DEFAULT_COMPRESSION_LEVEL = 9$/;"	v
+TARGZ_DEFAULT_COMPRESSION_LEVEL	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^TARGZ_DEFAULT_COMPRESSION_LEVEL = 9$/;"	v
+TIMR_DONE	Src/server/FDB_Key_val.h	23;"	d
+Tail_key	Src/server/FDB_skiplist.h	/^    E Tail_key;            \/*限定结点值在一定范围内*\/$/;"	m	class:list_skip
+TarGzBuilder	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^    TarGzBuilder = makeBuilder()$/;"	v
+Task	Src/server/FDB_thread_pool.h	/^    typedef std::function<void()> Task;$/;"	t	class:ThreadPool
+TestCase	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestCase::TestCase()$/;"	f	class:JsonTest::TestCase
+TestCase	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^   class TestCase$/;"	c	namespace:JsonTest
+TestCaseFactory	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^   typedef TestCase *(*TestCaseFactory)();$/;"	t	namespace:JsonTest
+TestProxy	Src/jsoncpp-src-0.5.0/test/rununittests.py	/^class TestProxy(object):$/;"	c
+TestResult	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::TestResult()$/;"	f	class:JsonTest::TestResult
+TestResult	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^   class TestResult$/;"	c	namespace:JsonTest
+ThreadPool	Src/server/FDB_thread_pool.cpp	/^ThreadPool::ThreadPool(const std::string &name):name_(name),maxQueueSize_(0),running_(false){  $/;"	f	class:ThreadPool
+ThreadPool	Src/server/FDB_thread_pool.h	/^        ThreadPool(){};               \/*这个类不可复制*\/$/;"	f	class:ThreadPool
+ThreadPool	Src/server/FDB_thread_pool.h	/^class ThreadPool{$/;"	c
+Token	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      class Token$/;"	c	class:Json::Reader
+TokenType	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      enum TokenType$/;"	g	class:Json::Reader
+Type	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^   typedef AllocatedType Type;$/;"	t	class:Json::BatchAllocator
+UInt	Src/jsoncpp-src-0.5.0/include/json/forwards.h	/^   typedef unsigned int UInt;$/;"	t	namespace:Json
+UInt	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef Json::UInt UInt;$/;"	t	class:Json::Value
+User	Src/server/FDB_user.cpp	/^User::User()$/;"	f	class:User
+User	Src/server/FDB_user.h	/^class User$/;"	c
+User_add	Src/server/FDB_user.cpp	/^void User::User_add( Accept rhs)$/;"	f	class:User
+User_data	Src/server/FDB_user.h	/^        std::vector<Accept>  User_data;$/;"	m	class:User
+User_del	Src/server/FDB_user.cpp	/^bool User::User_del(int rhs_fd)$/;"	f	class:User
+User_find	Src/server/FDB_user.cpp	/^bool User::User_find(int rhs_fd)$/;"	f	class:User
+User_return	Src/server/FDB_user.cpp	/^Accept  User::User_return(int rhs_fd)$/;"	f	class:User
+User_show	Src/server/FDB_user.cpp	/^bool User::User_show(){$/;"	f	class:User
+Util	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^import SCons.Util$/;"	i
+Value	Src/jsoncpp-src-0.5.0/include/json/value.h	/^   class JSON_API Value $/;"	c	namespace:Json
+Value	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::Value( Int value )$/;"	f	class:Json::Value
+Value	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::Value( UInt value )$/;"	f	class:Json::Value
+Value	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::Value( ValueType type )$/;"	f	class:Json::Value
+Value	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::Value( bool value )$/;"	f	class:Json::Value
+Value	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::Value( const CppTL::ConstString &value )$/;"	f	class:Json::Value
+Value	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::Value( const StaticString &value )$/;"	f	class:Json::Value
+Value	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::Value( const Value &other )$/;"	f	class:Json::Value
+Value	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::Value( const char *beginValue, $/;"	f	class:Json::Value
+Value	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::Value( const char *value )$/;"	f	class:Json::Value
+Value	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::Value( const std::string &value )$/;"	f	class:Json::Value
+Value	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::Value( double value )$/;"	f	class:Json::Value
+ValueAllocator	Src/jsoncpp-src-0.5.0/include/json/value.h	/^   class ValueAllocator$/;"	c	namespace:Json
+ValueArrayAllocator	Src/jsoncpp-src-0.5.0/include/json/value.h	/^   class JSON_API ValueArrayAllocator$/;"	c	namespace:Json
+ValueConstIterator	Src/jsoncpp-src-0.5.0/include/json/value.h	/^   class ValueConstIterator : public ValueIteratorBase$/;"	c	namespace:Json
+ValueHolder	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      union ValueHolder$/;"	u	class:Json::Value
+ValueInternalArray	Src/jsoncpp-src-0.5.0/include/json/value.h	/^   class JSON_API ValueInternalArray$/;"	c	namespace:Json
+ValueInternalLink	Src/jsoncpp-src-0.5.0/include/json/value.h	/^   class JSON_API ValueInternalLink$/;"	c	namespace:Json
+ValueInternalMap	Src/jsoncpp-src-0.5.0/include/json/value.h	/^   class JSON_API ValueInternalMap$/;"	c	namespace:Json
+ValueIterator	Src/jsoncpp-src-0.5.0/include/json/value.h	/^   class ValueIterator : public ValueIteratorBase$/;"	c	namespace:Json
+ValueIteratorBase	Src/jsoncpp-src-0.5.0/include/json/value.h	/^   class ValueIteratorBase$/;"	c	namespace:Json
+ValueMapAllocator	Src/jsoncpp-src-0.5.0/include/json/value.h	/^   class JSON_API ValueMapAllocator$/;"	c	namespace:Json
+ValueTest	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   ValueTest()$/;"	f	struct:ValueTest
+ValueTest	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^struct ValueTest : JsonTest::TestCase$/;"	s	file:
+ValueType	Src/jsoncpp-src-0.5.0/include/json/value.h	/^   enum ValueType$/;"	g	namespace:Json
+WIN32_LEAN_AND_MEAN	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	14;"	d	file:
+Writer	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^   class JSON_API Writer$/;"	c	namespace:Json
+Ziplist	Src/server/FDB_ziplist.h	/^    Ziplist() {  }                  $/;"	f	class:Ziplist
+Ziplist	Src/server/FDB_ziplist.h	/^Ziplist<T>::Ziplist(std::vector<T> rhs)$/;"	f	class:Ziplist
+Ziplist	Src/server/FDB_ziplist.h	/^class Ziplist$/;"	c
+Ziplist_NUM	Src/server/FDB_Data_num.h	13;"	d
+Ziplist_add	Src/server/FDB_ziplist.h	/^void Ziplist<T>::Ziplist_add(T rhs)$/;"	f	class:Ziplist
+Ziplist_del	Src/server/FDB_ziplist.h	/^void Ziplist<T>::Ziplist_del(T rhs)$/;"	f	class:Ziplist
+Ziplist_del_more	Src/server/FDB_ziplist.h	/^bool Ziplist<T>::Ziplist_del_more(T first, T last)$/;"	f	class:Ziplist
+Ziplist_destory	Src/server/FDB_ziplist.h	/^void Ziplist<T>::Ziplist_destory()$/;"	f	class:Ziplist
+Ziplist_find	Src/server/FDB_ziplist.h	/^bool Ziplist<T>::Ziplist_find(T rhs)$/;"	f	class:Ziplist
+Ziplist_return	Src/server/FDB_ziplist.h	/^std::vector<T> Ziplist<T>::Ziplist_return()$/;"	f	class:Ziplist
+Ziplist_show	Src/server/FDB_ziplist.h	/^void Ziplist<T>::Ziplist_show()$/;"	f	class:Ziplist
+Ziplist_size	Src/server/FDB_ziplist.h	/^int Ziplist<T>::Ziplist_size()$/;"	f	class:Ziplist
+Ziplist_size_bytes	Src/server/FDB_ziplist.h	/^int Ziplist<T>::Ziplist_size_bytes()$/;"	f	class:Ziplist
+_ANT_RE	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^_ANT_RE = re.compile( r'(\/\\*\\*\/)|(\\*\\*\/)|(\/\\*\\*)|(\\*)|(\/)|([^\\*\/]*)' )$/;"	v
+_CRT_SECURE_NO_WARNINGS	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	1;"	d	file:
+_DATE_H	Src/server/FDB_Date.h	9;"	d
+_FDB_ACCEPT_H	Src/server/FDB_accept.h	9;"	d
+_FDB_BUFFER_H	Src/server/FDB_buffer.h	9;"	d
+_FDB_CTL_INFO_H	Src/server/FDB_ctl_info.h	9;"	d
+_FDB_DATA_ALL_H	Src/server/FDB_Data_All.h	9;"	d
+_FDB_DATA_BASE_H	Src/server/FDB_Data_Base.h	9;"	d
+_FDB_DATA_NUM_H	Src/server/FDB_Data_num.h	9;"	d
+_FDB_EPOLL_H	Src/server/FDB_epoll.h	9;"	d
+_FDB_HASH_MAP_H	Src/server/FDB_Hash_map.h	9;"	d
+_FDB_HASH_NODE_H	Src/server/FDB_Hash_node.h	9;"	d
+_FDB_HASH_PSEUDO_H	Src/server/FDB_Hash_pseudo.h	9;"	d
+_FDB_INTSET_H	Src/test/FDB_intset.h	9;"	d
+_FDB_IO_H	Src/server/FDB_IO.h	9;"	d
+_FDB_JSON_H	Src/server/FDB_json.h	9;"	d
+_FDB_KEY_VAL_H	Src/server/FDB_Key_val.h	9;"	d
+_FDB_KS_H	Src/server/FDB_ks.h	9;"	d
+_FDB_LOG_H	Src/server/FDB_LOG.h	9;"	d
+_FDB_NOCOPYABLE_H	Src/server/FDB_nocopyable.h	9;"	d
+_FDB_QUEUE_H	Src/server/FDB_Queue.h	9;"	d
+_FDB_SERVER_H	Src/server/FDB_server.h	9;"	d
+_FDB_SERWORK_H	Src/server/FDB_serwork.h	9;"	d
+_FDB_SOCKET_H	Src/server/FDB_Socket.h	9;"	d
+_FDB_STACK_H	Src/server/FDB_Stack.h	9;"	d
+_FDB_STRING_H	Src/server/FDB_String.h	9;"	d
+_FDB_THREAD_POOL_H	Src/server/FDB_thread_pool.h	9;"	d
+_FDB_TIMER_H	Src/server/FDB_timer.h	9;"	d
+_FDB_USER_H	Src/server/FDB_user.h	9;"	d
+_FDB_ZIPLIST_H	Src/server/FDB_ziplist.h	9;"	d
+_MD5_H	Src/server/FDB_md5.h	4;"	d
+__init__	Src/jsoncpp-src-0.5.0/test/rununittests.py	/^    def __init__( self, test_exe_path, use_valgrind=False ):$/;"	m	class:TestProxy
+_as_list	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^def _as_list( l ):$/;"	f
+a	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^from SCons.Script import *  # the usual scons stuff you get in a SConscript$/;"	i
+ack	Src/server/FDB_json.h	/^        int ack;$/;"	m	class:JSon
+actual_path	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^actual_path = base_path + '.actual'$/;"	v
+add	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^Runner::add( TestCaseFactory factory )$/;"	f	class:JsonTest::Runner
+addChildValues_	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      bool addChildValues_;$/;"	m	class:Json::StyledStreamWriter
+addChildValues_	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      bool addChildValues_;$/;"	m	class:Json::StyledWriter
+addComment	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::addComment( Location begin, $/;"	f	class:Json::Reader
+addError	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::addError( const std::string &message, $/;"	f	class:Json::Reader
+addErrorAndRecover	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::addErrorAndRecover( const std::string &message, $/;"	f	class:Json::Reader
+addFailure	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::addFailure( const char *file, unsigned int line,$/;"	f	class:JsonTest::TestResult
+addFailureInfo	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::addFailureInfo( const char *file, unsigned int line,$/;"	f	class:JsonTest::TestResult
+addPathInArg	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Path::addPathInArg( const std::string &path, $/;"	f	class:Json::Path
+addToLastFailure	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::addToLastFailure( const std::string &message )$/;"	f	class:JsonTest::TestResult
+add_cut_ptime	Src/server/FDB_Key_val.cpp	/^void Key_val::add_cut_ptime(long long time)$/;"	f	class:Key_val
+add_cut_time	Src/server/FDB_Key_val.cpp	/^void Key_val::add_cut_time(long long time)$/;"	f	class:Key_val
+address	Src/server/FDB_Socket.h	/^        struct sockaddr_in address;      $/;"	m	class:Socket	typeref:struct:Socket::sockaddr_in
+all	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Features::all()$/;"	f	class:Json::Features
+allocate	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^   AllocatedType *allocate()$/;"	f	class:Json::BatchAllocator
+allocateBatch	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^   static BatchInfo *allocateBatch( unsigned int objectsPerPage )$/;"	f	class:Json::BatchAllocator
+allowComments_	Src/jsoncpp-src-0.5.0/include/json/features.h	/^      bool allowComments_;$/;"	m	class:Json::Features
+ant_pattern_to_re	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^def ant_pattern_to_re( ant_pattern ):$/;"	f
+antglob	Src/jsoncpp-src-0.5.0/makerelease.py	/^from devtools import antglob, fixeol, tarball$/;"	i
+aof_buffer	Src/server/FDB_LOG.h	/^    LOG_Buffer aof_buffer[LOG_BUFFER_SIZE];$/;"	m	class:FDB_LOG
+append	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::append( const Value &value )$/;"	f	class:Json::Value
+apply_filter	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^    def apply_filter( full_path, filter_rexs ):$/;"	f	function:glob
+archive_name	Src/jsoncpp-src-0.5.0/devtools/tarball.py	/^    def archive_name( path ):$/;"	f	function:make_tarball
+archive_name	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^        def archive_name( path ):$/;"	f	function:targz
+args_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      Args args_;$/;"	m	class:Json::Path
+array1_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   Json::Value array1_;$/;"	m	struct:ValueTest	file:
+arrayValue	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      arrayValue,    \/\/\/< array value (ordered list)$/;"	e	enum:Json::ValueType
+array_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         ValueInternalArray *array_;$/;"	m	struct:Json::ValueInternalArray::IteratorState
+array_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         ValueInternalArray *array_;$/;"	m	union:Json::Value::ValueHolder
+array_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         ValueInternalArray::IteratorState array_;$/;"	m	union:Json::ValueIteratorBase::__anon5
+asBool	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::asBool() const$/;"	f	class:Json::Value
+asCString	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::asCString() const$/;"	f	class:Json::Value
+asConstString	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::asConstString() const$/;"	f	class:Json::Value
+asDouble	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::asDouble() const$/;"	f	class:Json::Value
+asInt	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::asInt() const$/;"	f	class:Json::Value
+asString	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::asString() const$/;"	f	class:Json::Value
+asUInt	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::asUInt() const$/;"	f	class:Json::Value
+backlog	Src/server/FDB_Socket.h	/^        int backlog;$/;"	m	class:Socket
+base_path	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^base_path = os.path.splitext(input_path)[0]$/;"	v
+batch_size	Src/jsoncpp-src-0.5.0/makerelease.py	/^    batch_size = 10$/;"	v
+batches_	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^   BatchInfo *batches_;$/;"	m	class:Json::BatchAllocator
+begin	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::begin() const$/;"	f	class:Json::Value
+begin	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::begin()$/;"	f	class:Json::Value
+begin_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      Location begin_;$/;"	m	class:Json::Reader
+bindAddress	Src/server/FDB_Socket.cpp	/^bool Socket::bindAddress(){                \/*绑定IP 端口*\/$/;"	f	class:Socket
+bit_size	Src/server/FDB_intset.h	/^    int bit_size;                          \/*集合所占字节数*\/$/;"	m	class:my_intset
+blocksize	Src/server/FDB_md5.h	/^	enum {blocksize = 64}; $/;"	e	enum:MD5::__anon1
+bool_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         bool bool_;$/;"	m	union:Json::Value::ValueHolder
+booleanValue	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      booleanValue,  \/\/\/< bool value$/;"	e	enum:Json::ValueType
+bucketIndex_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         BucketIndex bucketIndex_;$/;"	m	struct:Json::ValueInternalMap::IteratorState
+bucketsSize_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      BucketIndex bucketsSize_;$/;"	m	class:Json::ValueInternalMap
+buckets_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      ValueInternalLink *buckets_;$/;"	m	class:Json::ValueInternalMap
+buf_SIZE	Src/server/FDB_epoll.h	/^        int buf_SIZE;$/;"	m	class:Epoll
+buffer	Src/server/FDB_LOG.h	/^    char (*buffer)[LOG_SIZE];$/;"	m	class:LOG_Buffer
+buffer	Src/server/FDB_md5.h	/^	uint1 buffer[blocksize];  $/;"	m	class:MD5
+buffer_	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^      AllocatedType buffer_[objectPerAllocation];$/;"	m	struct:Json::BatchAllocator::BatchInfo
+build_doc	Src/jsoncpp-src-0.5.0/doxybuild.py	/^def build_doc( options,  make_release=False ):$/;"	f
+c_str	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      const char *c_str() const$/;"	f	class:Json::StaticString
+c_str	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::CZString::c_str() const$/;"	f	class:Json::Value::CZString
+change	Src/server/FDB_server.h	/^        int change       ;$/;"	m	class:server
+checkConstMemberCount	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^ValueTest::checkConstMemberCount( const Json::Value &value, unsigned int expectedCount )$/;"	f	class:ValueTest
+checkEqual	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^   checkEqual( TestResult &result, const T &expected, const T &actual, $/;"	f	namespace:JsonTest
+checkIs	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^ValueTest::checkIs( const Json::Value &value, const IsCheck &check )$/;"	f	class:ValueTest
+checkMemberCount	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^ValueTest::checkMemberCount( Json::Value &value, unsigned int expectedCount )$/;"	f	class:ValueTest
+checkStringEqual	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^checkStringEqual( TestResult &result, $/;"	f	namespace:JsonTest
+check_compile	Src/jsoncpp-src-0.5.0/makerelease.py	/^def check_compile( distcheck_top_dir, platform ):$/;"	f
+check_no_pending_commit	Src/jsoncpp-src-0.5.0/makerelease.py	/^def check_no_pending_commit():$/;"	f
+childValues_	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      ChildValues childValues_;$/;"	m	class:Json::StyledStreamWriter
+childValues_	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      ChildValues childValues_;$/;"	m	class:Json::StyledWriter
+clear	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::clear()$/;"	f	class:Json::Value
+cliaddr	Src/server/FDB_Socket.h	/^        struct sockaddr_in cliaddr;$/;"	m	class:Socket	typeref:struct:Socket::sockaddr_in
+client_addr	Src/server/FDB_accept.h	/^        struct sockaddr_in client_addr;$/;"	m	class:Accept	typeref:struct:Accept::sockaddr_in
+client_addr_length	Src/server/FDB_accept.h	/^        socklen_t client_addr_length = sizeof(client_addr);  $/;"	m	class:Accept
+cluster	Src/server/FDB_ctl_info.h	/^        int cluster;$/;"	m	class:Ctl_info
+codePointToUTF8	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^static std::string codePointToUTF8(unsigned int cp)$/;"	f	namespace:Json
+collect	Src/jsoncpp-src-0.5.0/makerelease.py	/^            collect = 2$/;"	v
+collect	Src/jsoncpp-src-0.5.0/makerelease.py	/^            collect = True$/;"	v
+collect	Src/jsoncpp-src-0.5.0/makerelease.py	/^    collect = 0$/;"	v
+collectComments_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      bool collectComments_;$/;"	m	class:Json::Reader
+commentAfter	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      commentAfter,             \/\/\/< a comment on the line after a value (only make sense for root value)$/;"	e	enum:Json::CommentPlacement
+commentAfterOnSameLine	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      commentAfterOnSameLine,   \/\/\/< a comment just after a value on the same line$/;"	e	enum:Json::CommentPlacement
+commentBefore	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      commentBefore = 0,        \/\/\/< a comment placed on the line before a value$/;"	e	enum:Json::CommentPlacement
+comment_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         char *comment_;$/;"	m	struct:Json::Value::CommentInfo
+commentsBefore_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      std::string commentsBefore_;$/;"	m	class:Json::Reader
+comments_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      CommentInfo *comments_;$/;"	m	class:Json::Value
+compare	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::compare( const Value &other )$/;"	f	class:Json::Value
+compareOutputs	Src/jsoncpp-src-0.5.0/test/runjsontests.py	/^def compareOutputs( expected, actual, message ):$/;"	f
+connfd	Src/server/FDB_accept.h	/^        int connfd;$/;"	m	class:Accept
+connfd_buf	Src/server/FDB_accept.h	/^        Buffer connfd_buf;$/;"	m	class:Accept
+connfd_flag	Src/server/FDB_accept.h	/^        int connfd_flag;$/;"	m	class:Accept
+connfd_num	Src/server/FDB_ctl_info.h	/^        int connfd_num;$/;"	m	class:Ctl_info
+connfd_num	Src/server/FDB_server.h	/^        int connfd_num   ;$/;"	m	class:server
+connfd_sockfd	Src/server/FDB_serwork.h	/^        int connfd_sockfd  ;   $/;"	m	class:Server_work
+connfd_write	Src/server/FDB_buffer.cpp	/^int Buffer::connfd_write(std::string str,int use_less,int length){$/;"	f	class:Buffer
+const_iterator	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef ValueConstIterator const_iterator;$/;"	t	class:Json::Value
+containsControlCharacter	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^static bool containsControlCharacter( const char* str )$/;"	f	namespace:Json
+containsNewLine	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^containsNewLine( Reader::Location begin, $/;"	f	namespace:Json
+count	Src/server/FDB_md5.h	/^	uint4 count[2];           \/*64位的高低位计数器*\/$/;"	m	class:MD5
+counts	Src/server/FDB_intset.h	/^    long counts;                           \/*集合包含的元素个数*\/$/;"	m	class:my_intset
+cstr_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         const char *cstr_;$/;"	m	class:Json::Value::CZString
+currentBatch_	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^   BatchInfo *currentBatch_;$/;"	m	class:Json::BatchAllocator
+currentItemIndex_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         unsigned int currentItemIndex_;$/;"	m	struct:Json::ValueInternalArray::IteratorState
+currentPageIndex_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         Value **currentPageIndex_;$/;"	m	struct:Json::ValueInternalArray::IteratorState
+currentValue	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::currentValue()$/;"	f	class:Json::Reader
+current_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      Location current_;$/;"	m	class:Json::Reader
+current_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      Value::ObjectValues::iterator current_;$/;"	m	class:Json::ValueIteratorBase
+cut_time	Src/server/FDB_Key_val.h	/^    long long  cut_time;$/;"	m	class:Key_val
+data	Src/server/FDB_Hash_pseudo.h	/^    std::vector<Hash_node_pseudo<T> > data;     \/\/保存键值对的容器$/;"	m	class:Hash_map_pseudo
+data	Src/server/FDB_Queue.h	/^    std::queue<T> data;              \/\/对列数据对象$/;"	m	class:FDB_Queue
+data	Src/server/FDB_Stack.h	/^    std::stack<T> data;		\/\/栈数据对象$/;"	m	class:FDB_Stack
+data	Src/server/FDB_skiplist.h	/^    E data;             $/;"	m	class:SkipNode
+data	Src/server/FDB_ziplist.h	/^    std::vector<T> data;            \/\/vector容器列表$/;"	m	class:Ziplist
+date	Src/server/FDB_Date.h	/^    char date[30];$/;"	m	class:Date
+db_num	Src/server/FDB_Data_All.h	/^    int db_num;$/;"	m	class:Data_All
+decode	Src/server/FDB_md5.cpp	/^void MD5::decode(uint4 output[], const uint1 input[], size_type len)$/;"	f	class:MD5
+decodeDouble	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::decodeDouble( Token &token )$/;"	f	class:Json::Reader
+decodeNumber	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::decodeNumber( Token &token )$/;"	f	class:Json::Reader
+decodeString	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::decodeString( Token &token )$/;"	f	class:Json::Reader
+decodeString	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::decodeString( Token &token, std::string &decoded )$/;"	f	class:Json::Reader
+decodeUnicodeCodePoint	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::decodeUnicodeCodePoint( Token &token, $/;"	f	class:Json::Reader
+decodeUnicodeEscapeSequence	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::decodeUnicodeEscapeSequence( Token &token, $/;"	f	class:Json::Reader
+decompress	Src/jsoncpp-src-0.5.0/devtools/tarball.py	/^def decompress( tarball_path, base_dir ):$/;"	f
+decrypt	Src/server/FDB_ks.cpp	/^void passwd::decrypt()$/;"	f	class:passwd
+difference_type	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef int difference_type;$/;"	t	class:Json::ValueConstIterator
+difference_type	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef int difference_type;$/;"	t	class:Json::ValueIterator
+difference_type	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef int difference_type;$/;"	t	class:Json::ValueIteratorBase
+digest	Src/server/FDB_md5.h	/^	uint1 digest[16];         \/*结果*\/$/;"	m	class:MD5
+do_accept	Src/server/FDB_Socket.cpp	/^int Socket::do_accept(){$/;"	f	class:Socket
+do_subst_in_file	Src/jsoncpp-src-0.5.0/doxybuild.py	/^def do_subst_in_file(targetfile, sourcefile, dict):$/;"	f
+do_subst_in_file	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^    def do_subst_in_file(targetfile, sourcefile, dict):$/;"	f	function:generate
+do_work	Src/server/FDB_serwork.cpp	/^bool Server_work::do_work(){$/;"	f	class:Server_work
+document_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      std::string document_;$/;"	m	class:Json::Reader
+document_	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      std::ostream* document_;$/;"	m	class:Json::StyledStreamWriter
+document_	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      std::string document_;$/;"	m	class:Json::FastWriter
+document_	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      std::string document_;$/;"	m	class:Json::StyledWriter
+download	Src/jsoncpp-src-0.5.0/makerelease.py	/^def download( url, target_path ):$/;"	f
+doxybuild	Src/jsoncpp-src-0.5.0/makerelease.py	/^import doxybuild$/;"	i
+dummyValueAllocatorInitializer	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^} dummyValueAllocatorInitializer;$/;"	m	namespace:Json	typeref:struct:Json::DummyValueAllocatorInitializer	file:
+duplicate	Src/jsoncpp-src-0.5.0/include/json/value.h	/^            duplicate,$/;"	e	enum:Json::Value::CZString::DuplicationPolicy
+duplicateOnCopy	Src/jsoncpp-src-0.5.0/include/json/value.h	/^            duplicateOnCopy$/;"	e	enum:Json::Value::CZString::DuplicationPolicy
+duplicateStringValue	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^   virtual char *duplicateStringValue( const char *value, $/;"	f	class:Json::DefaultValueAllocator
+empty	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::empty() const$/;"	f	class:Json::Value
+emptyArray_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   Json::Value emptyArray_;$/;"	m	struct:ValueTest	file:
+emptyObject_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   Json::Value emptyObject_;$/;"	m	struct:ValueTest	file:
+emptyString_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   Json::Value emptyString_;$/;"	m	struct:ValueTest	file:
+enableYAMLCompatibility	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^FastWriter::enableYAMLCompatibility()$/;"	f	class:Json::FastWriter
+encode	Src/server/FDB_md5.cpp	/^void MD5::encode(uint1 output[], const uint4 input[], size_type len)$/;"	f	class:MD5
+encryption	Src/server/FDB_ks.cpp	/^void passwd::encryption()$/;"	f	class:passwd
+end	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::end() const$/;"	f	class:Json::Value
+end	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::end()$/;"	f	class:Json::Value
+end_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         Location end_;$/;"	m	class:Json::Reader::Token
+end_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      Location end_;$/;"	m	class:Json::Reader
+end_	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^      AllocatedType *end_;$/;"	m	struct:Json::BatchAllocator::BatchInfo
+epoll_fd	Src/server/FDB_epoll.h	/^        int epoll_fd;$/;"	m	class:Epoll
+epoll_num	Src/server/FDB_ctl_info.h	/^        int epoll_num;$/;"	m	class:Ctl_info
+errors_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      Errors errors_;$/;"	m	class:Json::Reader
+etree	Src/jsoncpp-src-0.5.0/makerelease.py	/^import xml.etree.ElementTree as ElementTree$/;"	i
+event_s	Src/server/FDB_epoll.h	/^        epoll_event *event_s;$/;"	m	class:Epoll
+existing_paths	Src/jsoncpp-src-0.5.0/makerelease.py	/^    existing_paths = set()$/;"	v
+exists	Src/jsoncpp-src-0.5.0/scons-tools/globtool.py	/^def exists(env):$/;"	f
+exists	Src/jsoncpp-src-0.5.0/scons-tools/srcdist.py	/^def exists(env):$/;"	f
+exists	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^def exists(env):$/;"	f
+exists	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^def exists(env):$/;"	f
+expectToken	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::expectToken( TokenType type, Token &token, const char *message )$/;"	f	class:Json::Reader
+expr_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      const char *expr_;$/;"	m	struct:JsonTest::PredicateContext
+expr_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      std::string expr_;$/;"	m	class:JsonTest::Failure
+express	Src/server/FDB_ks.h	/^    std::string express;               \/*明文字符串*\/$/;"	m	class:passwd
+extra_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         Location extra_;$/;"	m	class:Json::Reader::ErrorInfo
+failed	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::failed() const$/;"	f	class:JsonTest::TestResult
+failure_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      Failure *failure_;$/;"	m	struct:JsonTest::PredicateContext
+failures_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      Failures failures_;$/;"	m	class:JsonTest::TestResult
+false_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   Json::Value false_;$/;"	m	struct:ValueTest	file:
+fd	Src/server/FDB_LOG.h	/^    int fd;$/;"	m	class:LOG_fd
+fd	Src/server/FDB_Socket.h	/^        int fd()const{return sockfd_; }$/;"	f	class:Socket
+fd	Src/server/FDB_timer.h	/^        int fd;$/;"	m	class:timer
+fd	Src/test/FDB_socket_epoll_test.cpp	/^static int fd ;$/;"	v	file:
+features_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      Features features_;$/;"	m	class:Json::Reader
+file_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      const char *file_;$/;"	m	class:JsonTest::Failure
+file_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      const char *file_;$/;"	m	struct:JsonTest::PredicateContext
+file_per_sec	Src/jsoncpp-src-0.5.0/makerelease.py	/^        file_per_sec = (time.time() - start_time) \/ (index+1)$/;"	v
+filterFilename	Src/jsoncpp-src-0.5.0/scons-tools/globtool.py	/^      def filterFilename(path):$/;"	f	function:generate.Glob
+finalize	Src/server/FDB_md5.cpp	/^MD5& MD5::finalize()$/;"	f	class:MD5
+finalized	Src/server/FDB_md5.h	/^	bool finalized;$/;"	m	class:MD5
+find_intset	Src/server/FDB_intset.cpp	/^bool my_intset::find_intset(int s)$/;"	f	class:my_intset
+find_intset	Src/server/FDB_intset.cpp	/^bool my_intset::find_intset(long s)$/;"	f	class:my_intset
+find_intset	Src/server/FDB_intset.cpp	/^bool my_intset::find_intset(short s)$/;"	f	class:my_intset
+find_intset	Src/server/FDB_intset.cpp	/^bool my_intset::find_intset(std::string s)$/;"	f	class:my_intset
+find_program	Src/jsoncpp-src-0.5.0/doxybuild.py	/^def find_program(*filenames):$/;"	f
+fix_source_eol	Src/jsoncpp-src-0.5.0/devtools/fixeol.py	/^def fix_source_eol( path, is_dry_run = True, verbose = True, eol = '\\n' ):$/;"	f
+fix_sources_eol	Src/jsoncpp-src-0.5.0/makerelease.py	/^def fix_sources_eol( dist_dir ):$/;"	f
+fixeol	Src/jsoncpp-src-0.5.0/makerelease.py	/^from devtools import antglob, fixeol, tarball$/;"	i
+flag	Src/server/FDB_timer.h	/^        bool flag;                     \/*是否循环定时标志位*\/$/;"	m	class:timer
+flagAvailable	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         flagAvailable = 0,$/;"	e	enum:Json::ValueInternalLink::InternalFlags
+flagUsed	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         flagUsed = 1$/;"	e	enum:Json::ValueInternalLink::InternalFlags
+fnmatch	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^import fnmatch$/;"	i
+fnmatch	Src/jsoncpp-src-0.5.0/scons-tools/globtool.py	/^import fnmatch$/;"	i
+fnmatch	Src/jsoncpp-src-0.5.0/scons-tools/srcdist.py	/^from fnmatch import fnmatch$/;"	i
+free	Src/server/FDB_String.h	/^    int free;		\/\/字符串已经使用长度$/;"	m	class:String
+freeHead_	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^   AllocatedType *freeHead_;$/;"	m	class:Json::BatchAllocator
+fun	Src/test/FDB_Hash_map_test.cpp	/^void fun(void)$/;"	f
+fun	Src/test/FDB_thread_pool.cpp	/^int fun(){$/;"	f
+funb	Src/test/FDB_socket_epoll_test.cpp	/^void funb(){$/;"	f
+func	Src/test/FDB_Key_val_test.cpp	/^void func()$/;"	f
+func	Src/test/FDB_socket_epoll_test.cpp	/^void func(){$/;"	f
+func	Src/test/FDB_user_test.cpp	/^void func()$/;"	f
+func1	Src/test/FDB_Key_val_test.cpp	/^void func1()$/;"	f
+func2	Src/test/FDB_Key_val_test.cpp	/^void func2()$/;"	f
+func3	Src/test/FDB_Key_val_test.cpp	/^void func3()$/;"	f
+func4	Src/test/FDB_Key_val_test.cpp	/^void func4()$/;"	f
+func5	Src/test/FDB_Key_val_test.cpp	/^void func5()$/;"	f
+func6	Src/test/FDB_Key_val_test.cpp	/^void func6()$/;"	f
+func7	Src/test/FDB_Key_val_test.cpp	/^void func7()$/;"	f
+generate	Src/jsoncpp-src-0.5.0/scons-tools/globtool.py	/^def generate( env ): $/;"	f
+generate	Src/jsoncpp-src-0.5.0/scons-tools/srcdist.py	/^def generate(env):$/;"	f
+generate	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^def generate(env):$/;"	f
+generate	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^    def generate(env):$/;"	f
+get	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^from SCons.Script import *  # the usual scons stuff you get in a SConscript$/;"	i
+get	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::get( UInt index, $/;"	f	class:Json::Value
+get	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::get( const CppTL::ConstString &key,$/;"	f	class:Json::Value
+get	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::get( const char *key, $/;"	f	class:Json::Value
+get	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::get( const std::string &key,$/;"	f	class:Json::Value
+getAssertionNestingLevel	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::getAssertionNestingLevel() const$/;"	f	class:JsonTest::TestResult
+getComment	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::getComment( CommentPlacement placement ) const$/;"	f	class:Json::Value
+getFormatedErrorMessages	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::getFormatedErrorMessages() const$/;"	f	class:Json::Reader
+getLocationLineAndColumn	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::getLocationLineAndColumn( Location location ) const$/;"	f	class:Json::Reader
+getLocationLineAndColumn	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::getLocationLineAndColumn( Location location,$/;"	f	class:Json::Reader
+getMemberNames	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::getMemberNames() const$/;"	f	class:Json::Value
+getNextChar	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::getNextChar()$/;"	f	class:Json::Reader
+get_bit_size	Src/server/FDB_intset.cpp	/^int my_intset::get_bit_size(){$/;"	f	class:my_intset
+get_cut_time	Src/server/FDB_Key_val.cpp	/^long long Key_val::get_cut_time()$/;"	f	class:Key_val
+get_data	Src/server/FDB_skiplist.h	/^    E get_data(){return data;}$/;"	f	class:SkipNode
+get_hash	Src/server/FDB_Key_val.cpp	/^unsigned int Key_val::get_hash()$/;"	f	class:Key_val
+get_key	Src/server/FDB_Key_val.cpp	/^std::string Key_val::get_key()$/;"	f	class:Key_val
+get_size	Src/server/FDB_intset.cpp	/^int my_intset::get_size(){$/;"	f	class:my_intset
+get_type	Src/server/FDB_Key_val.cpp	/^int Key_val::get_type()$/;"	f	class:Key_val
+getfree	Src/server/FDB_String.cpp	/^int String::getfree() const$/;"	f	class:String
+getsize	Src/server/FDB_String.cpp	/^int String::getsize() const$/;"	f	class:String
+glob	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^def glob(dir_path,$/;"	f
+glob	Src/jsoncpp-src-0.5.0/test/cleantests.py	/^import glob$/;"	i
+glob	Src/jsoncpp-src-0.5.0/test/generate_expected.py	/^import glob$/;"	i
+glob	Src/jsoncpp-src-0.5.0/test/runjsontests.py	/^from glob import glob$/;"	i
+glob	Src/jsoncpp-src-0.5.0/test/rununittests.py	/^from glob import glob$/;"	i
+glob_impl	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^    def glob_impl( root_dir_path ):$/;"	f	function:glob
+gzip	Src/jsoncpp-src-0.5.0/devtools/tarball.py	/^import gzip$/;"	i
+gzip	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^    import gzip$/;"	i
+hasComment	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::hasComment( CommentPlacement placement ) const$/;"	f	class:Json::Value
+hasCommentForValue	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledStreamWriter::hasCommentForValue( const Value &value )$/;"	f	class:Json::StyledStreamWriter
+hasCommentForValue	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledWriter::hasCommentForValue( const Value &value )$/;"	f	class:Json::StyledWriter
+hash	Src/server/FDB_Data_Base.h	/^    std::vector<std::list<Key_val>> hash;$/;"	m	class:Data_Base
+hash	Src/server/FDB_Hash_map.h	/^    std::vector<std::list<Hash_node_pseudo<T>>> hash;   \/\/hash表的实现$/;"	m	class:Hash_map
+hash_key	Src/server/FDB_Key_val.h	/^    unsigned int hash_key;$/;"	m	class:Key_val
+hash_num	Src/server/FDB_Hash_node.h	/^    unsigned int hash_num;      \/\/键值对键的hash值$/;"	m	class:Hash_node_pseudo
+head	Src/server/FDB_skiplist.h	/^    SkipNode<E>* head;     \/*跳跃表的头指针*\/$/;"	m	class:list_skip
+hexdigest	Src/server/FDB_md5.cpp	/^std::string MD5::hexdigest() const$/;"	f	class:MD5
+id	Src/server/FDB_accept.h	/^        int id     ;$/;"	m	class:Accept
+id_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      Id id_;$/;"	m	struct:JsonTest::PredicateContext
+in	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^from SCons.Script import *  # the usual scons stuff you get in a SConscript$/;"	i
+in	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^in( Reader::Char c, Reader::Char c1, Reader::Char c2, Reader::Char c3, Reader::Char c4 )$/;"	f	namespace:Json
+in	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^in( Reader::Char c, Reader::Char c1, Reader::Char c2, Reader::Char c3, Reader::Char c4, Reader::Char c5 )$/;"	f	namespace:Json
+indent	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledStreamWriter::indent()$/;"	f	class:Json::StyledStreamWriter
+indent	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledWriter::indent()$/;"	f	class:Json::StyledWriter
+indentSize_	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      int indentSize_;$/;"	m	class:Json::StyledWriter
+indentString_	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      std::string indentString_;$/;"	m	class:Json::StyledStreamWriter
+indentString_	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      std::string indentString_;$/;"	m	class:Json::StyledWriter
+indentText	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::indentText( const std::string &text, $/;"	f	class:JsonTest::TestResult
+indentation_	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      std::string indentation_;$/;"	m	class:Json::StyledStreamWriter
+index	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::CZString::index() const$/;"	f	class:Json::Value::CZString
+index_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         int index_;$/;"	m	class:Json::Value::CZString
+index_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      UInt index_;$/;"	m	class:Json::PathArgument
+init	Src/server/FDB_md5.cpp	/^void MD5::init()$/;"	f	class:MD5
+input	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^input = file( input_path, 'rt' ).read()$/;"	v
+input_path	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^input_path = sys.argv[1]$/;"	v
+intValue	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      intValue,      \/\/\/< signed integer value$/;"	e	enum:Json::ValueType
+int_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         Int int_;$/;"	m	union:Json::Value::ValueHolder
+integer_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   Json::Value integer_;$/;"	m	struct:ValueTest	file:
+internal_targz	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^    internal_targz = 0$/;"	v
+internal_targz	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^    internal_targz = 1$/;"	v
+intset_delete	Src/server/FDB_intset.cpp	/^bool my_intset::intset_delete(int s){$/;"	f	class:my_intset
+intset_delete	Src/server/FDB_intset.cpp	/^bool my_intset::intset_delete(long s){$/;"	f	class:my_intset
+intset_delete	Src/server/FDB_intset.cpp	/^bool my_intset::intset_delete(short s){$/;"	f	class:my_intset
+intset_delete	Src/server/FDB_intset.cpp	/^bool my_intset::intset_delete(std::string s)$/;"	f	class:my_intset
+invalidPath	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Path::invalidPath( const std::string &path, $/;"	f	class:Json::Path
+isArray	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::isArray() const$/;"	f	class:Json::Value
+isArray_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      bool isArray_;$/;"	m	class:Json::ValueIteratorBase
+isArray_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^      bool isArray_;$/;"	m	struct:ValueTest::IsCheck	file:
+isBool	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::isBool() const$/;"	f	class:Json::Value
+isBool_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^      bool isBool_;$/;"	m	struct:ValueTest::IsCheck	file:
+isControlCharacter	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^static bool isControlCharacter(char ch)$/;"	f	namespace:Json
+isConvertibleTo	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::isConvertibleTo( ValueType other ) const$/;"	f	class:Json::Value
+isDouble	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::isDouble() const$/;"	f	class:Json::Value
+isDouble_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^      bool isDouble_;$/;"	m	struct:ValueTest::IsCheck	file:
+isFull	Src/server/FDB_thread_pool.h	/^        bool isFull() const{$/;"	f	class:ThreadPool
+isInt	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::isInt() const$/;"	f	class:Json::Value
+isInt_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^      bool isInt_;$/;"	m	struct:ValueTest::IsCheck	file:
+isIntegral	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::isIntegral() const$/;"	f	class:Json::Value
+isIntegral_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^      bool isIntegral_;$/;"	m	struct:ValueTest::IsCheck	file:
+isItemAvailable	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      inline bool isItemAvailable() const$/;"	f	class:Json::Value
+isMember	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::isMember( const CppTL::ConstString &key ) const$/;"	f	class:Json::Value
+isMember	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::isMember( const char *key ) const$/;"	f	class:Json::Value
+isMember	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::isMember( const std::string &key ) const$/;"	f	class:Json::Value
+isMemberNameStatic	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      inline bool isMemberNameStatic() const$/;"	f	class:Json::Value
+isMultineArray	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledStreamWriter::isMultineArray( const Value &value )$/;"	f	class:Json::StyledStreamWriter
+isMultineArray	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledWriter::isMultineArray( const Value &value )$/;"	f	class:Json::StyledWriter
+isNull	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::isNull() const$/;"	f	class:Json::Value
+isNull_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      bool isNull_;$/;"	m	class:Json::ValueIteratorBase
+isNull_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^      bool isNull_;$/;"	m	struct:ValueTest::IsCheck	file:
+isNumeric	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::isNumeric() const$/;"	f	class:Json::Value
+isNumeric_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^      bool isNumeric_;$/;"	m	struct:ValueTest::IsCheck	file:
+isObject	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::isObject() const$/;"	f	class:Json::Value
+isObject_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^      bool isObject_;$/;"	m	struct:ValueTest::IsCheck	file:
+isStaticString	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::CZString::isStaticString() const$/;"	f	class:Json::Value::CZString
+isString	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::isString() const$/;"	f	class:Json::Value
+isString_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^      bool isString_;$/;"	m	struct:ValueTest::IsCheck	file:
+isUInt	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::isUInt() const$/;"	f	class:Json::Value
+isUInt_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^      bool isUInt_;$/;"	m	struct:ValueTest::IsCheck	file:
+isValidIndex	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::isValidIndex( UInt index ) const$/;"	f	class:Json::Value
+is_pruned_dir	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^    def is_pruned_dir( dir_name ):$/;"	f	function:glob
+itemCount_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      BucketIndex itemCount_;$/;"	m	class:Json::ValueInternalMap
+itemIndex_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         BucketIndex itemIndex_;$/;"	m	struct:Json::ValueInternalMap::IteratorState
+itemPerLink	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      enum { itemPerLink = 6 };  \/\/ sizeof(ValueInternalLink) = 128 on 32 bits architecture.$/;"	e	enum:Json::ValueInternalLink::__anon3
+itemsPerPage	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      enum { itemsPerPage = 8 };    \/\/ should be a power of 2 for fast divide and modulo.$/;"	e	enum:Json::ValueInternalArray::__anon4
+items_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      Value items_[itemPerLink];$/;"	m	class:Json::ValueInternalLink
+iterator	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef ValueIterator iterator;$/;"	t	class:Json::Value
+iterator_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      } iterator_;$/;"	m	class:Json::ValueIteratorBase	typeref:union:Json::ValueIteratorBase::__anon5
+json	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^import json$/;"	i
+json_obj	Src/server/FDB_json.h	/^        Json::Value json_obj;$/;"	m	class:JSon
+key	Src/server/FDB_Hash_node.h	/^    String key;                 \/\/键值对的键$/;"	m	class:Hash_node_pseudo
+key	Src/server/FDB_Key_val.h	/^    std::string key;$/;"	m	class:Key_val
+key	Src/server/FDB_ks.h	/^    int key;                           \/*密钥*\/$/;"	m	class:passwd
+key_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      std::string key_;$/;"	m	class:Json::PathArgument
+keys_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      char *keys_[itemPerLink];$/;"	m	class:Json::ValueInternalLink
+kindIndex	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         kindIndex,$/;"	e	enum:Json::PathArgument::Kind
+kindKey	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         kindKey$/;"	e	enum:Json::PathArgument::Kind
+kindNone	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         kindNone = 0,$/;"	e	enum:Json::PathArgument::Kind
+kind_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      Kind kind_;$/;"	m	class:Json::PathArgument
+last	Src/server/FDB_skiplist.h	/^    SkipNode<E>** last;$/;"	m	class:list_skip
+lastUsedPredicateId_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      PredicateContext::Id lastUsedPredicateId_;$/;"	m	class:JsonTest::TestResult
+lastValueEnd_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      Location lastValueEnd_;$/;"	m	class:Json::Reader
+lastValue_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      Value *lastValue_;$/;"	m	class:Json::Reader
+level	Src/server/FDB_skiplist.cpp	/^int list_skip<E>::level()$/;"	f	class:list_skip
+levels	Src/server/FDB_skiplist.h	/^    int levels;            \/*已存在的非空层数*\/$/;"	m	class:list_skip
+line	Src/jsoncpp-src-0.5.0/makerelease.py	/^        line = line.strip()$/;"	v
+line_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      unsigned int line_;$/;"	m	class:JsonTest::Failure
+line_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      unsigned int line_;$/;"	m	struct:JsonTest::PredicateContext
+link	Src/server/FDB_skiplist.h	/^    SkipNode<E>** link;              \/*一维指针数组*\/$/;"	m	class:SkipNode
+link_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         ValueInternalLink *link_;$/;"	m	struct:Json::ValueInternalMap::IteratorState
+listTests	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^Runner::listTests() const$/;"	f	class:JsonTest::Runner
+list_skip	Src/server/FDB_skiplist.cpp	/^list_skip<E>::list_skip(E large, int MaxE, float p)$/;"	f	class:list_skip
+list_skip	Src/server/FDB_skiplist.h	/^class list_skip{$/;"	c
+listdir	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^from dircache import listdir$/;"	i
+listen	Src/server/FDB_Socket.cpp	/^bool Socket::listen(int backlog){       \/*监听最大链接数*\/$/;"	f	class:Socket
+local_path	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^                def local_path( paths ):$/;"	f	function:glob.AntPatternToRETest.test_matching
+log_fd	Src/server/FDB_LOG.h	/^    LOG_fd log_fd;$/;"	m	class:LOG_Buffer
+main	Src/client/cilent.cpp	/^int main(int argc ,char **argv){$/;"	f
+main	Src/jsoncpp-src-0.5.0/doxybuild.py	/^def main():$/;"	f
+main	Src/jsoncpp-src-0.5.0/makerelease.py	/^def main():$/;"	f
+main	Src/jsoncpp-src-0.5.0/src/jsontestrunner/main.cpp	/^int main( int argc, const char *argv[] )$/;"	f
+main	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^int main( int argc, const char *argv[] )$/;"	f
+main	Src/jsoncpp-src-0.5.0/test/runjsontests.py	/^def main():$/;"	f
+main	Src/jsoncpp-src-0.5.0/test/rununittests.py	/^def main():$/;"	f
+main	Src/server/FDB_test_server.cpp	/^int main(){$/;"	f
+main	Src/test/Date_test.cpp	/^int main()$/;"	f
+main	Src/test/FDB_Hash_map_test.cpp	/^int main()$/;"	f
+main	Src/test/FDB_Hash_pseudo_test.cpp	/^int main()$/;"	f
+main	Src/test/FDB_Key_val_test.cpp	/^int main()$/;"	f
+main	Src/test/FDB_LOG_test.cpp	/^int main()$/;"	f
+main	Src/test/FDB_Stack_test.cpp	/^int main()$/;"	f
+main	Src/test/FDB_String_Test.cpp	/^int main()$/;"	f
+main	Src/test/FDB_Ziplist_test.cpp	/^int main()$/;"	f
+main	Src/test/FDB_info_test.cpp	/^int main(){$/;"	f
+main	Src/test/FDB_json.cpp	/^int main(){$/;"	f
+main	Src/test/FDB_man.cpp	/^int main(int argc,char *argv[])$/;"	f
+main	Src/test/FDB_md5test.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	Src/test/FDB_ski_test.cpp	/^int main(int argc,char *argv[])$/;"	f
+main	Src/test/FDB_socket_epoll_test.cpp	/^int main(){$/;"	f
+main	Src/test/FDB_test_json.cpp	/^int main(){$/;"	f
+main	Src/test/FDB_test_skiplist.cpp	/^int main()  $/;"	f
+main	Src/test/FDB_testks.cpp	/^int main(int argc,char *argv[])$/;"	f
+main	Src/test/FDB_thread_pool.cpp	/^int main(){$/;"	f
+main	Src/test/FDB_timer_test.cpp	/^int main(){$/;"	f
+main	Src/test/FDB_user_test.cpp	/^int main()$/;"	f
+make	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Path::make( Value &root ) const$/;"	f	class:Json::Path
+makeAbsFileNode	Src/jsoncpp-src-0.5.0/scons-tools/globtool.py	/^      def makeAbsFileNode( path ):$/;"	f	function:generate.Glob
+makeBuilder	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^    def makeBuilder( emitter = None ):$/;"	f
+makeMemberName	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^   virtual char *makeMemberName( const char *memberName )$/;"	f	class:Json::DefaultValueAllocator
+makePath	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Path::makePath( const std::string &path,$/;"	f	class:Json::Path
+make_tarball	Src/jsoncpp-src-0.5.0/devtools/tarball.py	/^def make_tarball(tarball_path, sources, base_dir, prefix_dir=''):$/;"	f
+map_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         ObjectValues *map_;$/;"	m	union:Json::Value::ValueHolder
+map_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         ValueInternalMap *map_;$/;"	m	struct:Json::ValueInternalMap::IteratorState
+map_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         ValueInternalMap *map_;$/;"	m	union:Json::Value::ValueHolder
+map_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         ValueInternalMap::IteratorState map_;$/;"	m	union:Json::ValueIteratorBase::__anon5
+master	Src/server/FDB_ctl_info.h	/^        int master;$/;"	m	class:Ctl_info
+match	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::match( Location pattern, $/;"	f	class:Json::Reader
+maxInt	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      static const Int maxInt;$/;"	m	class:Json::Value
+maxInt	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^const Int Value::maxInt = Int( UInt(-1)\/2 );$/;"	m	class:Json::Value	file:
+maxQueueSize_	Src/server/FDB_thread_pool.h	/^        size_t maxQueueSize_;                                           \/*任务队列最大长度*\/$/;"	m	class:ThreadPool
+maxUInt	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      static const UInt maxUInt;$/;"	m	class:Json::Value
+maxUInt	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^const UInt Value::maxUInt = UInt(-1);$/;"	m	class:Json::Value	file:
+maxlevel	Src/server/FDB_skiplist.h	/^    int maxlevel;          \/*跳跃表所允许的最大级数*\/$/;"	m	class:list_skip
+md5	Src/test/FDB_md5test.cpp	/^std::string md5(const std::string str)$/;"	f
+message	Src/server/FDB_json.h	/^        std::string message;$/;"	m	class:JSon
+message	Src/server/FDB_serwork.h	/^        std::string message;$/;"	m	class:Server_work
+messageTarget_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      Failure *messageTarget_;$/;"	m	class:JsonTest::TestResult
+message_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         std::string message_;$/;"	m	class:Json::Reader::ErrorInfo
+message_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      std::string message_;$/;"	m	class:JsonTest::Failure
+minInt	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      static const Int minInt;$/;"	m	class:Json::Value
+minInt	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^const Int Value::minInt = Int( ~(UInt(-1)\/2) );$/;"	m	class:Json::Value	file:
+msvcrtSilentReportHook	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^msvcrtSilentReportHook( int reportType, char *message, int *returnValue )$/;"	f	namespace:JsonTest
+mutex_	Src/server/FDB_thread_pool.h	/^        mutable  std::mutex mutex_;                                     \/*线程池的锁*\/$/;"	m	class:ThreadPool
+mutex_buffer	Src/server/FDB_LOG.h	/^    std::mutex mutex_buffer;$/;"	m	class:LOG_Buffer
+mutex_fd	Src/server/FDB_LOG.h	/^    std::mutex mutex_fd;$/;"	m	class:LOG_fd
+my_greater_sort	Src/server/FDB_intset.cpp	/^int my_intset::my_greater_sort()$/;"	f	class:my_intset
+my_insert	Src/server/FDB_intset.cpp	/^void my_intset::my_insert(int s)$/;"	f	class:my_intset
+my_insert	Src/server/FDB_intset.cpp	/^void my_intset::my_insert(long s)$/;"	f	class:my_intset
+my_insert	Src/server/FDB_intset.cpp	/^void my_intset::my_insert(short s)$/;"	f	class:my_intset
+my_insert	Src/server/FDB_intset.cpp	/^void my_intset::my_insert(std::string s)$/;"	f	class:my_intset
+my_intset	Src/server/FDB_intset.cpp	/^my_intset::my_intset()$/;"	f	class:my_intset
+my_intset	Src/server/FDB_intset.h	/^class my_intset$/;"	c
+my_less_sort	Src/server/FDB_intset.cpp	/^int my_intset::my_less_sort()$/;"	f	class:my_intset
+my_output	Src/server/FDB_ks.cpp	/^void passwd::my_output()$/;"	f	class:passwd
+name_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      std::string name_;$/;"	m	class:JsonTest::TestResult
+name_	Src/server/FDB_thread_pool.h	/^        std::string name_; $/;"	m	class:ThreadPool
+nestingLevel_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      unsigned int nestingLevel_;$/;"	m	class:JsonTest::Failure
+new_value	Src/server/FDB_timer.h	/^        struct itimerspec  new_value;  \/*定时器时间结构*\/$/;"	m	class:timer	typeref:struct:timer::itimerspec
+next_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      ValueInternalLink *next_;$/;"	m	class:Json::ValueInternalLink
+next_	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^      BatchInfo *next_;$/;"	m	struct:Json::BatchAllocator::BatchInfo
+next_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      PredicateContext *next_;$/;"	m	struct:JsonTest::PredicateContext
+noDuplication	Src/jsoncpp-src-0.5.0/include/json/value.h	/^            noDuplication = 0,$/;"	e	enum:Json::Value::CZString::DuplicationPolicy
+nocopyable	Src/server/FDB_nocopyable.h	/^        nocopyable(){}$/;"	f	class:nocopyable
+nocopyable	Src/server/FDB_nocopyable.h	/^class nocopyable{$/;"	c
+nodes_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^      Nodes nodes_;$/;"	m	class:Json::Reader
+noexcept	Src/server/FDB_String.h	/^    String(String &&rhs) noexcept;$/;"	m	class:String
+normalizeEOL	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledStreamWriter::normalizeEOL( const std::string &text )$/;"	f	class:Json::StyledStreamWriter
+normalizeEOL	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledWriter::normalizeEOL( const std::string &text )$/;"	f	class:Json::StyledWriter
+notEmptyCond_	Src/server/FDB_thread_pool.h	/^        std::condition_variable notEmptyCond_;                          \/*条件变量不为空*\/$/;"	m	class:ThreadPool
+notFullCond_	Src/server/FDB_thread_pool.h	/^        std::condition_variable notFullCond_;                           \/*条件变量未满*\/$/;"	m	class:ThreadPool
+now	Src/server/FDB_timer.h	/^        struct timespec now;           \/*现在时间*\/$/;"	m	class:timer	typeref:struct:timer::timespec
+null	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      static const Value null;$/;"	m	class:Json::Value
+null	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^const Value Value::null;$/;"	m	class:Json::Value	file:
+nullValue	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      nullValue = 0, \/\/\/< 'null' value$/;"	e	enum:Json::ValueType
+null_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   Json::Value null_;$/;"	m	struct:ValueTest	file:
+numberOfCommentPlacement	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      numberOfCommentPlacement$/;"	e	enum:Json::CommentPlacement
+object1_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   Json::Value object1_;$/;"	m	struct:ValueTest	file:
+objectValue	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      objectValue    \/\/\/< object value (collection of name\/value pairs).$/;"	e	enum:Json::ValueType
+objectsPerPage_	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^   unsigned int objectsPerPage_;$/;"	m	class:Json::BatchAllocator
+operator !	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator!() const$/;"	f	class:Json::Value
+operator !=	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      bool operator !=( const SelfType &other ) const$/;"	f	class:Json::ValueIteratorBase
+operator !=	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator !=( const Value &other ) const$/;"	f	class:Json::Value
+operator !=	Src/server/FDB_String.cpp	/^bool operator!=(const String &lhs, const String &rhs)$/;"	f
+operator *	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      reference operator *() const$/;"	f	class:Json::ValueConstIterator
+operator *	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      reference operator *() const$/;"	f	class:Json::ValueIterator
+operator +	Src/server/FDB_String.cpp	/^String operator+(const String &lhs, const String &rhs)$/;"	f
+operator +	Src/server/FDB_String.cpp	/^String operator+(const String &lhs, const char *rhs)$/;"	f
+operator ++	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      SelfType &operator++()$/;"	f	class:Json::ValueConstIterator
+operator ++	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      SelfType &operator++()$/;"	f	class:Json::ValueIterator
+operator ++	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      SelfType operator++( int )$/;"	f	class:Json::ValueConstIterator
+operator ++	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      SelfType operator++( int )$/;"	f	class:Json::ValueIterator
+operator +=	Src/server/FDB_String.cpp	/^String& String::operator+=(const String &rhs)$/;"	f	class:String
+operator +=	Src/server/FDB_String.cpp	/^String& String::operator+=(const char *rhs)$/;"	f	class:String
+operator -	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      difference_type operator -( const SelfType &other ) const$/;"	f	class:Json::ValueIteratorBase
+operator --	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      SelfType &operator--()$/;"	f	class:Json::ValueConstIterator
+operator --	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      SelfType &operator--()$/;"	f	class:Json::ValueIterator
+operator --	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      SelfType operator--( int )$/;"	f	class:Json::ValueConstIterator
+operator --	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      SelfType operator--( int )$/;"	f	class:Json::ValueIterator
+operator <	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::CZString::operator<( const CZString &other ) const $/;"	f	class:Json::Value::CZString
+operator <	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator <( const Value &other ) const$/;"	f	class:Json::Value
+operator <	Src/server/FDB_String.cpp	/^bool operator<(const String &lhs, const String &rhs)$/;"	f
+operator <	Src/server/FDB_skiplist.h	/^    friend int operator<(SkipNode<E> t1, SkipNode<E> t2)$/;"	f	class:SkipNode
+operator <<	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^std::ostream& operator<<( std::ostream &sout, const Value &root )$/;"	f	namespace:Json
+operator <<	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::operator << ( bool value )$/;"	f	class:JsonTest::TestResult
+operator <<	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::operator << ( const char *value )$/;"	f	class:JsonTest::TestResult
+operator <<	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::operator << ( const std::string &value )$/;"	f	class:JsonTest::TestResult
+operator <<	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::operator << ( double value )$/;"	f	class:JsonTest::TestResult
+operator <<	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::operator << ( int value )$/;"	f	class:JsonTest::TestResult
+operator <<	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::operator << ( unsigned int value )$/;"	f	class:JsonTest::TestResult
+operator <<	Src/server/FDB_String.cpp	/^std::ostream& operator<<(std::ostream &os, const String &rhs)$/;"	f
+operator <<	Src/server/FDB_md5.cpp	/^std::ostream& operator<<(std::ostream& out, MD5 md5)$/;"	f
+operator <=	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator <=( const Value &other ) const$/;"	f	class:Json::Value
+operator =	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::CZString::operator =( const CZString &other )$/;"	f	class:Json::Value::CZString
+operator =	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator=( const Value &other )$/;"	f	class:Json::Value
+operator =	Src/server/FDB_String.cpp	/^String& String::operator=(const String &rhs) $/;"	f	class:String
+operator =	Src/server/FDB_String.cpp	/^String& String::operator=(const char *rhs)$/;"	f	class:String
+operator ==	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      bool operator ==( const SelfType &other ) const$/;"	f	class:Json::ValueIteratorBase
+operator ==	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::CZString::operator==( const CZString &other ) const $/;"	f	class:Json::Value::CZString
+operator ==	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator ==( const Value &other ) const$/;"	f	class:Json::Value
+operator ==	Src/server/FDB_String.cpp	/^bool operator==(const String &lhs, const String &rhs)$/;"	f
+operator ==	Src/server/FDB_skiplist.h	/^    friend int operator==(SkipNode<E> t1, SkipNode<E> t2)$/;"	f	class:SkipNode
+operator >	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator >( const Value &other ) const$/;"	f	class:Json::Value
+operator >	Src/server/FDB_String.cpp	/^bool operator>(const String &lhs, const String &rhs)$/;"	f
+operator >	Src/server/FDB_skiplist.h	/^    friend int operator>(SkipNode<E> t1, SkipNode<E> t2)$/;"	f	class:SkipNode
+operator >=	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator >=( const Value &other ) const$/;"	f	class:Json::Value
+operator >>	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^std::istream& operator>>( std::istream &sin, Value &root )$/;"	f	namespace:Json
+operator >>	Src/server/FDB_String.cpp	/^std::istream& operator>>(std::istream &is, String &rhs)$/;"	f
+operator []	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator[]( UInt index ) const$/;"	f	class:Json::Value
+operator []	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator[]( UInt index )$/;"	f	class:Json::Value
+operator []	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator[]( const CppTL::ConstString &key ) const$/;"	f	class:Json::Value
+operator []	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator[]( const CppTL::ConstString &key )$/;"	f	class:Json::Value
+operator []	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator[]( const StaticString &key )$/;"	f	class:Json::Value
+operator []	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator[]( const char *key ) const$/;"	f	class:Json::Value
+operator []	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator[]( const char *key )$/;"	f	class:Json::Value
+operator []	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator[]( const std::string &key ) const$/;"	f	class:Json::Value
+operator []	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::operator[]( const std::string &key )$/;"	f	class:Json::Value
+operator []	Src/server/FDB_String.cpp	/^char& String::operator[](int i)$/;"	f	class:String
+operator const char *	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      operator const char *() const$/;"	f	class:Json::StaticString
+optparse	Src/jsoncpp-src-0.5.0/test/runjsontests.py	/^import optparse$/;"	i
+optparse	Src/jsoncpp-src-0.5.0/test/rununittests.py	/^import optparse$/;"	i
+os	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^import os.path$/;"	i
+os	Src/jsoncpp-src-0.5.0/devtools/fixeol.py	/^import os.path$/;"	i
+os	Src/jsoncpp-src-0.5.0/devtools/tarball.py	/^import os.path$/;"	i
+os	Src/jsoncpp-src-0.5.0/doxybuild.py	/^import os$/;"	i
+os	Src/jsoncpp-src-0.5.0/doxybuild.py	/^import os.path$/;"	i
+os	Src/jsoncpp-src-0.5.0/makerelease.py	/^import os$/;"	i
+os	Src/jsoncpp-src-0.5.0/makerelease.py	/^import os.path$/;"	i
+os	Src/jsoncpp-src-0.5.0/scons-tools/globtool.py	/^import os$/;"	i
+os	Src/jsoncpp-src-0.5.0/scons-tools/srcdist.py	/^import os$/;"	i
+os	Src/jsoncpp-src-0.5.0/scons-tools/srcdist.py	/^import os.path$/;"	i
+os	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^import os.path$/;"	i
+os	Src/jsoncpp-src-0.5.0/test/cleantests.py	/^import os$/;"	i
+os	Src/jsoncpp-src-0.5.0/test/generate_expected.py	/^import os.path$/;"	i
+os	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^import os.path$/;"	i
+os	Src/jsoncpp-src-0.5.0/test/runjsontests.py	/^import os$/;"	i
+os	Src/jsoncpp-src-0.5.0/test/runjsontests.py	/^import os.path$/;"	i
+os	Src/jsoncpp-src-0.5.0/test/rununittests.py	/^import os$/;"	i
+os	Src/jsoncpp-src-0.5.0/test/rununittests.py	/^import os.path$/;"	i
+out_my	Src/server/FDB_skiplist.cpp	/^void list_skip<E>::out_my()$/;"	f	class:list_skip
+pageCount_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      PageIndex pageCount_;$/;"	m	class:Json::ValueInternalArray
+pages_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      Value **pages_;$/;"	m	class:Json::ValueInternalArray
+parse	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::parse( const char *beginDoc, const char *endDoc, $/;"	f	class:Json::Reader
+parse	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::parse( const std::string &document, $/;"	f	class:Json::Reader
+parse	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::parse( std::istream& sin,$/;"	f	class:Json::Reader
+parseAndSaveValueTree	Src/jsoncpp-src-0.5.0/src/jsontestrunner/main.cpp	/^parseAndSaveValueTree( const std::string &input, $/;"	f	file:
+parseAndSaveValueTree	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^def parseAndSaveValueTree( input, actual_path ):$/;"	f
+parseCommandLine	Src/jsoncpp-src-0.5.0/src/jsontestrunner/main.cpp	/^parseCommandLine( int argc, const char *argv[], $/;"	f
+passwd	Src/server/FDB_ks.cpp	/^passwd::passwd(std::string s, int k)$/;"	f	class:passwd
+passwd	Src/server/FDB_ks.h	/^class passwd$/;"	c
+path	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^import os.path$/;"	i
+path	Src/jsoncpp-src-0.5.0/devtools/fixeol.py	/^import os.path$/;"	i
+path	Src/jsoncpp-src-0.5.0/devtools/tarball.py	/^import os.path$/;"	i
+path	Src/jsoncpp-src-0.5.0/doxybuild.py	/^import os.path$/;"	i
+path	Src/jsoncpp-src-0.5.0/makerelease.py	/^            path = line.strip().split()[-1:]$/;"	v
+path	Src/jsoncpp-src-0.5.0/makerelease.py	/^import os.path$/;"	i
+path	Src/jsoncpp-src-0.5.0/scons-tools/srcdist.py	/^import os.path$/;"	i
+path	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^import os.path$/;"	i
+path	Src/jsoncpp-src-0.5.0/test/generate_expected.py	/^import os.path$/;"	i
+path	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^import os.path$/;"	i
+path	Src/jsoncpp-src-0.5.0/test/runjsontests.py	/^import os.path$/;"	i
+path	Src/jsoncpp-src-0.5.0/test/rununittests.py	/^import os.path$/;"	i
+paths	Src/jsoncpp-src-0.5.0/makerelease.py	/^        paths = upload_paths[index:index+batch_size]$/;"	v
+paths	Src/jsoncpp-src-0.5.0/test/cleantests.py	/^paths = []$/;"	v
+paths_to_remove	Src/jsoncpp-src-0.5.0/makerelease.py	/^    paths_to_remove = existing_paths - upload_paths$/;"	v
+pointer	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef Value *pointer;$/;"	t	class:Json::ValueIterator
+pointer	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef const Value *pointer;$/;"	t	class:Json::ValueConstIterator
+popPredicateContext	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::popPredicateContext()$/;"	f	class:JsonTest::TestResult
+predicateId_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      PredicateContext::Id predicateId_;$/;"	m	class:JsonTest::TestResult
+predicateStackTail_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      PredicateContext *predicateStackTail_;$/;"	m	class:JsonTest::TestResult
+preventDialogOnCrash	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^Runner::preventDialogOnCrash()$/;"	f	class:JsonTest::Runner
+previous_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      ValueInternalLink *previous_;$/;"	m	class:Json::ValueInternalLink
+printFailure	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::printFailure( bool printTestName ) const$/;"	f	class:JsonTest::TestResult
+printUsage	Src/jsoncpp-src-0.5.0/src/jsontestrunner/main.cpp	/^printUsage( const char *argv[] )$/;"	f	file:
+printUsage	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^Runner::printUsage( const char *appName )$/;"	f	class:JsonTest::Runner
+printValueTree	Src/jsoncpp-src-0.5.0/src/jsontestrunner/main.cpp	/^printValueTree( FILE *fout, Json::Value &value, const std::string &path = "." )$/;"	f	file:
+print_int	Src/server/FDB_intset.cpp	/^void my_intset::print_int()$/;"	f	class:my_intset
+prune_dirs	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^prune_dirs = '.git .bzr .hg .svn _MTN _darcs CVS SCCS '$/;"	v
+pushTask	Src/server/FDB_thread_pool.cpp	/^void ThreadPool::pushTask(Task task){                          \/*线程池添加任务*\/$/;"	f	class:ThreadPool
+pushValue	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledStreamWriter::pushValue( const std::string &value )$/;"	f	class:Json::StyledStreamWriter
+pushValue	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledWriter::pushValue( const std::string &value )$/;"	f	class:Json::StyledWriter
+queueSize	Src/server/FDB_thread_pool.h	/^        size_t queueSize() const {                                      \/*当前任务队列长度*\/$/;"	f	class:ThreadPool
+queue_	Src/server/FDB_thread_pool.h	/^        std::deque<Task> queue_;                                        $/;"	m	class:ThreadPool
+queue_mutex	Src/server/FDB_Queue.h	/^    std::mutex queue_mutex;     \/\/对列类中的锁$/;"	m	class:FDB_Queue
+re	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^import re$/;"	i
+re	Src/jsoncpp-src-0.5.0/doxybuild.py	/^import re$/;"	i
+re	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^import re$/;"	i
+readArray	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::readArray( Token &tokenStart )$/;"	f	class:Json::Reader
+readCStyleComment	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::readCStyleComment()$/;"	f	class:Json::Reader
+readComment	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::readComment()$/;"	f	class:Json::Reader
+readCppStyleComment	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::readCppStyleComment()$/;"	f	class:Json::Reader
+readInputTestFile	Src/jsoncpp-src-0.5.0/src/jsontestrunner/main.cpp	/^readInputTestFile( const char *path )$/;"	f	file:
+readNumber	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::readNumber()$/;"	f	class:Json::Reader
+readObject	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::readObject( Token &tokenStart )$/;"	f	class:Json::Reader
+readString	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::readString()$/;"	f	class:Json::Reader
+readToken	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::readToken( Token &token )$/;"	f	class:Json::Reader
+readValue	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::readValue()$/;"	f	class:Json::Reader
+read_buff_	Src/server/FDB_buffer.h	/^        std::vector<char>  read_buff_;$/;"	m	class:Buffer
+read_index_end	Src/server/FDB_buffer.h	/^        int read_index_end   ;$/;"	m	class:Buffer
+read_index_start	Src/server/FDB_buffer.h	/^        int read_index_start ;$/;"	m	class:Buffer
+read_info	Src/server/FDB_ctl_info.cpp	/^bool Ctl_info::read_info(){$/;"	f	class:Ctl_info
+read_info__	Src/server/FDB_ctl_info.cpp	/^bool Ctl_info::read_info__(std::fstream & s){$/;"	f	class:Ctl_info
+read_info_select	Src/server/FDB_ctl_info.cpp	/^bool Ctl_info::read_info_select(std::string temp,std::string b){$/;"	f	class:Ctl_info
+read_length	Src/server/FDB_buffer.h	/^        int read_length      ;                    \/*read and write = ( start - end )*\/$/;"	m	class:Buffer
+read_max	Src/server/FDB_buffer.h	/^        int read_max         ;$/;"	m	class:Buffer
+realValue	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      realValue,     \/\/\/< double value$/;"	e	enum:Json::ValueType
+real_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         double real_;$/;"	m	union:Json::Value::ValueHolder
+real_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   Json::Value real_;$/;"	m	struct:ValueTest	file:
+recoverFromError	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::recoverFromError( TokenType skipUntilToken )$/;"	f	class:Json::Reader
+reference	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef Value &reference;$/;"	t	class:Json::ValueIterator
+reference	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef const Value &reference;$/;"	t	class:Json::ValueConstIterator
+rehash	Src/server/FDB_Data_Base.h	/^    std::vector<std::list<Key_val>> rehash;$/;"	m	class:Data_Base
+rehash	Src/server/FDB_Hash_map.h	/^    std::vector<std::list<Hash_node_pseudo<T>>> rehash; \/\/rehash表的实现$/;"	m	class:Hash_map
+rehash_default	Src/server/FDB_Data_Base.h	/^    int rehash_default;$/;"	m	class:Data_Base
+rehashhidx	Src/server/FDB_Data_Base.h	/^    int rehashhidx;$/;"	m	class:Data_Base
+rehashhidx	Src/server/FDB_Hash_map.h	/^    int rehashhidx;             \/\/标志rehash是否使用（-1的代表未使用）$/;"	m	class:Hash_map
+release	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^   void release( AllocatedType *object )$/;"	f	class:Json::BatchAllocator
+releaseMemberName	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^   virtual void releaseMemberName( char *memberName )$/;"	f	class:Json::DefaultValueAllocator
+releaseStringValue	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^   virtual void releaseStringValue( char *value )$/;"	f	class:Json::DefaultValueAllocator
+remaining_files	Src/jsoncpp-src-0.5.0/makerelease.py	/^        remaining_files = len(upload_paths) - index$/;"	v
+remaining_sec	Src/jsoncpp-src-0.5.0/makerelease.py	/^        remaining_sec = file_per_sec * remaining_files$/;"	v
+removeMember	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::removeMember( const char* key )$/;"	f	class:Json::Value
+removeMember	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::removeMember( const std::string &key )$/;"	f	class:Json::Value
+removeSuffix	Src/jsoncpp-src-0.5.0/src/jsontestrunner/main.cpp	/^removeSuffix( const std::string &path, $/;"	f	file:
+resize	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::resize( UInt newSize )$/;"	f	class:Json::Value
+resize	Src/server/FDB_Data_Base.h	/^    unsigned long resize;$/;"	m	class:Data_Base
+resize	Src/server/FDB_Hash_map.h	/^    unsigned long resize;       \/\/rehash表的大小$/;"	m	class:Hash_map
+resolve	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Path::resolve( const Value &root ) const$/;"	f	class:Json::Path
+resolve	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Path::resolve( const Value &root, $/;"	f	class:Json::Path
+resolveReference	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::resolveReference( const char *key, $/;"	f	class:Json::Value
+result_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      TestResult *result_;$/;"	m	class:JsonTest::TestCase
+return_read_length	Src/server/FDB_buffer.cpp	/^int Buffer::return_read_length(){$/;"	f	class:Buffer
+return_write_length	Src/server/FDB_buffer.cpp	/^int Buffer::return_write_length(){$/;"	f	class:Buffer
+reused	Src/server/FDB_Data_Base.h	/^    unsigned long reused;$/;"	m	class:Data_Base
+reused	Src/server/FDB_Hash_map.h	/^    unsigned long reused;       \/\/键值对保存在rehash表中的大小$/;"	m	class:Hash_map
+rewrite	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^rewrite = rewriteValueTree( json.write( root ), rewrite_path )$/;"	v
+rewriteValueTree	Src/jsoncpp-src-0.5.0/src/jsontestrunner/main.cpp	/^rewriteValueTree( const std::string &rewritePath, $/;"	f	file:
+rewriteValueTree	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^def rewriteValueTree( value, rewrite_path ):$/;"	f
+rewrite_actual_path	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^rewrite_actual_path = base_path + '.actual-rewrite'$/;"	v
+rewrite_path	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^rewrite_path = base_path + '.rewrite'$/;"	v
+rewrite_root	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^rewrite_root = parseAndSaveValueTree( rewrite, rewrite_actual_path )$/;"	v
+rightMargin_	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      int rightMargin_;$/;"	m	class:Json::StyledStreamWriter
+rightMargin_	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      int rightMargin_;$/;"	m	class:Json::StyledWriter
+rmdir_if_exist	Src/jsoncpp-src-0.5.0/makerelease.py	/^def rmdir_if_exist( dir_path ):$/;"	f
+root	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^root = parseAndSaveValueTree( input, actual_path )$/;"	v
+rootPredicateNode_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      PredicateContext rootPredicateNode_;$/;"	m	class:JsonTest::TestResult
+rotate_left	Src/server/FDB_md5.cpp	/^inline MD5::uint4 MD5::rotate_left(uint4 x, int n) {$/;"	f	class:MD5
+run	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestCase::run( TestResult &result )$/;"	f	class:JsonTest::TestCase
+run	Src/jsoncpp-src-0.5.0/test/rununittests.py	/^    def run( self, options ):$/;"	m	class:TestProxy
+runAllTest	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^Runner::runAllTest( bool printSummary ) const$/;"	f	class:JsonTest::Runner
+runAllTests	Src/jsoncpp-src-0.5.0/test/runjsontests.py	/^def runAllTests( jsontest_executable_path, input_dir = None,$/;"	f
+runAllTests	Src/jsoncpp-src-0.5.0/test/rununittests.py	/^def runAllTests( exe_path, use_valgrind=False ):$/;"	f
+runCommandLine	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^Runner::runCommandLine( int argc, const char *argv[] ) const$/;"	f	class:JsonTest::Runner
+runTestAt	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^Runner::runTestAt( unsigned int index, TestResult &result ) const$/;"	f	class:JsonTest::Runner
+run_doxygen	Src/jsoncpp-src-0.5.0/doxybuild.py	/^def run_doxygen(doxygen_path, config_file, working_dir, is_silent):$/;"	f
+run_sftp_batch	Src/jsoncpp-src-0.5.0/makerelease.py	/^def run_sftp_batch( userhost, sftp, batch, retry=0 ):$/;"	f
+running_	Src/server/FDB_thread_pool.h	/^        bool running_;$/;"	m	class:ThreadPool
+safeGetLine	Src/jsoncpp-src-0.5.0/test/runjsontests.py	/^    def safeGetLine( lines, index ):$/;"	f	function:compareOutputs
+safeReadFile	Src/jsoncpp-src-0.5.0/test/runjsontests.py	/^def safeReadFile( path ):$/;"	f
+scons	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^from SCons.Script import *  # the usual scons stuff you get in a SConscript$/;"	i
+sec_time	Src/server/FDB_timer.h	/^        int sec_time;                  \/*定时时间*\/$/;"	m	class:timer
+sec_times	Src/server/FDB_timer.h	/^        int sec_times;                 \/*定时触发间隔时间*\/$/;"	m	class:timer
+server	Src/server/FDB_server.cpp	/^server::server(int status ,int connfd_num,int server_s){   \/*构造服务器基础信息*\/$/;"	f	class:server
+server	Src/server/FDB_server.h	/^class server{$/;"	c
+server_fd	Src/server/FDB_server.cpp	/^int server::server_fd(){$/;"	f	class:server
+server_start	Src/server/FDB_server.cpp	/^bool server::server_start(){                               \/*开启多线程服务器*\/$/;"	f	class:server
+server_status	Src/server/FDB_server.h	/^        int server_status;$/;"	m	class:server
+server_threads	Src/server/FDB_server.h	/^        int server_threads;$/;"	m	class:server
+server_work	Src/server/FDB_server.cpp	/^static void server_work(int fd){$/;"	f	file:
+setComment	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::CommentInfo::setComment( const char *text )$/;"	f	class:Json::Value::CommentInfo
+setComment	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::setComment( const char *comment,$/;"	f	class:Json::Value
+setComment	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::setComment( const std::string &comment,$/;"	f	class:Json::Value
+setItemUsed	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      inline void setItemUsed( bool isUsed = true )$/;"	f	class:Json::Value
+setKeepAlive	Src/server/FDB_Socket.cpp	/^bool Socket::setKeepAlive(bool on){      \/*设置保活*\/$/;"	f	class:Socket
+setMaxQueueSize	Src/server/FDB_thread_pool.h	/^        void setMaxQueueSize(size_t maxSize) {                          \/*设置任务队列最大长度*\/$/;"	f	class:ThreadPool
+setMemberNameIsStatic	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      inline void setMemberNameIsStatic( bool isStatic )$/;"	f	class:Json::Value
+setReuseAddr	Src/server/FDB_Socket.cpp	/^bool Socket::setReuseAddr(bool on){      \/*设置reuseaddr 标志*\/$/;"	f	class:Socket
+setReusePort	Src/server/FDB_Socket.cpp	/^bool Socket::setReusePort(bool on){      \/*设置reuseport*\/$/;"	f	class:Socket
+setTestName	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestResult::setTestName( const std::string &name )$/;"	f	class:JsonTest::TestResult
+setThreadPoolInitCallback	Src/server/FDB_thread_pool.h	/^        void setThreadPoolInitCallback(Task  callback){                 \/*设置线程初始化回调*\/$/;"	f	class:ThreadPool
+set_cut_ptime	Src/server/FDB_Key_val.cpp	/^void Key_val::set_cut_ptime(long long time)$/;"	f	class:Key_val
+set_cut_time	Src/server/FDB_Key_val.cpp	/^void Key_val::set_cut_time(long long time)$/;"	f	class:Key_val
+set_data	Src/server/FDB_skiplist.h	/^    void set_data(E m){data = m;}$/;"	f	class:SkipNode
+set_hash_key	Src/server/FDB_Key_val.cpp	/^void Key_val::set_hash_key(unsigned int hash)$/;"	f	class:Key_val
+set_version	Src/jsoncpp-src-0.5.0/makerelease.py	/^def set_version( version ):$/;"	f
+setbuffsize	Src/server/FDB_Socket.cpp	/^bool Socket::setbuffsize(bool on){$/;"	f	class:Socket
+setnonblocking	Src/server/FDB_Socket.cpp	/^int Socket::setnonblocking(){              \/*设置非阻塞*\/$/;"	f	class:Socket
+show_all	Src/server/FDB_ctl_info.cpp	/^bool Ctl_info::show_all(){$/;"	f	class:Ctl_info
+shutil	Src/jsoncpp-src-0.5.0/doxybuild.py	/^import shutil$/;"	i
+shutil	Src/jsoncpp-src-0.5.0/makerelease.py	/^import shutil$/;"	i
+size	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::size() const$/;"	f	class:Json::Value
+size	Src/server/FDB_Data_Base.h	/^    unsigned long size;$/;"	m	class:Data_Base
+size	Src/server/FDB_Hash_map.h	/^    unsigned long size;         \/\/hash表的大小$/;"	m	class:Hash_map
+size	Src/server/FDB_Queue.h	/^    unsigned int size;          \/\/对列中对象的个数$/;"	m	class:FDB_Queue
+size	Src/server/FDB_Stack.h	/^    unsigned int size; 		\/\/栈中对象的个数$/;"	m	class:FDB_Stack
+size	Src/server/FDB_String.h	/^    int size; 		\/\/字符串已用长度$/;"	m	class:String
+size_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      ArrayIndex size_;$/;"	m	class:Json::ValueInternalArray
+size_counts	Src/server/FDB_intset.h	/^    long size_counts;                      \/*集合占用的内存字节数*\/$/;"	m	class:my_intset
+size_t	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef unsigned int size_t;$/;"	t	class:Json::ValueConstIterator
+size_t	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef unsigned int size_t;$/;"	t	class:Json::ValueIterator
+size_t	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      typedef unsigned int size_t;$/;"	t	class:Json::ValueIteratorBase
+size_type	Src/server/FDB_md5.h	/^	typedef unsigned int size_type; $/;"	t	class:MD5
+skipCommentTokens	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::skipCommentTokens( Token &token )$/;"	f	class:Json::Reader
+skipSpaces	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Reader::skipSpaces()$/;"	f	class:Json::Reader
+slave	Src/server/FDB_ctl_info.h	/^        int slave ;$/;"	m	class:Ctl_info
+slave_ip_port1	Src/server/FDB_ctl_info.h	/^        std::string slave_ip_port1;$/;"	m	class:Ctl_info
+slave_ip_port2	Src/server/FDB_ctl_info.h	/^        std::string slave_ip_port2;$/;"	m	class:Ctl_info
+slave_master	Src/server/FDB_ctl_info.h	/^        std::string slave_master;$/;"	m	class:Ctl_info
+slave_num	Src/server/FDB_ctl_info.h	/^        int slave_num;$/;"	m	class:Ctl_info
+smallUnsignedInteger_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   Json::Value smallUnsignedInteger_;$/;"	m	struct:ValueTest	file:
+sock_fd	Src/server/FDB_accept.h	/^        int sock_fd;$/;"	m	class:Accept
+sock_fd	Src/server/FDB_epoll.h	/^        int sock_fd ;$/;"	m	class:Epoll
+sockfd	Src/server/FDB_server.h	/^        int sockfd       ;$/;"	m	class:server
+sockfd_	Src/server/FDB_Socket.h	/^        int sockfd_ ;$/;"	m	class:Socket
+sourceforge_release_tarball	Src/jsoncpp-src-0.5.0/makerelease.py	/^def sourceforge_release_tarball( sourceforge_project, paths, user=None, sftp='sftp' ):$/;"	f
+sourceforge_web_synchro	Src/jsoncpp-src-0.5.0/makerelease.py	/^def sourceforge_web_synchro( sourceforge_project, doc_dir,$/;"	f
+srcDistEmitter	Src/jsoncpp-src-0.5.0/scons-tools/srcdist.py	/^def srcDistEmitter(source, target, env):$/;"	f
+stack_mutex	Src/server/FDB_Stack.h	/^    std::mutex stack_mutex; 	\/\/栈类中的锁$/;"	m	class:FDB_Stack
+start	Src/server/FDB_thread_pool.cpp	/^void ThreadPool::start(int threadNums){      \/*启动线程池*\/$/;"	f	class:ThreadPool
+start_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         Location start_;$/;"	m	class:Json::Reader::Token
+start_time	Src/jsoncpp-src-0.5.0/makerelease.py	/^    start_time = time.time()$/;"	v
+state	Src/server/FDB_md5.h	/^	uint4 state[4];           \/*md5计算后尚未转换为字符的md5值*\/$/;"	m	class:MD5
+stop	Src/server/FDB_thread_pool.cpp	/^void ThreadPool::stop(){                            \/*销毁线程池*\/$/;"	f	class:ThreadPool
+str	Src/server/FDB_String.h	/^    char *str; 		\/\/空闲长度$/;"	m	class:String
+str_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      const char *str_;$/;"	m	class:Json::StaticString
+str_cil	Src/client/cilent.cpp	/^int str_cil(int sockfd){$/;"	f
+strictMode	Src/jsoncpp-src-0.5.0/src/lib_json/json_reader.cpp	/^Features::strictMode()$/;"	f	class:Json::Features
+strictRoot_	Src/jsoncpp-src-0.5.0/include/json/features.h	/^      bool strictRoot_;$/;"	m	class:Json::Features
+string1_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   Json::Value string1_;$/;"	m	struct:ValueTest	file:
+stringValue	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      stringValue,   \/\/\/< UTF-8 string value$/;"	e	enum:Json::ValueType
+string_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         char *string_;$/;"	m	union:Json::Value::ValueHolder
+string_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   Json::Value string_;$/;"	m	struct:ValueTest	file:
+stuff	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^from SCons.Script import *  # the usual scons stuff you get in a SConscript$/;"	i
+subprocess	Src/jsoncpp-src-0.5.0/doxybuild.py	/^            import subprocess$/;"	i
+subprocess	Src/jsoncpp-src-0.5.0/makerelease.py	/^import subprocess$/;"	i
+subprocess	Src/jsoncpp-src-0.5.0/test/rununittests.py	/^import subprocess$/;"	i
+subst_emitter	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^    def subst_emitter(target, source, env):$/;"	f	function:generate
+subst_in_file	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^    def subst_in_file(target, source, env):$/;"	f	function:generate
+subst_in_file_string	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^    def subst_in_file_string(target, source, env):$/;"	f	function:generate
+svn_check_if_tag_exist	Src/jsoncpp-src-0.5.0/makerelease.py	/^def svn_check_if_tag_exist( tag_url ):$/;"	f
+svn_command	Src/jsoncpp-src-0.5.0/makerelease.py	/^def svn_command( command, *args ):$/;"	f
+svn_commit	Src/jsoncpp-src-0.5.0/makerelease.py	/^def svn_commit( message ):$/;"	f
+svn_export	Src/jsoncpp-src-0.5.0/makerelease.py	/^def svn_export( tag_url, export_dir ):$/;"	f
+svn_join_url	Src/jsoncpp-src-0.5.0/makerelease.py	/^def svn_join_url( base_url, suffix ):$/;"	f
+svn_remove_tag	Src/jsoncpp-src-0.5.0/makerelease.py	/^def svn_remove_tag( tag_url, message ):$/;"	f
+svn_tag_sandbox	Src/jsoncpp-src-0.5.0/makerelease.py	/^def svn_tag_sandbox( tag_url, message ):$/;"	f
+swap	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::CZString::swap( CZString &other )$/;"	f	class:Json::Value::CZString
+swap	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::swap( Value &other )$/;"	f	class:Json::Value
+sys	Src/jsoncpp-src-0.5.0/doxybuild.py	/^import sys$/;"	i
+sys	Src/jsoncpp-src-0.5.0/makerelease.py	/^import sys$/;"	i
+sys	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^import sys$/;"	i
+sys	Src/jsoncpp-src-0.5.0/test/runjsontests.py	/^import sys$/;"	i
+sys	Src/jsoncpp-src-0.5.0/test/rununittests.py	/^import sys$/;"	i
+t	Src/server/FDB_Date.h	/^    struct tm *t;$/;"	m	class:Date	typeref:struct:Date::tm
+tail	Src/server/FDB_skiplist.h	/^    SkipNode<E>* tail;     \/*尾结点指针*\/$/;"	m	class:list_skip
+tailLink_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      ValueInternalLink *tailLink_;$/;"	m	class:Json::ValueInternalMap
+take	Src/server/FDB_thread_pool.cpp	/^ThreadPool::Task ThreadPool::take(){                                          \/*返回任务队列中的任务*\/$/;"	f	class:ThreadPool
+tarball	Src/jsoncpp-src-0.5.0/doxybuild.py	/^from devtools import tarball$/;"	i
+tarball	Src/jsoncpp-src-0.5.0/makerelease.py	/^from devtools import antglob, fixeol, tarball$/;"	i
+tarfile	Src/jsoncpp-src-0.5.0/devtools/tarball.py	/^import tarfile$/;"	i
+tarfile	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^    import tarfile$/;"	i
+target	Src/jsoncpp-src-0.5.0/test/generate_expected.py	/^    target = os.path.splitext(path)[0] + '.expected'$/;"	v
+targz	Src/jsoncpp-src-0.5.0/scons-tools/srcdist.py	/^import targz$/;"	i
+targz	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^    def targz(target, source, env):$/;"	f
+targzAction	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^    targzAction = SCons.Action.Action(targz, varlist=['TARGZ_COMPRESSION_LEVEL','TARGZ_BASEDIR'])$/;"	v
+tempfile	Src/jsoncpp-src-0.5.0/makerelease.py	/^import tempfile$/;"	i
+testCount	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^Runner::testCount() const$/;"	f	class:JsonTest::Runner
+testIndex	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^Runner::testIndex( const std::string &testName, $/;"	f	class:JsonTest::Runner
+testNameAt	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^Runner::testNameAt( unsigned int index ) const$/;"	f	class:JsonTest::Runner
+test_accept	Src/server/FDB_Socket.cpp	/^bool Socket::test_accept(){$/;"	f	class:Socket
+test_matching	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^        def test_matching( self ):$/;"	m	class:glob.AntPatternToRETest
+tests_	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.h	/^      Factories tests_;$/;"	m	class:JsonTest::Runner
+text	Src/jsoncpp-src-0.5.0/test/generate_expected.py	/^    text = file(path,'rt').read()$/;"	v
+the	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^from SCons.Script import *  # the usual scons stuff you get in a SConscript$/;"	i
+threadFunc	Src/server/FDB_thread_pool.cpp	/^void ThreadPool::threadFunc(){                                                \/*线程池回调函数*\/$/;"	f	class:ThreadPool
+threadInitCallback_	Src/server/FDB_thread_pool.h	/^        Task threadInitCallback_;                                       \/*回调函数*\/$/;"	m	class:ThreadPool
+thread_1	Src/test/FDB_LOG_test.cpp	/^void thread_1()$/;"	f
+threads_	Src/server/FDB_thread_pool.h	/^        std::vector<std::thread*> threads_;                             \/*线程池*\/$/;"	m	class:ThreadPool
+time	Src/jsoncpp-src-0.5.0/makerelease.py	/^import time$/;"	i
+time_s	Src/server/FDB_timer.h	/^        unsigned long time_s;          \/*定时次数*\/ $/;"	m	class:timer
+timer	Src/server/FDB_epoll.h	/^        void (*timer)(int);$/;"	m	class:Epoll
+timer	Src/server/FDB_timer.cpp	/^timer::timer(){$/;"	f	class:timer
+timer	Src/server/FDB_timer.h	/^class timer{$/;"	c
+timer_loop	Src/server/FDB_timer.cpp	/^bool timer::timer_loop(int sec,unsigned long times,int sectimes,bool loop){$/;"	f	class:timer
+timer_re	Src/server/FDB_timer.cpp	/^bool timer::timer_re(){$/;"	f	class:timer
+timer_settime	Src/server/FDB_timer.cpp	/^bool timer::timer_settime(){$/;"	f	class:timer
+timer_test	Src/server/FDB_timer.cpp	/^bool timer::timer_test(){$/;"	f	class:timer
+toStyledString	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::toStyledString() const$/;"	f	class:Json::Value
+tokenArrayBegin	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         tokenArrayBegin,$/;"	e	enum:Json::Reader::TokenType
+tokenArrayEnd	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         tokenArrayEnd,$/;"	e	enum:Json::Reader::TokenType
+tokenArraySeparator	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         tokenArraySeparator,$/;"	e	enum:Json::Reader::TokenType
+tokenComment	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         tokenComment,$/;"	e	enum:Json::Reader::TokenType
+tokenEndOfStream	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         tokenEndOfStream = 0,$/;"	e	enum:Json::Reader::TokenType
+tokenError	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         tokenError$/;"	e	enum:Json::Reader::TokenType
+tokenFalse	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         tokenFalse,$/;"	e	enum:Json::Reader::TokenType
+tokenMemberSeparator	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         tokenMemberSeparator,$/;"	e	enum:Json::Reader::TokenType
+tokenNull	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         tokenNull,$/;"	e	enum:Json::Reader::TokenType
+tokenNumber	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         tokenNumber,$/;"	e	enum:Json::Reader::TokenType
+tokenObjectBegin	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         tokenObjectBegin,$/;"	e	enum:Json::Reader::TokenType
+tokenObjectEnd	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         tokenObjectEnd,$/;"	e	enum:Json::Reader::TokenType
+tokenString	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         tokenString,$/;"	e	enum:Json::Reader::TokenType
+tokenTrue	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         tokenTrue,$/;"	e	enum:Json::Reader::TokenType
+token_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         Token token_;$/;"	m	class:Json::Reader::ErrorInfo
+tra	Src/server/FDB_intset.h	/^    int tra;                               \/*整数类型转换的次数*\/$/;"	m	class:my_intset
+transform	Src/server/FDB_md5.cpp	/^void MD5::transform(const uint1 block[blocksize])$/;"	f	class:MD5
+true_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   Json::Value true_;$/;"	m	struct:ValueTest	file:
+tv	Src/server/FDB_Date.h	/^    struct timeval tv;$/;"	m	class:Date	typeref:struct:Date::timeval
+type	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::type() const$/;"	f	class:Json::Value
+type	Src/server/FDB_Key_val.h	/^    int type;$/;"	m	class:Key_val
+type_	Src/jsoncpp-src-0.5.0/include/json/reader.h	/^         TokenType type_;$/;"	m	class:Json::Reader::Token
+types	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^import types$/;"	i
+uint1	Src/server/FDB_md5.h	/^	typedef unsigned char uint1; \/*  8bit 1个字节*\/$/;"	t	class:MD5
+uint4	Src/server/FDB_md5.h	/^	typedef unsigned int uint4;  \/*  32bit 4 个字节 *\/$/;"	t	class:MD5
+uintToString	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^static void uintToString( unsigned int value, $/;"	f	namespace:Json
+uintValue	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      uintValue,     \/\/\/< unsigned integer value$/;"	e	enum:Json::ValueType
+uint_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^         UInt uint_;$/;"	m	union:Json::Value::ValueHolder
+unindent	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledStreamWriter::unindent()$/;"	f	class:Json::StyledStreamWriter
+unindent	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledWriter::unindent()$/;"	f	class:Json::StyledWriter
+unittest	Src/jsoncpp-src-0.5.0/devtools/antglob.py	/^    import unittest$/;"	i
+unknown	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      enum { unknown = (unsigned)-1 };$/;"	e	enum:Json::ValueAllocator::__anon2
+unsignedInteger_	Src/jsoncpp-src-0.5.0/src/test_lib_json/main.cpp	/^   Json::Value unsignedInteger_;$/;"	m	struct:ValueTest	file:
+update	Src/server/FDB_md5.cpp	/^void MD5::update(const char input[], size_type length)$/;"	f	class:MD5
+update	Src/server/FDB_md5.cpp	/^void MD5::update(const unsigned char input[], size_type length)$/;"	f	class:MD5
+upload_paths	Src/jsoncpp-src-0.5.0/makerelease.py	/^    upload_paths = list(upload_paths)$/;"	v
+upload_paths	Src/jsoncpp-src-0.5.0/makerelease.py	/^    upload_paths = set( [os.path.basename(p) for p in antglob.glob( doc_dir )] )$/;"	v
+urllib2	Src/jsoncpp-src-0.5.0/makerelease.py	/^import urllib2$/;"	i
+used	Src/server/FDB_Data_Base.h	/^    unsigned long used;$/;"	m	class:Data_Base
+used	Src/server/FDB_Hash_map.h	/^    unsigned long used;         \/\/键值对保存在hash表中的大小$/;"	m	class:Hash_map
+used	Src/server/FDB_LOG.h	/^    int used;$/;"	m	class:LOG_Buffer
+used_	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^      AllocatedType *used_;$/;"	m	struct:Json::BatchAllocator::BatchInfo
+user	Src/server/FDB_test_server.cpp	/^User user;$/;"	v
+usual	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^from SCons.Script import *  # the usual scons stuff you get in a SConscript$/;"	i
+v1	Src/server/FDB_intset.h	/^    std::vector<short> v1;$/;"	m	class:my_intset
+v2	Src/server/FDB_intset.h	/^    std::vector<int> v2;$/;"	m	class:my_intset
+v3	Src/server/FDB_intset.h	/^    std::vector<long> v3;$/;"	m	class:my_intset
+v4	Src/server/FDB_intset.h	/^    std::vector<std::string > v4;          \/*如果操作的元素是字符类型的*\/$/;"	m	class:my_intset
+value	Src/server/FDB_Hash_node.h	/^    T value;                    \/\/键值对的值$/;"	m	class:Hash_node_pseudo
+value	Src/server/FDB_Key_val.h	/^    void *value;$/;"	m	class:Key_val
+valueAllocator	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^static ValueAllocator *&valueAllocator()$/;"	f	namespace:Json
+valueToQuotedString	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^std::string valueToQuotedString( const char *value )$/;"	f	namespace:Json
+valueToString	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^std::string valueToString( Int value )$/;"	f	namespace:Json
+valueToString	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^std::string valueToString( UInt value )$/;"	f	namespace:Json
+valueToString	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^std::string valueToString( bool value )$/;"	f	namespace:Json
+valueToString	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^std::string valueToString( double value )$/;"	f	namespace:Json
+valueTreeToString	Src/jsoncpp-src-0.5.0/test/pyjsontestrunner.py	/^def valueTreeToString( fout, value, path = '.' ):$/;"	f
+value_	Src/jsoncpp-src-0.5.0/include/json/value.h	/^      } value_;$/;"	m	class:Json::Value	typeref:union:Json::Value::ValueHolder
+visit	Src/jsoncpp-src-0.5.0/devtools/tarball.py	/^    def visit(tar, dirname, names):$/;"	f	function:make_tarball
+visit	Src/jsoncpp-src-0.5.0/scons-tools/targz.py	/^        def visit(tar, dirname, names):$/;"	f	function:targz
+webbrowser	Src/jsoncpp-src-0.5.0/doxybuild.py	/^        import webbrowser$/;"	i
+work	Src/server/FDB_epoll.cpp	/^bool Epoll::work(int sockfd,std::string string,char *buf){$/;"	f	class:Epoll
+write	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^FastWriter::write( const Value &root )$/;"	f	class:Json::FastWriter
+write	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledStreamWriter::write( std::ostream &out, const Value &root )$/;"	f	class:Json::StyledStreamWriter
+write	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledWriter::write( const Value &root )$/;"	f	class:Json::StyledWriter
+writeArrayValue	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledStreamWriter::writeArrayValue( const Value &value )$/;"	f	class:Json::StyledStreamWriter
+writeArrayValue	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledWriter::writeArrayValue( const Value &value )$/;"	f	class:Json::StyledWriter
+writeCommentAfterValueOnSameLine	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledStreamWriter::writeCommentAfterValueOnSameLine( const Value &root )$/;"	f	class:Json::StyledStreamWriter
+writeCommentAfterValueOnSameLine	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledWriter::writeCommentAfterValueOnSameLine( const Value &root )$/;"	f	class:Json::StyledWriter
+writeCommentBeforeValue	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledStreamWriter::writeCommentBeforeValue( const Value &root )$/;"	f	class:Json::StyledStreamWriter
+writeCommentBeforeValue	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledWriter::writeCommentBeforeValue( const Value &root )$/;"	f	class:Json::StyledWriter
+writeIndent	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledStreamWriter::writeIndent()$/;"	f	class:Json::StyledStreamWriter
+writeIndent	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledWriter::writeIndent()$/;"	f	class:Json::StyledWriter
+writeValue	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^FastWriter::writeValue( const Value &value )$/;"	f	class:Json::FastWriter
+writeValue	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledStreamWriter::writeValue( const Value &value )$/;"	f	class:Json::StyledStreamWriter
+writeValue	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledWriter::writeValue( const Value &value )$/;"	f	class:Json::StyledWriter
+writeWithIndent	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledStreamWriter::writeWithIndent( const std::string &value )$/;"	f	class:Json::StyledStreamWriter
+writeWithIndent	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^StyledWriter::writeWithIndent( const std::string &value )$/;"	f	class:Json::StyledWriter
+write_buff_	Src/server/FDB_buffer.h	/^        std::vector<char>  write_buff_;$/;"	m	class:Buffer
+write_index_end	Src/server/FDB_buffer.h	/^        int write_index_end  ;$/;"	m	class:Buffer
+write_index_start	Src/server/FDB_buffer.h	/^        int write_index_start;                    \/*read and write index *\/$/;"	m	class:Buffer
+write_info	Src/server/FDB_ctl_info.cpp	/^bool Ctl_info::write_info(){$/;"	f	class:Ctl_info
+write_length	Src/server/FDB_buffer.h	/^        int write_length     ;$/;"	m	class:Buffer
+write_max	Src/server/FDB_buffer.h	/^        int write_max        ;$/;"	m	class:Buffer
+write_tempfile	Src/jsoncpp-src-0.5.0/makerelease.py	/^def write_tempfile( content, **kwargs ):$/;"	f
+xml	Src/jsoncpp-src-0.5.0/makerelease.py	/^import xml.etree.ElementTree as ElementTree$/;"	i
+yamlCompatiblityEnabled_	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      bool yamlCompatiblityEnabled_;$/;"	m	class:Json::FastWriter
+yesno	Src/jsoncpp-src-0.5.0/doxybuild.py	/^    def yesno( bool ):$/;"	f	function:build_doc
+you	Src/jsoncpp-src-0.5.0/scons-tools/substinfile.py	/^from SCons.Script import *  # the usual scons stuff you get in a SConscript$/;"	i
+~BatchAllocator	Src/jsoncpp-src-0.5.0/src/lib_json/json_batchallocator.h	/^   ~BatchAllocator()$/;"	f	class:Json::BatchAllocator
+~CZString	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::CZString::~CZString()$/;"	f	class:Json::Value::CZString
+~CommentInfo	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::CommentInfo::~CommentInfo()$/;"	f	class:Json::Value::CommentInfo
+~Data_All	Src/server/FDB_Data_All.cpp	/^Data_All::~Data_All()$/;"	f	class:Data_All
+~DefaultValueAllocator	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^   virtual ~DefaultValueAllocator()$/;"	f	class:Json::DefaultValueAllocator
+~Epoll	Src/server/FDB_epoll.cpp	/^Epoll::~Epoll(){$/;"	f	class:Epoll
+~FastWriter	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      virtual ~FastWriter(){}$/;"	f	class:Json::FastWriter
+~Key_val	Src/server/FDB_Key_val.cpp	/^Key_val::~Key_val()$/;"	f	class:Key_val
+~LOG_Buffer	Src/server/FDB_LOG.cpp	/^LOG_Buffer::~LOG_Buffer()$/;"	f	class:LOG_Buffer
+~SkipNode	Src/server/FDB_skiplist.h	/^    ~SkipNode(){delete []link;}$/;"	f	class:SkipNode
+~Socket	Src/server/FDB_Socket.cpp	/^Socket::~Socket(){                      $/;"	f	class:Socket
+~String	Src/server/FDB_String.cpp	/^String::~String()$/;"	f	class:String
+~StyledStreamWriter	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      ~StyledStreamWriter(){}$/;"	f	class:Json::StyledStreamWriter
+~StyledWriter	Src/jsoncpp-src-0.5.0/include/json/writer.h	/^      virtual ~StyledWriter(){}$/;"	f	class:Json::StyledWriter
+~TestCase	Src/jsoncpp-src-0.5.0/src/test_lib_json/jsontest.cpp	/^TestCase::~TestCase()$/;"	f	class:JsonTest::TestCase
+~ThreadPool	Src/server/FDB_thread_pool.cpp	/^ThreadPool::~ThreadPool(){    \/*析构函数*\/$/;"	f	class:ThreadPool
+~Value	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^Value::~Value()$/;"	f	class:Json::Value
+~ValueAllocator	Src/jsoncpp-src-0.5.0/src/lib_json/json_value.cpp	/^ValueAllocator::~ValueAllocator()$/;"	f	class:Json::ValueAllocator
+~Writer	Src/jsoncpp-src-0.5.0/src/lib_json/json_writer.cpp	/^Writer::~Writer()$/;"	f	class:Json::Writer
+~Ziplist	Src/server/FDB_ziplist.h	/^    ~Ziplist() {  } $/;"	f	class:Ziplist
+~list_skip	Src/server/FDB_skiplist.cpp	/^list_skip<E>::~list_skip()$/;"	f	class:list_skip
+~my_intset	Src/server/FDB_intset.cpp	/^my_intset::~my_intset()$/;"	f	class:my_intset
+~nocopyable	Src/server/FDB_nocopyable.h	/^        ~nocopyable(){}$/;"	f	class:nocopyable
+~timer	Src/server/FDB_timer.cpp	/^timer::~timer(){$/;"	f	class:timer

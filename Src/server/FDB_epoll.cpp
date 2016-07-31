@@ -184,25 +184,25 @@ bool Epoll::Epoll_wait(){                                 /*epoll 核心wait*/
                 /*
                 Epoll_set_EPOLLOUT(connfd);
                 */
-                std::cout << "id = events " << event_s[i].data.fd << " " << std::endl;
+                //std::cout << "id = events " << event_s[i].data.fd << " " << std::endl;
                 read(event_s[i].data.fd,buf,1024);
                 std::cout << buf << std::endl;
-                bzero(buf,1024);
-                std::string bu(700000,'c');
-                int flag;
+                //bzero(buf,1024);
+                //std::string bu(700000,'c');
+                //int flag;
                 //std::cout << bu << std::endl;
-                flag = user.User_return(connfd).Accept_Write(bu);
-                std::cout << flag << std::endl;
-                if(user.User_return(connfd).Accept_return_flag()){
+                //flag = user.User_return(connfd).Accept_Write(bu);
+                //std::cout << flag << std::endl;
+                /*if(user.User_return(connfd).Accept_return_flag()){
                     
                     std::cout << "PPPPPP" << std::endl;
                     Epoll_set_EPOLLOUT(connfd);
                     
-                }else{  
+                }else{*/  
                     
                     Epoll_reset(event_s[i].data.fd);
 
-                }   
+                //}   
 
             }else if(event_s[i].events & EPOLLOUT){
                 
