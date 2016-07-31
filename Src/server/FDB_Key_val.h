@@ -31,10 +31,10 @@ private:
     unsigned int hash_key;
     long long  cut_time;
     int Server_ID;
-    int flag;
 public:
+//int flag = 0;
     Key_val() = default;
-    Key_val(std::string key_name, unsigned int hash, int type_data, int elem);
+    Key_val(std::string key_name, int type_data, int elem);
     Key_val(const Key_val &a);
     ~Key_val();
     void Key_val_add(void *obj);

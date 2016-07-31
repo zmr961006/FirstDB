@@ -10,14 +10,14 @@
 
 using namespace std;
 
-Key_val::Key_val(std::string key_name, unsigned int hash, int type_data, int elem)
+Key_val::Key_val(std::string key_name, int type_data, int elem)
 {
     key = key_name;
     type  = type_data;
-    hash_key = hash;
+    hash_key = 0;
     cut_time = -1;
     Server_ID = elem;
-    flag = 0;
+
     /*obj*/
     if (type_data == Hash_Map_pseudo_NUM)
     {
@@ -51,9 +51,8 @@ Key_val::Key_val(const Key_val &a)
     key = a.key;
     type  = a.type;
     hash_key = a.hash_key;
-    cut_time = -1;
+    cut_time = a.cut_time;
     Server_ID = a.Server_ID;
-    flag = 0;
     /*obj*/
     if (type == Hash_Map_pseudo_NUM)
     {
@@ -259,11 +258,6 @@ void Key_val::Key_val_destory()
     {
         (*(FDB_Queue<std::string> *)value).FDB_Queue_destory();
     }
-}
-
-void Key_val::Key_val_flag()
-{
-    flag = 1;
 }
 
 int Key_val::Key_val_size()
