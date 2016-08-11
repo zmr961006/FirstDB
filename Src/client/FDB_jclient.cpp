@@ -9,11 +9,13 @@
 using namespace std;
 
 #include"FDB_jcli.h"
+#include"FDB_json.h"
 
 jcli::jcli()
 {
     socketfd = -1;
     sip[0]='\0';
+
 }
 
 jcli::jcli(char* s)
@@ -23,9 +25,8 @@ jcli::jcli(char* s)
     servaddr.sin_port = htons(PORT);
 
     socketfd = -1;
-    
-    strncpy(sip, s, strlen(s));                 /*初始化要连接的服务器IP*/
-
+    strcpy(sip, s);
+    //strncpy(sip, s, strlen(s));                 /*初始化要连接的服务器IP*/
 }
 
 void jcli::Socket()
@@ -36,6 +37,7 @@ void jcli::Socket()
         my_err("client socket creat error ", __LINE__);
     }
 }
+
 
 void jcli::my_err(const char* s, int line)
 {
@@ -48,8 +50,12 @@ void jcli::Connect()
 {
     pid_t  the_pid;
     char buff[MAXLINE];                 /*在父进程检查服务器是否断开*/
+    char buff_1[MAXLINE];                 /*在父进程检查服务器是否断开*/
 
-    if( inet_pton(AF_INET, sip, &servaddr.sin_addr)  <= 0){
+    int m;
+
+    if( ( m = inet_pton(AF_INET, sip, &servaddr.sin_addr) )  <= 0){
+        printf("%d\n", m);
         my_err("client inet_pton error ", __LINE__);
     }
 
@@ -57,108 +63,40 @@ void jcli::Connect()
         my_err("client connect error ", __LINE__);
     }
 
-    Json::Reader reader;
-    Json::Value root;
-
     if( (the_pid = fork()) == 0){
-        for(; ;)
-        {
-            jcli::str_cli();
+        
+        for(; ;){
+            
+            fdb_json A;                       /*定义对象A获取fdb_json类的成员*/
+            sendline = A.input_str_tojson();
 
-            if(reader.parse(sendline, root) == 0){
-                my_err("client string to json error ", __LINE__);
-            }
-
-            if( write(socketfd, sendline, strlen(sendline)) != strlen(sendline) ){
+            if( write(socketfd, sendline.c_str(), sendline.size() ) != sendline.size()){
                 my_err("client write error ", __LINE__);
             }
 
-            bzero(sendline, sizeof(sendline) );
+            sendline = "\0";
         }
     }
     else
     {
-        /*阻塞等待服务器发来已断开信息*/
-        while(read(socketfd, buff, MAXLINE));
+        //阻塞等待服务器发来已断开信息
+        while(read(socketfd, buff, MAXLINE)){
+            printf("hh_%s\n", buff);
+            bzero(buff, sizeof(buff) );
+        }
         my_err("服务器过早退出 ", __LINE__);
         
     }
-
-}
-
-/*将普通字符串转换成json格式的字符串*/
-void jcli::str_cli()
-{
-    
-    char buff[MAXLINE];                         /*临时存放输入*/
-
-
-    char  str ='{';
-    const char * str1 = "\"";
-    const char * str2 = ":";
-    const char * str3 = ",";
-    const char * str4 = "}";
-
-    const char * name = "name";
-    const char * fast = "fast";
-    const char * last = "last";
-
-    sendline[0] = str;
-        
-    bzero(buff, sizeof(buff) );
-    //std::cin >> buff;
-
-    scanf("%s",buff);
-
-
-    strncat(sendline, str1, strlen(str1));
-    strncat(sendline, name, strlen(name));
-    strncat(sendline, str1, strlen(str1));
-    strncat(sendline, str2, strlen(str2));
-
-    strncat(sendline, str1, strlen(str1));
-    strncat(sendline, buff,strlen(buff));
-    strncat(sendline, str1, strlen(str1));
-    strncat(sendline, str3, strlen(str3));
-    
-    bzero(buff, sizeof(buff) );
-    //std::cin >> buff;
-    
-    scanf("%s",buff);
-    strncat(sendline, str1, strlen(str1));
-    strncat(sendline, fast, strlen(fast));
-    strncat(sendline, str1, strlen(str1));
-    strncat(sendline, str2, strlen(str2));
-
-    strncat(sendline, str1, strlen(str1));
-    strncat(sendline, buff,strlen(buff));
-    strncat(sendline, str1, strlen(str1));
-    strncat(sendline, str3, strlen(str3));
-
-    bzero(buff, sizeof(buff) );
-
-    //std::cin >> buff;
-    scanf("%s",buff);
-
-    strncat(sendline, str1, strlen(str1));
-    strncat(sendline, last,strlen(last));
-    strncat(sendline, str1, strlen(str1));
-    strncat(sendline, str2, strlen(str2));
-
-    strncat(sendline, str1, strlen(str1));
-    strncat(sendline, buff,strlen(buff));
-    strncat(sendline, str1, strlen(str1));
-    strncat(sendline, str4, strlen(str4));
-
 }
 
 int main(int argc,char *argv[])
 {
+    if(argc < 2){
+        std::cout << __LINE__ << ": 参数格式不对,正确格式为：可执行文件名+IP地址" << std::endl;
+        exit(-1);
+    }
     jcli a(argv[1]);
 
-
-    //a.str_cli();
-    
     a.Socket();
     a.Connect();
 

@@ -8,6 +8,9 @@
 #ifndef _FDB_HEADER_H
 #define _FDB_HEADER_H
 
+#define PORT 9201
+#define MAXLINE 4096
+
 #include<unistd.h>
 #include<stdlib.h>
 #include<stdio.h>
