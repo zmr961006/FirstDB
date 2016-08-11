@@ -22,6 +22,8 @@ public:
     std::string get_comm_name();
     std::string get_key();
     std::string get_value();
+    std::string get_jadd();
+    std::string get_num();
 
     void print_str();
 
