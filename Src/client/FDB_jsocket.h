@@ -8,9 +8,8 @@
 #ifndef _FDB_JSOCKET_H
 #define _FDB_JSOCKET_H
 
-#define PORT 4055             /*服务器端自定义端口号*/
+//define PORT 9201             /*服务器端自定义端口号*/
 #define LISTENQ 15
-#define MAXLINE 4096
 
 #include"FDB_jheader.h"
 

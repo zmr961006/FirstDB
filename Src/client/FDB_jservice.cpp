@@ -7,6 +7,7 @@
 
 #include<iostream>
 #include"FDB_jsocket.h"
+#include"FDB_json.h"
 
 
 using namespace std;
@@ -68,15 +69,13 @@ void jSocket::Accept()
             close(connfd);
         }
 
-        if(reader.parse(buff, root) == 0){
-            my_err("service string to json erro ", __LINE__);
-        }
+       // printf("%d\n", buff);
 
-        std::cout << root["name"].asString() << " ";
-        std::cout << root["fast"].asString() << " ";
-        std::cout << root["last"].asString() << std::endl;
+        fdb_json A;
+       
+        A.fdb_json::json_tostr(buff);
+        A.fdb_json::print_str();
 
-        //std::cout << sty.write(root) << std::endl;
        bzero(buff, sizeof(buff));
 
 
