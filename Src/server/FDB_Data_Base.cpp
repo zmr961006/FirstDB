@@ -30,15 +30,13 @@ void Data_Base::Data_Base_rehash()
     int i = 0;
     int sum = 0;
     //实现了键值对从hash向rehash的迁移
-    //std::cout << "q" << std::endl;
     while (1)
     {
         while (hash[i].size() != 0)
         {
             auto item = hash[i].begin();
-	    Key_val a(*item);
+            Key_val a(*item);
             rehash[(*item).get_hash() % resize].push_front(a);
-
             hash[i].erase(item);
             reused++;
             rehashhidx++;
@@ -68,8 +66,11 @@ void Data_Base::Data_Base_rehash()
 
 void Data_Base::Data_Base_add(Key_val rhs)
 {
-    unsigned int key = GetKey_char( rhs.get_key().c_str() );
+    char *a = new char[rhs.get_key().size()+10];
+    FDB_Base_c_str(a, rhs.get_key());
+    unsigned int key = GetKey_char( a );
     rhs.set_hash_key(key);
+    delete []a;
     
     //当hash表的用量大于hash表大小的时候，启用rehash
     if ((rehashhidx == -1) && (used/size >= 1))
@@ -103,8 +104,10 @@ void Data_Base::Data_Base_add(Key_val rhs)
 
 bool Data_Base::Data_Base_del(std::string rhs)
 {
-    unsigned int hash_key = GetKey_char( rhs.c_str() );
-    
+    char *a = new char[rhs.size()+10];
+    FDB_Base_c_str(a, rhs);
+    unsigned int hash_key = GetKey_char( a );
+    delete []a;
     //若hash表大小是使用量的十倍则用rehash表进行对hash表减少空间的操作
     if ( (used != 0) && (size/used >= 10) && (rehashhidx == -1) )
     {
@@ -179,7 +182,10 @@ void Data_Base::Data_Base_destory()
 
 bool Data_Base::Data_Base_find(std::string rhs)
 {
-    unsigned int key = GetKey_char( rhs.c_str() );
+    char *a = new char[rhs.size()+10];
+    FDB_Base_c_str(a, rhs);
+    unsigned int key = GetKey_char( a );
+    delete []a;
 
     for (auto item : hash[key % size])
     {
@@ -204,8 +210,11 @@ bool Data_Base::Data_Base_find(std::string rhs)
 }
 
 bool Data_Base::Data_Base_type_compare(std::string rhs, int type)
-{
-    unsigned int key = GetKey_char( rhs.c_str() );
+{    
+    char *a = new char[rhs.size()+10];
+    FDB_Base_c_str(a, rhs);
+    unsigned int key = GetKey_char( a );
+    delete []a;
 
     for (auto item : hash[key % size])
     {
@@ -213,7 +222,7 @@ bool Data_Base::Data_Base_type_compare(std::string rhs, int type)
         {
             if (type == item.get_type()) 
             {
-            	return true;
+                return true;
             }
             return false;
         }
@@ -227,7 +236,7 @@ bool Data_Base::Data_Base_type_compare(std::string rhs, int type)
             {
                 if (type == item.get_type()) 
                 {
-            	    return true;
+                    return true;
                 }
                 return false;
             }
@@ -244,8 +253,12 @@ unsigned int Data_Base::Data_Base_size()
 
 bool Data_Base::Data_Base_value_add(std::string rhs, void *obj)
 {    
-    unsigned int key = GetKey_char( rhs.c_str() );
-    for (auto item = hash[key % size].begin(); item != hash[key % size].end(); item++) 
+    char *a = new char[rhs.size()+10];
+    FDB_Base_c_str(a, rhs);
+    unsigned int key = GetKey_char( a );
+    delete []a;
+
+    for (auto item = hash[key % size].begin(); item != hash[key % size].end(); item++) //gouzaole
     {
         if (rhs == (*item).get_key())
         {
@@ -256,7 +269,7 @@ bool Data_Base::Data_Base_value_add(std::string rhs, void *obj)
 
     if (rehashhidx != -1)
     {
-Data_Base_rehash();
+        Data_Base_rehash();
         for (auto item = rehash[key % resize].begin(); item != rehash[key % resize].end(); item++)
         {
             if (rhs == (*item).get_key())
@@ -272,7 +285,10 @@ Data_Base_rehash();
 
 bool Data_Base::Data_Base_value_del(std::string rhs, void *obj)
 {       
-    unsigned int key = GetKey_char( rhs.c_str() );
+    char *a = new char[rhs.size()+10];
+    FDB_Base_c_str(a, rhs);
+    unsigned int key = GetKey_char( a );
+    delete []a;
 
     for (auto item = hash[key % size].begin(); item != hash[key % size].end(); item++)
     {
@@ -288,7 +304,7 @@ bool Data_Base::Data_Base_value_del(std::string rhs, void *obj)
 
     if (rehashhidx != -1)
     {
-Data_Base_rehash();
+        Data_Base_rehash();
         for (auto item = rehash[key % resize].begin(); item != rehash[key % resize].end(); item++)
         {
             if (rhs == (*item).get_key())
@@ -307,7 +323,11 @@ Data_Base_rehash();
 
 bool Data_Base::Data_Base_value_value(std::string rhs, void *buff)
 { 
-    unsigned int key = GetKey_char( rhs.c_str() );
+    char *a = new char[rhs.size()+10];
+    FDB_Base_c_str(a, rhs);
+    unsigned int key = GetKey_char( a );
+    delete []a;
+
     for (auto item = hash[key % size].begin(); item != hash[key % size].end(); item++)
     {
         if (rhs == (*item).get_key())
@@ -319,7 +339,7 @@ bool Data_Base::Data_Base_value_value(std::string rhs, void *buff)
 
     if (rehashhidx != -1)
     {
-Data_Base_rehash();
+        Data_Base_rehash();
         for (auto item = rehash[key % resize].begin(); item != rehash[key % resize].end(); item++)
         {
             if (rhs == (*item).get_key())
@@ -335,7 +355,10 @@ Data_Base_rehash();
 
 bool Data_Base::Data_Base_value_destory(std::string rhs)
 {
-    unsigned int key = GetKey_char( rhs.c_str() );
+    char *a = new char[rhs.size()+10];
+    FDB_Base_c_str(a, rhs);
+    unsigned int key = GetKey_char( a );
+    delete []a;
 
     for (auto item = hash[key % size].begin(); item != hash[key % size].end(); item++)
     {
@@ -348,7 +371,7 @@ bool Data_Base::Data_Base_value_destory(std::string rhs)
 
     if (rehashhidx != -1)
     {
-Data_Base_rehash();
+        Data_Base_rehash();
         for (auto item = rehash[key % resize].begin(); item != rehash[key % resize].end(); item++)
         {
             if (rhs == (*item).get_key())
@@ -364,7 +387,10 @@ Data_Base_rehash();
 
 unsigned int Data_Base::Data_Base_value_size(std::string rhs)
 {
-    unsigned int key = GetKey_char( rhs.c_str() );
+    char *a = new char[rhs.size()+10];
+    FDB_Base_c_str(a, rhs);
+    unsigned int key = GetKey_char( a );
+    delete []a;
 
     for (auto item = hash[key % size].begin(); item != hash[key % size].end(); item++)
     {
@@ -388,7 +414,10 @@ unsigned int Data_Base::Data_Base_value_size(std::string rhs)
 
 bool Data_Base::Data_Base_add_time(std::string rhs, long long time)
 {
-    unsigned int key = GetKey_char( rhs.c_str() );
+    char *a = new char[rhs.size()+10];
+    FDB_Base_c_str(a, rhs);
+    unsigned int key = GetKey_char( a );
+    delete []a;
 
     for (auto item = hash[key % size].begin(); item != hash[key % size].end(); item++)
     {
@@ -401,7 +430,7 @@ bool Data_Base::Data_Base_add_time(std::string rhs, long long time)
 
     if (rehashhidx != -1)
     {
-Data_Base_rehash();
+        Data_Base_rehash();
         for (auto item = rehash[key % resize].begin(); item != rehash[key % resize].end(); item++)
         {
             if (rhs == (*item).get_key())
@@ -417,7 +446,10 @@ Data_Base_rehash();
 
 bool Data_Base::Data_Base_add_ptime(std::string rhs, long long time)
 {
-    unsigned int key = GetKey_char( rhs.c_str() );
+    char *a = new char[rhs.size()+10];
+    FDB_Base_c_str(a, rhs);
+    unsigned int key = GetKey_char( a );
+    delete []a;
 
     for (auto item = hash[key % size].begin(); item != hash[key % size].end(); item++)
     {
@@ -430,7 +462,7 @@ bool Data_Base::Data_Base_add_ptime(std::string rhs, long long time)
 
     if (rehashhidx != -1)
     {
-Data_Base_rehash();
+        Data_Base_rehash();
         for (auto item = rehash[key % resize].begin(); item != rehash[key % resize].end(); item++)
         {
             if (rhs == (*item).get_key())
@@ -446,7 +478,10 @@ Data_Base_rehash();
 
 bool Data_Base::Data_Base_set_time(std::string rhs, long long time)
 {
-    unsigned int key = GetKey_char( rhs.c_str() );
+    char *a = new char[rhs.size()+10];
+    FDB_Base_c_str(a, rhs);
+    unsigned int key = GetKey_char( a );
+    delete []a;
 
     for (auto item = hash[key % size].begin(); item != hash[key % size].end(); item++)
     {
@@ -459,7 +494,7 @@ bool Data_Base::Data_Base_set_time(std::string rhs, long long time)
 
     if (rehashhidx != -1)
     {
-Data_Base_rehash();
+        Data_Base_rehash();
         for (auto item = rehash[key % resize].begin(); item != rehash[key % resize].end(); item++)
         {
             if (rhs == (*item).get_key())
@@ -475,7 +510,10 @@ Data_Base_rehash();
 
 bool Data_Base::Data_Base_set_ptime(std::string rhs,long long time)
 {    
-    unsigned int key = GetKey_char( rhs.c_str() );
+    char *a = new char[rhs.size()+10];
+    FDB_Base_c_str(a, rhs);
+    unsigned int key = GetKey_char( a );
+    delete []a;
 
     for (auto item = hash[key % size].begin(); item != hash[key % size].end(); item++)
     {
@@ -488,7 +526,7 @@ bool Data_Base::Data_Base_set_ptime(std::string rhs,long long time)
 
     if (rehashhidx != -1)
     {
-Data_Base_rehash();
+        Data_Base_rehash();
         for (auto item = rehash[key % resize].begin(); item != rehash[key % resize].end(); item++)
         {
             if (rhs == (*item).get_key())
@@ -504,7 +542,10 @@ Data_Base_rehash();
 
 long long Data_Base::Data_Base_get_time(std::string rhs)
 {
-    unsigned int key = GetKey_char( rhs.c_str() );
+    char *a = new char[rhs.size()+10];
+    FDB_Base_c_str(a, rhs);
+    unsigned int key = GetKey_char( a );
+    delete []a;
 
     for (auto item = hash[key % size].begin(); item != hash[key % size].end(); item++)
     {
@@ -516,7 +557,7 @@ long long Data_Base::Data_Base_get_time(std::string rhs)
 
     if (rehashhidx != -1)
     {
-Data_Base_rehash();
+        Data_Base_rehash();
         for (auto item = rehash[key % resize].begin(); item != rehash[key % resize].end(); item++)
         {
             if (rhs == (*item).get_key())
@@ -527,13 +568,24 @@ Data_Base_rehash();
     }
 }
 
-void Data_Base::Data_Base::Data_Base_show()
+char* Data_Base::FDB_Base_c_str(char *a, std::string rhs)
+{
+    strcpy(a, rhs.c_str());
+    for (int i = rhs.size(); i < rhs.size()+10; i++)
+    {
+         a[i] = 0;
+    }
+    return a;
+}
+
+void Data_Base::Data_Base_show()
 {
     std::cout << "hash: " << std::endl;
     std::cout << "size: " << size << " used: " << used << " hash_size: " << hash.size() << std::endl;
     int i = 0;
     for (auto item : hash)
-    { 
+    {
+        //std::cout << item.size() << std::endl; 
         for (auto it : item)
         {
             std::cout << i << " : " << std::endl;

@@ -1,5 +1,5 @@
 # FirstDB  
-#仅以此献给Xiyou Linux group  10周年 
+
 ##关于我们  www.xiyoulinux.org
 ##由西邮Linux兴趣小组成员开发的分布式键值存储系统
 
