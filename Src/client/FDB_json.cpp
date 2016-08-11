@@ -13,25 +13,61 @@ void fdb_json::json_tostr(std::string buff)
 
 std::string fdb_json::input_str_tojson()
 {
-    char buff[MAXLINE];
+    std::string buff[MAXLINE];
     std::string sendline;
+    std::string lastsend;
 
-    std::cout <<  "请输入三个以空格隔开的字符串：" << std::endl;
+    std::cout <<  "请输入字符串(ps:'$'为结束串，仅前四个以内有效)：" << std::endl;
 
-    std::cin >> buff;
-    sendline = "{";
-    sendline = sendline  + "\"" + "comm_name" + "\"" + ":" + "\"" + buff + "\"" + ",";
+    int i = 0;
+    char c;
 
+    std::cin >> buff[i];
+
+    while( i < 5 ){
+        i++;
+        if(getchar() == '\n'){
+            break;
+        }
+        std::cin >> buff[i];
+    }
     
-    bzero(buff, sizeof(buff) );
-    std::cin >> buff;
-    sendline = sendline + "\"" + "jkey" + "\"" + ":" + "\"" + buff + "\"" + ",";
+    if(i == 0){
+        return "\0";
+    }
 
-    bzero(buff, sizeof(buff) );
-    std::cin >> buff;
-    sendline = sendline + "\"" + "jvalue" + "\"" + ":" + "\"" + buff + "\"" + "}" + "\0";
+    lastsend = lastsend +"{" + "\"" + "num" + "\"" + ":" + "\"" + "1" + "\"" + ",";
+    sendline = sendline  + "\"" + "comm_name" + "\"" + ":" + "\"" + buff[0] + "\"" + ",";
+    
+    if(i == 1){
+        sendline[strlen(sendline.c_str())-1] = '}';
+        lastsend[8] = '1';
+        return (lastsend + sendline);
+    }
+    sendline = sendline + "\"" + "jkey" + "\"" + ":" + "\"" + buff[1] + "\"" + ",";
+    if(i == 2){
+        sendline[strlen(sendline.c_str())-1] = '}';
+        lastsend[8] = '2';
+        return (lastsend + sendline);
+    }
+    sendline = sendline + "\"" + "jvalue" + "\"" + ":" + "\"" + buff[2] + "\""+",";
+    if(i == 3){
+        sendline[strlen(sendline.c_str())-1] = '}';
+        lastsend[8] = '3';
+        return (lastsend + sendline);
+    }
 
-    return sendline;
+    sendline = sendline + "\"" + "jadd" + "\"" + ":" + "\"" + buff[3] + "\""+",";
+    if(i == 4){
+        lastsend[8] = '4';
+        sendline[strlen(sendline.c_str())-1] = '}';
+        return (lastsend + sendline);
+    }
+
+    /*暂时定义为四个还可以加参数*/
+    lastsend[8] = '4';
+    sendline[strlen(sendline.c_str())-1] = '}';
+    return (lastsend + sendline);
 }
 
 std::string fdb_json::get_comm_name()
@@ -64,7 +100,26 @@ std::string fdb_json::get_value()
     return root["jvalue"].asString();
 }
 
+std::string fdb_json::get_jadd()
+{
+    if(jflag == 0){
+
+        return "\0";
+    }
+    
+    return root["jadd"].asString();
+}
+std::string fdb_json::get_num()
+{
+    if(jflag == 0){
+
+        return "\0";
+    }
+    
+    return root["num"].asString();
+}
+
 void fdb_json::print_str()
 {
-    std::cout << get_comm_name() << " " << get_key() << " " << get_value() << std::endl;
+    std::cout << get_num() << " " << get_comm_name() << " " << get_key() << " " << get_value()  << " " << get_jadd() << std::endl;
 }

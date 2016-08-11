@@ -26,6 +26,7 @@ int main(int argc,char *argv[])
     std::cout << "获取的第1个字符串：" << A.get_comm_name() << std::endl;
     std::cout << "获取的第2个字符串：" << A.get_key() << std::endl;
     std::cout << "获取的第3个字符串：" << A.get_value() << std::endl;
+    std::cout << "获取的第4个字符串：" << A.get_jadd() << std::endl;
 
 
     std::cout << '\n' << "将json解析成字符串后：" ;
