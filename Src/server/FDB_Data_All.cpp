@@ -369,7 +369,7 @@ char* Data_All::HGETALL(int num, char* key, char* val_key, char* val_value)
 char* Data_All::DEL(int num, char* key, char* val_key, char* val_value)
 {
 	char *a;
-	if (num != 4) {
+	if (num != 2) {
 		a = "format error: DEL KEY(have 2 inpdoc)";
 	} else {
 		if (Del(key)) {
@@ -461,7 +461,7 @@ char* Data_All::LPUSH(int num, char* key, char* val_key, char* val_value)
 char* Data_All::LPOP(int num, char* key, char* val_key, char* val_value)
 {
 	const char *a;
-	if (num != 4) {
+	if (num != 2) {
 		a = "format error: LPOP KEY(have 2 inpdoc)";
 	} else {
 		a = Value(key, 4);
@@ -475,7 +475,7 @@ char* Data_All::LPOP(int num, char* key, char* val_key, char* val_value)
 char* Data_All::RPUSH(int num, char* key, char* val_key, char* val_value)
 {
 	char *a;
-	if (num != 4) {
+	if (num != 3) {
 		a = "format error: RPUSH KEY _(have 3 inpdoc)";
 	} else {
 		if (Add(key, val_key, 5) == false ) {
@@ -491,7 +491,7 @@ char* Data_All::RPUSH(int num, char* key, char* val_key, char* val_value)
 char* Data_All::RPOP(int num, char* key, char* val_key, char* val_value)
 {
 	const char *a;
-	if (num != 4) {
+	if (num != 2) {
 		a = "format error: RPOP KEY(have 2 inpdoc)";
 	} else {
 		a = Value(key, 5);
