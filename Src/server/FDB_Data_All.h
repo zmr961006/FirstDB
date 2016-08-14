@@ -20,7 +20,7 @@
 class Data_All
 {
 private:
-    typedef char* (Data_All::*fun)(int, char*,char*, char*);
+    typedef char* (Data_All::*fun)(char*,char*, char*);
     int max_num;
     std::vector<Data_Base> DB;
     
@@ -49,23 +49,23 @@ private:
     void Data_All_show(int db_num = 0);
     int Data_All_get_num();
 
-    char* HSET(int num, char* key, char* val_key, char* val_value);
-    char* HDEL(int num, char* key, char* val_key, char* val_value);
-    char* HGETALL(int num, char* key, char* val_key, char* val_value);
-    char* DEL(int num, char* key, char* val_key, char* val_value);
-    char* SET(int num, char* key, char* val_key, char* val_value);
-    char* GET(int num, char* key, char* val_key, char* val_value);
-    char* LSET(int num, char* key, char* val_key, char* val_value);
-    char* LGET(int num, char* key, char* val_key, char* val_value);
-    char* LPUSH(int num, char* key, char* val_key, char* val_value);
-    char* LPOP(int num, char* key, char* val_key, char* val_value);
-    char* RPUSH(int num, char* key, char* val_key, char* val_value);
-    char* RPOP(int num, char* key, char* val_key, char* val_value);
+    char* HSET(char* key, char* val_key, char* val_value);
+    char* HDEL(char* key, char* val_key, char* val_value);
+    char* HGETALL(char* key, char* val_key, char* val_value);
+    char* DEL(char* key, char* val_key, char* val_value);
+    char* SET(char* key, char* val_key, char* val_value);
+    char* GET(char* key, char* val_key, char* val_value);
+    char* LSET(char* key, char* val_key, char* val_value);
+    char* LGET(char* key, char* val_key, char* val_value);
+    char* LPUSH(char* key, char* val_key, char* val_value);
+    char* LPOP(char* key, char* val_key, char* val_value);
+    char* RPUSH(char* key, char* val_key, char* val_value);
+    char* RPOP(char* key, char* val_key, char* val_value);
 public:
     Data_All(int num, int hash_def, int rehash_def);
     ~Data_All() = default;
     
-    char *handle(int num, char *signal, char *key, char *val_key, char *val_value);
+    char *handle(char *signal, char *key, char *val_key, char *val_value);
 };
 
 #endif
