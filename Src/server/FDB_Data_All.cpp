@@ -454,24 +454,53 @@ char* Data_All::RPOP(char* key, char* val_key, char* val_value)
 	return b;
 }
 
-char* Data_All::handle(char *signal, char *key, char *val_key, char *val_value)
+char* Data_All::handle(string signal, string key, string val_key, string val_value)
 {
 	char *ret;
-	map<char *, fun> mp;
-	mp.insert(pair<char *, fun> ("HSET" ,&Data_All::HSET));
-	mp.insert(pair<char *, fun> ("HDEL",&Data_All::HDEL));
-	mp.insert(pair<char *, fun> ("HGETALL",&Data_All::HGETALL));
-	mp.insert(pair<char *, fun> ("DEL",&Data_All::DEL));
-	mp.insert(pair<char *, fun> ("SET",&Data_All::SET));
-	mp.insert(pair<char *, fun> ("GET",&Data_All::GET));
-	mp.insert(pair<char *, fun> ("LSET",&Data_All::LSET));
-	mp.insert(pair<char *, fun> ("LGET",&Data_All::LGET));
-	mp.insert(pair<char *, fun> ("LPUSH",&Data_All::LPUSH));
-	mp.insert(pair<char *, fun> ("LPOP",&Data_All::LPOP));
-	mp.insert(pair<char *, fun> ("RPUSH", &Data_All::RPUSH));
-	mp.insert(pair<char *, fun> ("RPOP",&Data_All::RPOP));
+	// map<char *, fun> mp;
+	// mp.insert(pair<char *, fun> ("HSET" ,&Data_All::HSET));
+	// mp.insert(pair<char *, fun> ("HDEL",&Data_All::HDEL));
+	// mp.insert(pair<char *, fun> ("HGETALL",&Data_All::HGETALL));
+	// mp.insert(pair<char *, fun> ("DEL",&Data_All::DEL));
+	// mp.insert(pair<char *, fun> ("SET",&Data_All::SET));
+	// mp.insert(pair<char *, fun> ("GET",&Data_All::GET));
+	// mp.insert(pair<char *, fun> ("LSET",&Data_All::LSET));
+	// mp.insert(pair<char *, fun> ("LGET",&Data_All::LGET));
+	// mp.insert(pair<char *, fun> ("LPUSH",&Data_All::LPUSH));
+	// mp.insert(pair<char *, fun> ("LPOP",&Data_All::LPOP));
+	// mp.insert(pair<char *, fun> ("RPUSH", &Data_All::RPUSH));
+	// mp.insert(pair<char *, fun> ("RPOP",&Data_All::RPOP));
 
-	ret = (this->*mp[signal])(key, val_key, val_value);
+	map<string, fun> mp;
+	mp.insert(pair<string, fun> ("HSET" ,&Data_All::HSET));
+	mp.insert(pair<string, fun> ("HDEL",&Data_All::HDEL));
+	mp.insert(pair<string, fun> ("HGETALL",&Data_All::HGETALL));
+	mp.insert(pair<string, fun> ("DEL",&Data_All::DEL));
+	mp.insert(pair<string, fun> ("SET",&Data_All::SET));
+	mp.insert(pair<string, fun> ("GET",&Data_All::GET));
+	mp.insert(pair<string, fun> ("LSET",&Data_All::LSET));
+	mp.insert(pair<string, fun> ("LGET",&Data_All::LGET));
+	mp.insert(pair<string, fun> ("LPUSH",&Data_All::LPUSH));
+	mp.insert(pair<string, fun> ("LPOP",&Data_All::LPOP));
+	mp.insert(pair<string, fun> ("RPUSH", &Data_All::RPUSH));
+	mp.insert(pair<string, fun> ("RPOP",&Data_All::RPOP));
+
+    //char *csignal = new char[signal.size()+1];
+    //char *ckey = new char[key.size()+1];
+    //char *cval_key = new char[val_key.size()+1];
+    //char *cval_value = new char[val_value.size()+1];
+
+    //csignal = (char *)signal.c_str();
+    //ckey = (char*)key.c_str();
+    //cval_key = (char*)val_key.c_str();
+    //cval_value = (char*)val_value.c_str();
+
+	ret = (this->*mp[signal])((char*)key.c_str(), (char*)val_key.c_str(), (char*)val_value.c_str());
+
+    //delete csignal;
+    //delete ckey;
+    //delete cval_key;
+    //delete cval_value;
 
 	return ret;
 }

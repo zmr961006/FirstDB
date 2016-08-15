@@ -23,7 +23,7 @@ using namespace std;
 void fun3()
 {
     Data_All da(16,4,4);
-    char* a;
+    char * a;
     a = da.handle("SET", "wrx", "123", "\0");
     cout << a << endl;
     a = da.handle("GET", "wrx", "\0", "\0");
