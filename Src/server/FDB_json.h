@@ -1,48 +1,39 @@
 /*************************************************************************
 	> File Name: FDB_json.h
-	> Author: 
-	> Mail: 
-	> Created Time: 2016年05月04日 星期三 10时11分33秒
+	> Author:Eval 
+	> Mail:1040460587@qq.com 
+	> Created Time: 2016年08月09日 星期二 20时27分56秒
  ************************************************************************/
 
 #ifndef _FDB_JSON_H
 #define _FDB_JSON_H
 
-#include<iostream>
-#include<string>
-#include"../jsoncpp-src-0.5.0/include/json/json.h"
 
+#include"FDB_jheader.h"
 
-class JSon{
+class fdb_json
+{
+public:
 
-    private:
-        
-        std::string message;
-        Json::Value json_obj;
-        /*std::string key;             变量记录，预留未定
-        std::string operation;
-        std::string buf;
-        int size;
-        int type_data;
-        int type_data2;*/
-        int ack;
+    void json_tostr(std::string buff);
+    std::string input_str_tojson();
+    fdb_json(){
+        jflag = 0;
+    }
 
-    public:
-        
-        JSon(std::string key,std::string operation,int type_data,int type_data2,std::string buf);
-        JSon(std::string);
-        int Json_get_size();
-        int Json_get_typedata();
-        int Json_get_typedata2();
-        int Json_get_ack();
-        std::string Json_get_key();
-        std::string Json_get_operation();
-        std::string Json_get_buf();
+    std::string get_comm_name();
+    std::string get_key();
+    std::string get_value();
+    std::string get_jadd();
+    std::string get_num();
 
+    void print_str();
 
+private:
+
+    int jflag;                                /*用于标记是否已经有json字符串转换，没有转换就不能调用一系列get函数*/
+    Json::Reader reader;
+    Json::Value root;
 };
-
-
-
 
 #endif

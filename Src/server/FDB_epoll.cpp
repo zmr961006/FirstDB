@@ -9,7 +9,7 @@
 #include"./FDB_epoll.h"
 #include"./FDB_accept.h"
 #include<thread>
-
+#include"./FDB_json.h"
 using namespace std;
 extern User user;
 
@@ -186,7 +186,13 @@ bool Epoll::Epoll_wait(){                                 /*epoll 核心wait*/
                 */
                 //std::cout << "id = events " << event_s[i].data.fd << " " << std::endl;
                 read(event_s[i].data.fd,buf,1024);
-                std::cout << buf << std::endl;
+                fdb_json A;
+                A.json_tostr(buf);
+                string store;
+                store = db.handle(A.get_comm_name(),A.get_key(),A.get_value(),A.get_jadd());
+                memset(buf,0,1024);
+                memcpy(buf,store.c_str(),1024);
+                write(event_s[i].data.fd,buf,1024);
                 //bzero(buf,1024);
                 //std::string bu(700000,'c');
                 //int flag;
