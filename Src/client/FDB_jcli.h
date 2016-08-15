@@ -9,7 +9,8 @@
 #define _FDB_JCLI_H
 
 #include"FDB_jheader.h"
-//#include "FDB_json.h"
+#include"FDB_json.h"
+#include"FDB_judge_commd.h"
 
 class jcli
 {
@@ -17,12 +18,13 @@ class jcli
 public:
 
     jcli();
-    jcli(char* s);
-    void Socket();
-    void Connect();
+    jcli(char* s);   /*构造函数*/
+    void Socket();   /*创建套接字*/
+    void Connect();  /*建立连接*/
+    int input_commd_name(std::string buff[MAXLINE]);              /*输入函数*/
 
+    void print_prompt();        /*客户端提示符输出*/
 
-    void str_cli(); 
     void my_err(const char* s, int line);
 
 

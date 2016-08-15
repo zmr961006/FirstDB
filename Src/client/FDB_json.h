@@ -7,14 +7,20 @@
 
 #ifndef _FDB_JSON_H
 #define _FDB_JSON_H
-#include"FDB_jheader.h"
+
+#define MAXLINE 4096
+#include<string.h>
+#include"../jsoncpp-src-0.5.0/include/json/json.h"
+//#include<json.h>
+//#include<json/json.h>
+//#include"FDB_jheader.h"
 
 class fdb_json
 {
 public:
 
-    void json_tostr(std::string buff);
-    std::string input_str_tojson();
+    std::string json_tostr(std::string buff);
+    std::string str_tojson(int i, std::string buff[MAXLINE]);
     fdb_json(){
         jflag = 0;
     }
