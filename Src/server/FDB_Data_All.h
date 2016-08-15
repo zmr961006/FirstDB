@@ -65,7 +65,7 @@ public:
     Data_All(int num, int hash_def, int rehash_def);
     ~Data_All() = default;
     
-    char *handle(char *signal, char *key, char *val_key, char *val_value);
+    char *handle(std::string signal, std::string key, std::string val_key, std::string val_value);
 };
 
 #endif
