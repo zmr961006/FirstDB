@@ -320,189 +320,141 @@ int Data_All::Data_All_get_num()
     return max_num;
 }
 
-char* Data_All::HSET(int num, char* key, char* val_key, char* val_value)
+char* Data_All::HSET(char* key, char* val_key, char* val_value)
 {
 	char *a;
-	if (num != 4) {
-		a = "format error: HSET KEY _ _(have 4 inpdoc)";
+	if (Add(key, val_key, 1, val_value) == false ) {
+		a = "hset error";
 	} else {
-		if (Add(key, val_key, 1, val_value) == false ) {
-			a = "hset error";
-		} else {
-			a = "OK";
-		}
+		a = "OK";
 	}
 
 	return a;
 }
 
-char* Data_All::HDEL(int num, char* key, char* val_key, char* val_value)
+char* Data_All::HDEL(char* key, char* val_key, char* val_value)
 {
 	char *a;
-	if (num != 3) {
-		a = "format error: HDEL KEY _(have 3 inpdoc)";
+	if (Val_Del(key, 1, val_key) == false ) {
+		a = "nil";
 	} else {
-		if (Val_Del(key, 1, val_key) == false ) {
-			a = "nil";
-		} else {
-			a = "OK";
-		}
+		a = "OK";
 	}
-
+	
 	return a;
 }
 
-char* Data_All::HGETALL(int num, char* key, char* val_key, char* val_value)
+char* Data_All::HGETALL(char* key, char* val_key, char* val_value)
 {
 	const char *a;
-	if (num != 2) {
-		a = "format error: HGETALL KEY(have 2 inpdoc)";
-	} else {
-		a = Value(key, 1);
-	}
-
-	char *b;
+	a = Value(key, 1);
+	
+	char* b = new char[strlen(a)+1];
 	strcpy(b,a);
 	return b;
 }
 
-char* Data_All::DEL(int num, char* key, char* val_key, char* val_value)
+char* Data_All::DEL(char* key, char* val_key, char* val_value)
 {
 	char *a;
-	if (num != 2) {
-		a = "format error: DEL KEY(have 2 inpdoc)";
+	if (Del(key)) {
+		a = "nil";
 	} else {
-		if (Del(key)) {
-			a = "nil";
-		} else {
-			a = "OK";
-		}
+		a = "OK";
 	}
 
 	return a;
 }
 
-char* Data_All::SET(int num, char* key, char* val_key, char* val_value)
+char* Data_All::SET(char* key, char* val_key, char* val_value)
 {
 	char *a;
-	if (num != 3) {
-		a = "format error: SET KEY _(have 3 inpdoc)";
+	if (Add(key, val_key, 3) == false ) {
+	    a = "set error";
 	} else {
-		if (Add(key, val_key, 3) == false ) {
-			a = "set error";
-		} else {
-			a = "OK";
-		}
+		a = "OK";
 	}
 
 	return a;
 }
 
-char* Data_All::GET(int num, char* key, char* val_key, char* val_value)
+char* Data_All::GET(char* key, char* val_key, char* val_value)
 {
 	const char *a;
-	if (num != 2) {
-		a = "format error: GET KEY(have 2 inpdoc)";
-	} else {
-		a = Value(key, 3);
-	}
+	a = Value(key, 3);
 
 	char* b = new char[strlen(a)+1];
 	strcpy(b, a);
 	return b;
 }
 
-char* Data_All::LSET(int num, char* key, char* val_key, char* val_value)
+char* Data_All::LSET(char* key, char* val_key, char* val_value)
 {
-	char *a;
-	if (num != 3) {
-		a = "format error: LSET KEY _(have 3 inpdoc)";
+    char *a;
+	if (Add(key, val_key, 2) == false ) {
+		a = "lset error";
 	} else {
-		if (Add(key, val_key, 2) == false ) {
-			a = "lset error";
-		} else {
-			a = "OK";
-		}
+		a = "OK";
 	}
 
 	return a;
 }
 
-char* Data_All::LGET(int num, char* key, char* val_key, char* val_value)
+char* Data_All::LGET(char* key, char* val_key, char* val_value)
 {
 	const char *a;
-	if (num != 2) {
-		a = "format error: LGET KEY(have 2 inpdoc)";
-	} else {
-		a = Value(key, 2);
-	}
+	a = Value(key, 2);
 
-	char *b;
+	char* b = new char[strlen(a)+1];
 	strcpy(b,a);
 	return b;
 }
 
-char* Data_All::LPUSH(int num, char* key, char* val_key, char* val_value)
+char* Data_All::LPUSH(char* key, char* val_key, char* val_value)
 {
 	char *a;
-	if (num != 3) {
-		a = "format error: LPUSH KEY _ (have 3 inpdoc)";
+	if (Add(key, val_key, 4) == false ) {
+		a = "lpush error";
 	} else {
-		if (Add(key, val_key, 4) == false ) {
-			a = "lpush error";
-		} else {
-			a = "OK";
-		}
+		a = "OK";
 	}
 
 	return a;
 }
 
-char* Data_All::LPOP(int num, char* key, char* val_key, char* val_value)
+char* Data_All::LPOP(char* key, char* val_key, char* val_value)
 {
 	const char *a;
-	if (num != 2) {
-		a = "format error: LPOP KEY(have 2 inpdoc)";
-	} else {
-		a = Value(key, 4);
-	}
+	a = Value(key, 4);
 
-	char *b;
+	char* b = new char[strlen(a)+1];
 	strcpy(b,a);
 	return b;
 }
 
-char* Data_All::RPUSH(int num, char* key, char* val_key, char* val_value)
+char* Data_All::RPUSH(char* key, char* val_key, char* val_value)
 {
 	char *a;
-	if (num != 3) {
-		a = "format error: RPUSH KEY _(have 3 inpdoc)";
+	if (Add(key, val_key, 5) == false ) {
+		a = "rpush error";
 	} else {
-		if (Add(key, val_key, 5) == false ) {
-			a = "rpush error";
-		} else {
-			a = "OK";
-		}
+		a = "OK";
 	}
 
 	return a;
 }
 
-char* Data_All::RPOP(int num, char* key, char* val_key, char* val_value)
+char* Data_All::RPOP(char* key, char* val_key, char* val_value)
 {
 	const char *a;
-	if (num != 2) {
-		a = "format error: RPOP KEY(have 2 inpdoc)";
-	} else {
-		a = Value(key, 5);
-	}
+	a = Value(key, 5);
 
-	char *b;
+	char* b = new char[strlen(a)+1];
 	strcpy(b,a);
 	return b;
 }
 
-char* Data_All::handle(int num, char *signal, char *key, char *val_key, char *val_value)
+char* Data_All::handle(char *signal, char *key, char *val_key, char *val_value)
 {
 	char *ret;
 	map<char *, fun> mp;
@@ -519,12 +471,7 @@ char* Data_All::handle(int num, char *signal, char *key, char *val_key, char *va
 	mp.insert(pair<char *, fun> ("RPUSH", &Data_All::RPUSH));
 	mp.insert(pair<char *, fun> ("RPOP",&Data_All::RPOP));
 
-	if ( mp.find(signal) == mp.end() ){
-		ret = "orders error";
-		return ret;
-	} else {
-		ret = (this->*mp[signal])(num, key, val_key, val_value);
-	}
+	ret = (this->*mp[signal])(key, val_key, val_value);
 
 	return ret;
 }
